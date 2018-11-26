@@ -13,11 +13,12 @@ app.get('/api/:xaxis/:yaxis',
     {
         var joins = "";
         var yaxisFunc = 'avg';
-        if (req.params['yaxis'] == 'sticker')
+        if (req.params['yaxis'] == 'brand.name')
         {
             yaxisFunc = 'count';
             joins = " join person_has_sticker using (person_id) " +
-                    " join sticker using (sticker_id) "
+                    " join sticker using (sticker_id) " +
+                    " join brand using (brand_id) ";
         }
         var queryString = '';
         if (req.params['xaxis'] == 'hometown_location')
