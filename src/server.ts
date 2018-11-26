@@ -11,13 +11,12 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/api/',
     (req, res) =>
     {
-        const needsMajorJoin = req.param('xaxis') == 'major' || req.param('xaxis') == 'major';
-        let queryString = "select * from person";
-        if (needsMajorJoin)
-        {
-            queryString += " join major using (major_id)"
-        }
-        queryString += " limit 5;";
+        //const needsMajorJoin = req.param('xaxis') == 'major' || req.param('xaxis') == 'major';
+        let queryString = "select " + req.param('xaxis') + ", avg(" + req.param('yaxis') + ")" +
+                            "from person " +
+                            "join " + req.param('xaxis') + " " +
+                            "using (" + req.param('xaxis') + "_id) limit 5";
+
         const query = client.query(queryString);
 
         query.then(
