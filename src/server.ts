@@ -11,31 +11,42 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/api/:xaxis/:yaxis',
     (req, res) =>
     {
+        var joins = "";
+        var yaxisFunc = 'avg';
+        if (req.params['yaxis'] == 'sticker')
+        {
+            yaxisFunc = 'count';
+            joins = " join person_has_sticker using (person_id) " +
+                    " join sticker using (sticker_id) "
+        }
         var queryString = '';
         if (req.params['xaxis'] == 'hometown_location')
         {
-            queryString = "select location.name, avg(" + req.params['yaxis'] + ") " +
-                            "from person " +
-                            "join location " +
-                            "on (hometown_location_id = location_id) " +
-                            "group by location.name " +
-                            "limit 5;";
+            queryString = "select location.name, " + yaxisFunc + "(" + req.params['yaxis'] + ") " +
+                            " from person " +
+                            " join location " +
+                            " on (hometown_location_id = location_id) " +
+                            joins +
+                            " group by location.name " +
+                            " limit 5;";
         }
         else if (req.params['xaxis'] == 'laptop')
         {
-            queryString = "select laptop.brand as name, avg(" + req.params['yaxis'] + ") " +
+            queryString = "select laptop.brand as name, " + yaxisFunc + "(" + req.params['yaxis'] + ") " +
                             "from person " +
                             "join laptop " +
                             "using (laptop_id) " +
+                            joins +
                             "group by laptop.brand " +
                             "limit 5;";
         }
         else
         {
-            queryString = "select " + req.params['xaxis'] + ".name, avg(" + req.params['yaxis'] + ") " +
+            queryString = "select " + req.params['xaxis'] + ".name, " + yaxisFunc + "(" + req.params['yaxis'] + ") " +
                             "from person " +
                             "join " + req.params['xaxis'] + " " +
                             "using (" + req.params['xaxis'] + "_id) " +
+                            joins +
                             "group by " + req.params['xaxis'] + ".name " +
                                 "limit 5;";
         }
