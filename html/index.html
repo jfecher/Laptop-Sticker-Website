@@ -72,6 +72,6 @@ function createChart(sqlResults)
     });
 }
 
-simpleHttpRequest("/api?xaxis=major?yaxis=likelihood_to_buy_more", createChart, console.log);
+simpleHttpRequest("/api/major/likelihood_to_buy_more", createChart, console.log);
 
 </script>
