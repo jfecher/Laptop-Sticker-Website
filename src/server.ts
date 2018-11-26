@@ -11,10 +11,12 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/api/:xaxis/:yaxis',
     (req, res) =>
     {
-        let queryString = "select " + req.params['xaxis'] + ", avg(" + req.params['yaxis'] + ")" +
+        let queryString = "select " + req.params['xaxis'] + ".name, avg(" + req.params['yaxis'] + ") " +
                             "from person " +
                             "join " + req.params['xaxis'] + " " +
-                            "using (" + req.params['xaxis'] + "_id) limit 5";
+                            "using (" + req.params['xaxis'] + "_id) " +
+                            "group by " + req.params['xaxis'] + ".name " +
+                            "limit 5;";
 
         console.log(queryString);
         const query = client.query(queryString);
@@ -22,7 +24,15 @@ app.get('/api/:xaxis/:yaxis',
         query.then(
             (result : any) =>
             {
-                res.json(result.rows);
+                let toBeSent : any = {'xValues':[], 'yValues':[]};
+                result.rows.forEach(
+                    (pair : any) =>
+                    {
+                        toBeSent.xValues.push(pair.name);
+                        toBeSent.yValues.push(Number(pair.avg));
+                    }
+                );
+                res.json(toBeSent);
             }
         ).catch(
             (err : any) =>
