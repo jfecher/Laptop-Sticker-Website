@@ -21,6 +21,15 @@ app.get('/api/:xaxis/:yaxis',
                             "group by location.name " +
                             "limit 5;";
         }
+        else if (req.params['xaxis'] == 'laptop')
+        {
+            queryString = "select laptop.brand, avg(" + req.params['yaxis'] + ") " +
+                            "from person " +
+                            "join laptop " +
+                            "using (laptop_id) " +
+                            "group by laptop.brand " +
+                            "limit 5;";
+        }
         else
         {
             queryString = "select " + req.params['xaxis'] + ".name, avg(" + req.params['yaxis'] + ") " +
