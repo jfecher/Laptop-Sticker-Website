@@ -63,7 +63,7 @@ function createChart(sqlResults)
         data: {
             labels: sqlResults.xValues,
             datasets: [{
-                label: 'Major',
+                label: document.getElementById("xaxis").value,
                 data: sqlResults.yValues,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
