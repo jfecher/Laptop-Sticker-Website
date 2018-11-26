@@ -23,7 +23,7 @@ app.get('/api/:xaxis/:yaxis',
         }
         else if (req.params['xaxis'] == 'laptop')
         {
-            queryString = "select laptop.brand, avg(" + req.params['yaxis'] + ") " +
+            queryString = "select laptop.brand as name, avg(" + req.params['yaxis'] + ") " +
                             "from person " +
                             "join laptop " +
                             "using (laptop_id) " +
