@@ -65,11 +65,16 @@ function simpleHttpRequest(url, success, failure)
     }
   };
 }
+var myChart;
 
 function createChart(sqlResults)
 {
+    if (myChart)
+    {
+        myChart.destroy();
+    }
     var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
+    myChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: sqlResults.xValues,
