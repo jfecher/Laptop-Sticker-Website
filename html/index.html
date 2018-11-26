@@ -28,6 +28,13 @@
 <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js>
 </script>
 <script>
+
+const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stickers",
+                        "likelihood_to_put_more" : "Likelihood to Put on More Stickers",
+                        "laptop" : "Laptop Brand",
+                        "hometown_location":"Hometown",
+                        "major":"Major"};
+
 function makeHttpObject()
 {
   try {return new XMLHttpRequest();}
@@ -63,7 +70,7 @@ function createChart(sqlResults)
         data: {
             labels: sqlResults.xValues,
             datasets: [{
-                label: document.getElementById("xaxis").value,
+                label: valueToNameDict[document.getElementById("xaxis").value],
                 data: sqlResults.yValues,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
