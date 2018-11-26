@@ -1,5 +1,9 @@
 import express from 'express';
+import pg from 'pg';
 const app = express();
+const connectionString = process.env.DATABASE_URL || '';
+const client = new pg.Client(connectionString);
+client.connect();
 
 var port = process.env.PORT || 8080;
 
