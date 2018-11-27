@@ -40,6 +40,16 @@ def sql_list(l):
 
 # insert into person (person_id, major_id, hometown_location_id, survey_location_id, laptop_id, likelihood_to_buy_more, likelihood_to_put_more)
 #     values (0, 0, 0, 1, 0, 1, 10);
+
+# person_id INT NOT NULL,
+# major_id INT NOT NULL,
+# hometown_location_id INT NOT NULL,
+# laptop_id INT NOT NULL,
+# laptop_purchased_dt TIMESTAMP(0) NULL,
+# laptop_picture_url VARCHAR(50) NULL,
+# likelihood_to_buy_more INT NULL,
+# likelihood_to_put_more INT NULL,
+# survey_location_id INT NOT NULL,
 # 
 # Generate a string of the person table
 # Must be run after laptop_tbl!
@@ -52,6 +62,12 @@ def person_tbl(l):
         laptop_id = laptops[row[6]]
         s += "\t({}, {}, {}, {}, {}, {}, {}),\n".format(pk+1, major_id, hometown_id, survey_loc_id, laptop_id, row[10], row[11])
     return s[0:-2]
+
+def date_alters(l):
+    s = ""
+    for pk, row in enumerate(l):
+        s += "update person set laptop_purchased_dt='{}' where player_id={}\n".format(row[8], pk+1)
+    return s
 
 # Returns the list of values in:
 # insert into laptop (laptop_id, screen_size, brand, model) values (0, 13.0, 'Apple', 'Macbook Air'), ..., ...;
@@ -81,4 +97,5 @@ with open(output_filename, 'w') as out:
     out.write(insert_str.format("survey_loc", sql_list(survey_loc)))
     out.write(insert_str.format("laptop", laptop_tbl(responses)))
     out.write(insert_str.format("person", person_tbl(responses)))
+    out.write(date_alters(responses))
 
