@@ -73,109 +73,96 @@ insert into major values
 	(71, 'Biochemistry'),
 	(72, 'Physical Therapy ');
 
-insert into hometown values
-	(0, 'Freehold, NJ'),
-	(1, 'East Brunswick'),
-	(2, 'Portland, Oregon'),
-	(3, 'Franklin, MA'),
-	(4, 'New Rochelle, NY'),
-	(5, 'Farmingdale, NY '),
-	(6, 'Naples, FL'),
-	(7, 'Palm City, Florida'),
-	(8, 'Coralville, Iowa'),
-	(9, 'Miami Florida '),
-	(10, 'Ashland MA'),
-	(11, 'Commack, NY'),
-	(12, 'Mount Sinai, New York'),
-	(13, 'Surat, Gujarat, India'),
-	(14, 'Lynnfield MA'),
-	(15, 'Kentfield, California'),
-	(16, 'Mumbai Maharashtra India'),
-	(17, 'seattle wa'),
-	(18, 'redmond, Washington'),
-	(19, 'Watertown, MA'),
-	(20, 'Rutland, MA'),
-	(21, 'Daphne, AL'),
-	(22, 'India'),
-	(23, 'Atlanta'),
-	(24, 'Norwell MA USA'),
-	(25, 'Westford, MA'),
-	(26, 'Syracuse, New York'),
-	(27, 'Sturbridge, MA'),
-	(28, 'Dubai, United Arab Emirates'),
-	(29, 'Sanford, ME'),
-	(30, 'Bayside, NY'),
-	(31, 'Madhya Pradesh, India'),
-	(32, 'Seattle, WA'),
-	(33, 'Brussels, Belgium'),
-	(34, 'Phoenixville pa'),
-	(35, 'Ashford, CT'),
-	(36, 'Mumbai, INDIA'),
-	(37, 'Miami'),
-	(38, 'Maharashtra, India'),
-	(39, 'Istanbul, Turkey'),
-	(40, 'Lancaster, PA'),
-	(41, 'Walnut Creek, CA'),
-	(42, 'Santa Barbara'),
-	(43, 'Kingston, MA, US'),
-	(44, 'Barrington, Illinois'),
-	(45, 'Concord, MA'),
-	(46, 'Chattanooga, Tennessee'),
-	(47, 'Ashland, Ma'),
-	(48, 'West Babylon, NY'),
-	(49, 'China'),
-	(50, 'Lynnfield, MA'),
-	(51, 'East Brunswick, New Jersey'),
-	(52, 'New Hyde Park, NY'),
-	(53, 'Westwood, MA'),
-	(54, 'Mumbai, India'),
-	(55, 'Brookfield WI'),
-	(56, 'San Francisco, California'),
-	(57, 'Mill Valley California'),
-	(58, 'Buffalo, NY'),
-	(59, 'Newton, MA '),
-	(60, 'Scranton, PA'),
-	(61, 'San Jose, CA'),
-	(62, 'Bourne, MA'),
-	(63, 'Newark, DE'),
-	(64, 'Mercer Island, WA'),
-	(65, 'China,Beijing'),
-	(66, 'Los Angeles, CA. Also Where*'),
-	(67, 'Pearl River, New York'),
-	(68, 'Bangalore, Karnataka, India'),
-	(69, 'Franklin Lakes, New Jersey, USA'),
-	(70, 'Westborough, MA'),
-	(71, 'Alnmouth, United Kingdom'),
-	(72, 'Rye NH'),
-	(73, 'Wayne, NJ'),
-	(74, 'Oakland, CA'),
-	(75, 'Denver, CO'),
-	(76, 'Caracas. Venezuela'),
-	(77, 'Woodbridge, CT'),
-	(78, 'South orange, nj '),
-	(79, 'Groton, MA'),
-	(80, 'Edison, NJ'),
-	(81, 'Worcester, MA'),
-	(82, 'Bridgewater, MA'),
-	(83, 'Plantation, FL'),
-	(84, 'Toronto, Canada'),
-	(85, 'Taipei, Taiwan'),
-	(86, 'Beijing, China'),
-	(87, 'Perth Amboy, NJ'),
-	(88, 'Horsham, PA'),
-	(89, 'Blue Bell '),
-	(90, 'Brooklyn, NY'),
-	(91, 'Las Cruces, New Mexico'),
-	(92, 'Bhopal, MP, India'),
-	(93, 'Billerica, MA'),
-	(94, 'North Andover, MA '),
-	(95, 'Old Bethpage, NY'),
-	(96, 'Newton, MA'),
-	(97, 'Jackson NJ'),
-	(98, 'San Francisco, CA'),
-	(99, 'Portland, OR');
+insert into hometown_location values
+	(0, 'Freehold','NJ','USA'),
+	(1, 'East Brunswick', 'NJ', 'USA'),
+	(2, 'Portland', 'OR', 'USA'),
+	(3, 'Franklin', 'MA', 'USA'),
+	(4, 'New Rochelle', 'NY', 'USA'),
+	(5, 'Farmingdale', 'NY', 'USA'),
+	(6, 'Naples', 'FL', 'USA'),
+	(7, 'Palm City', 'FL', 'USA'),
+	(8, 'Coralville', 'IA', 'USA'),
+	(9, 'Miami', 'FL', 'USA'),
+	(10, 'Ashland', 'MA', 'USA'),
+	(11, 'Commack', 'NY', 'USA'),
+	(12, 'Mount Sinai', 'NY', 'USA'),
+	(13, 'Surat', NULL, 'India'),
+	(14, 'Lynnfield', 'MA', 'USA'),
+	(15, 'Kentfield', 'CA', 'USA'),
+	(16, 'Mumbai', NULL, 'India'),
+	(17, 'Seattle', 'WA', 'USA'),
+	(18, 'Redmond', 'WA', 'USA'),
+	(19, 'Watertown', 'MA', 'USA'),
+	(20, 'Rutland', 'MA', 'USA'),
+	(21, 'Daphne', 'AL', 'USA'),
+	(22, NULL, NULL, 'India'),
+	(23, 'Atlanta', 'GA', 'USA'),
+	(24, 'Norwell', 'MA', 'USA'),
+	(25, 'Westford', 'MA', 'USA'),
+	(26, 'Syracuse', 'NY', 'USA'),
+	(27, 'Sturbridge', 'MA', 'USA'),
+	(28, 'Dubai', NULL, 'United Arab Emirates'),
+	(29, 'Sanford', 'ME', 'USA'),
+	(30, 'Bayside', 'NY', 'USA'),
+	(31, 'Bhopal', NULL, 'India'),
+	(33, 'Brussels', NULL,'Belgium'),
+	(34, 'Phoenixville', 'PA', 'USA'),
+	(35, 'Ashford', 'CT', 'USA'),
+	(39, 'Istanbul', NULL, 'Turkey'),
+	(40, 'Lancaster', 'PA', 'USA'),
+	(41, 'Walnut Creek', 'CA', 'USA'),
+	(42, 'Santa Barbara', 'CA', 'USA'),
+	(43, 'Kingston', 'MA', 'USA'),
+	(44, 'Barrington', 'IL', 'USA'),
+	(45, 'Concord', 'MA', 'USA'),
+	(46, 'Chattanooga', 'TN', 'USA'),
+	(48, 'West Babylon', 'NY', 'USA'),
+	(49, NULL, NULL, 'China'),
+	(52, 'New Hyde Park', 'NY', 'USA'),
+	(53, 'Westwood', 'MA', 'USA'),
+	(55, 'Brookfield', 'WI', 'USA'),
+	(56, 'San Francisco', 'CA', 'USA'),
+	(57, 'Mill Valley', 'CA', 'USA'),
+	(58, 'Buffalo', 'NY', 'USA'),
+	(59, 'Newton', 'MA', 'USA'),
+	(60, 'Scranton', 'PA', 'USA'),
+	(61, 'San Jose', 'CA', 'USA'),
+	(62, 'Bourne', 'MA', 'USA'),
+	(63, 'Newark', 'DE', 'USA'),
+	(64, 'Mercer Island', 'WA', 'USA'),
+	(65, 'Beijing', NULL, China),
+	(66, 'Los Angeles', 'CA', 'USA'),
+	(67, 'Pearl River', 'NY', 'USA'),
+	(68, 'Bangalore', NULL, 'India'),
+	(69, 'Franklin Lakes', 'NJ', 'USA'),
+	(70, 'Westborough', 'MA', 'USA'),
+	(71, 'Alnmouth', NULL, 'United Kingdom'),
+	(72, 'Rye', 'NH', 'USA'),
+	(73, 'Wayne', 'NJ', 'USA'),
+	(74, 'Oakland', 'CA', 'USA'),
+	(75, 'Denver', 'CO', 'USA'),
+	(76, 'Caracas', NULL, 'Venezuela'),
+	(77, 'Woodbridge', 'CT', 'USA'),
+	(78, 'South Orange', 'NJ', 'USA'),
+	(79, 'Groton', 'MA', 'USA'),
+	(80, 'Edison', 'NJ', 'USA'),
+	(81, 'Worcester', 'MA', 'USA'),
+	(82, 'Bridgewater', 'MA', 'USA'),
+	(83, 'Plantation', 'FL', 'USA'),
+	(84, 'Toronto', NULL, 'Canada'),
+	(85, 'Taipei', NULL, 'Taiwan'),
+	(87, 'Perth Amboy', 'NJ', 'USA'),
+	(88, 'Horsham', 'PA', 'USA'),
+	(89, 'Blue Bell', 'PA', 'USA'),
+	(90, 'Brooklyn', 'NY', 'USA'),
+	(91, 'Las Cruces', 'NM', 'USA'),
+	(93, 'Billerica', 'MA', 'USA'),
+	(94, 'North Andover', 'MA', 'USA'),
+	(95, 'Old Bethpage', 'NY', 'USA'),
+	(97, 'Jackson', 'NJ', 'USA');
 
-insert into survey_loc values
+insert into survey_location values
 	(0, 'dorm'),
 	(1, 'Richards'),
 	(2, 'St. Louis'),
@@ -299,13 +286,13 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(2, 14, 6, 38, 1, 7, 8),
 	(3, 44, 88, 14, 1, 4, 6),
 	(4, 55, 13, 14, 3, 4, 8),
-	(5, 4, 36, 14, 4, 2, 2),
-	(6, 55, 38, 14, 5, 6, 10),
-	(7, 22, 96, 14, 6, 1, 1),
+	(5, 4, 16, 14, 4, 2, 2),
+	(6, 55, 16, 14, 5, 6, 10),
+	(7, 22, 59, 14, 6, 1, 1),
 	(8, 44, 80, 1, 1, 3, 8),
 	(9, 55, 65, 14, 8, 1, 1),
 	(10, 44, 68, 14, 1, 1, 1),
-	(11, 55, 92, 14, 1, 8, 8),
+	(11, 55, 31, 14, 1, 8, 8),
 	(12, 55, 31, 14, 11, 1, 10),
 	(13, 55, 16, 14, 8, 1, 1),
 	(14, 37, 94, 16, 13, 3, 3),
@@ -320,11 +307,11 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(23, 66, 5, 30, 22, 1, 1),
 	(24, 72, 82, 30, 1, 1, 1),
 	(25, 5, 22, 30, 24, 9, 9),
-	(26, 48, 54, 30, 25, 2, 2),
+	(26, 48, 16, 30, 25, 2, 2),
 	(27, 16, 24, 30, 26, 6, 8),
-	(28, 21, 54, 30, 27, 1, 1),
+	(28, 21, 16, 30, 27, 1, 1),
 	(29, 49, 11, 30, 28, 7, 2),
-	(30, 9, 86, 9, 29, 9, 8),
+	(30, 9, 65, 9, 29, 9, 8),
 	(31, 51, 83, 39, 1, 10, 10),
 	(32, 11, 12, 30, 1, 4, 10),
 	(33, 66, 14, 30, 32, 4, 4),
@@ -347,13 +334,13 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(50, 59, 74, 27, 49, 8, 8),
 	(51, 68, 20, 14, 1, 1, 4),
 	(52, 66, 93, 32, 51, 2, 4),
-	(53, 26, 99, 10, 1, 4, 7),
-	(54, 0, 32, 36, 53, 1, 6),
-	(55, 8, 50, 22, 54, 1, 1),
+	(53, 26, 2, 10, 1, 4, 7),
+	(54, 0, 17, 36, 53, 1, 6),
+	(55, 8, 14, 22, 54, 1, 1),
 	(56, 30, 75, 32, 8, 2, 3),
-	(57, 44, 37, 7, 1, 1, 1),
+	(57, 44, 9, 7, 1, 1, 1),
 	(58, 65, 18, 7, 57, 1, 10),
-	(59, 17, 47, 32, 58, 5, 8),
+	(59, 17, 10, 32, 58, 5, 8),
 	(60, 57, 57, 7, 1, 1, 1),
 	(61, 32, 44, 18, 60, 1, 1),
 	(62, 1, 42, 52, 1, 1, 1),
@@ -365,7 +352,7 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(68, 46, 67, 46, 67, 1, 1),
 	(69, 57, 29, 28, 1, 1, 1),
 	(70, 18, 55, 7, 69, 1, 1),
-	(71, 70, 51, 40, 70, 1, 1),
+	(71, 70, 1, 40, 70, 1, 1),
 	(72, 39, 81, 3, 1, 2, 2),
 	(73, 27, 59, 45, 72, 1, 1),
 	(74, 66, 41, 13, 47, 6, 9),
@@ -395,7 +382,7 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(98, 61, 58, 29, 1, 1, 8),
 	(99, 31, 8, 22, 98, 1, 1),
 	(100, 58, 60, 3, 99, 1, 4),
-	(101, 44, 98, 31, 100, 3, 2),
+	(101, 44, 56, 31, 100, 3, 2),
 	(102, 3, 69, 37, 1, 1, 2),
 	(103, 25, 52, 7, 102, 3, 1),
 	(104, 44, 90, 54, 1, 5, 5),
@@ -461,30 +448,42 @@ insert into sticker (sticker_id, text, width, height, color_id) values (27, "Rad
 insert into sticker (sticker_id, width, height, color_id) values (28, 3, 3, 8);
 insert into sticker (sticker_id, width, height, color_id) values (29, 2, 1, 0);
 
-insert into person_has_sticker (person_id, sticker_id) values (45, 0);
-insert into person_has_sticker (person_id, sticker_id) values (45, 1);
+insert into person_has_sticker (person_id, sticker_id) values (44, 0);
+insert into person_has_sticker (person_id, sticker_id) values (44, 1);
 
-insert into person_has_sticker (person_id, sticker_id) values (46, 2);
-insert into person_has_sticker (person_id, sticker_id) values (46, 3);
-insert into person_has_sticker (person_id, sticker_id) values (46, 4);
-insert into person_has_sticker (person_id, sticker_id) values (46, 5);
-insert into person_has_sticker (person_id, sticker_id) values (46, 6);
+insert into person_has_sticker (person_id, sticker_id) values (45, 2);
+insert into person_has_sticker (person_id, sticker_id) values (45, 3);
+insert into person_has_sticker (person_id, sticker_id) values (45, 4);
+insert into person_has_sticker (person_id, sticker_id) values (45, 5);
+insert into person_has_sticker (person_id, sticker_id) values (45, 6);
 
-insert into person_has_sticker (person_id, sticker_id) values (51, 7);
-insert into person_has_sticker (person_id, sticker_id) values (51, 8);
-insert into person_has_sticker (person_id, sticker_id) values (51, 9);
-insert into person_has_sticker (person_id, sticker_id) values (51, 10);
-insert into person_has_sticker (person_id, sticker_id) values (51, 11);
-insert into person_has_sticker (person_id, sticker_id) values (51, 12);
-insert into person_has_sticker (person_id, sticker_id) values (51, 13);
+insert into person_has_sticker (person_id, sticker_id) values (50, 7);
+insert into person_has_sticker (person_id, sticker_id) values (50, 8);
+insert into person_has_sticker (person_id, sticker_id) values (50, 9);
+insert into person_has_sticker (person_id, sticker_id) values (50, 10);
+insert into person_has_sticker (person_id, sticker_id) values (50, 11);
+insert into person_has_sticker (person_id, sticker_id) values (50, 12);
+insert into person_has_sticker (person_id, sticker_id) values (50, 13);
 
-insert into person_has_sticker (person_id, sticker_id) values (52, 14);
+insert into person_has_sticker (person_id, sticker_id) values (51, 14);
 
-insert into person_has_sticker (person_id, sticker_id) values (59, 15);
-insert into person_has_sticker (person_id, sticker_id) values (59, 16);
-insert into person_has_sticker (person_id, sticker_id) values (59, 17);
-insert into person_has_sticker (person_id, sticker_id) values (59, 18);
-insert into person_has_sticker (person_id, sticker_id) values (59, 19);
+insert into person_has_sticker (person_id, sticker_id) values (58, 15);
+insert into person_has_sticker (person_id, sticker_id) values (58, 16);
+insert into person_has_sticker (person_id, sticker_id) values (58, 17);
+insert into person_has_sticker (person_id, sticker_id) values (58, 18);
+insert into person_has_sticker (person_id, sticker_id) values (58, 19);
+
+insert into person_has_sticker (person_id, sticker_id) values (59, 20);
+insert into person_has_sticker (person_id, sticker_id) values (59, 21);
+insert into person_has_sticker (person_id, sticker_id) values (59, 22);
+insert into person_has_sticker (person_id, sticker_id) values (59, 23);
+insert into person_has_sticker (person_id, sticker_id) values (59, 24);
+insert into person_has_sticker (person_id, sticker_id) values (59, 25);
+insert into person_has_sticker (person_id, sticker_id) values (59, 26);
+insert into person_has_sticker (person_id, sticker_id) values (59, 27);
+insert into person_has_sticker (person_id, sticker_id) values (59, 28);
+insert into person_has_sticker (person_id, sticker_id) values (59, 29);
+
 
 
 
