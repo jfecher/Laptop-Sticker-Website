@@ -50,7 +50,7 @@ DROP TABLE IF EXISTS laptop ;
 
 CREATE TABLE IF NOT EXISTS laptop (
   laptop_id INT NOT NULL,
-  screen_size DECIMAL(3,1) NOT NULL,
+  screen_size INT NOT NULL,
   brand VARCHAR(45) NULL,
   model VARCHAR(45) NULL,
   PRIMARY KEY (laptop_id))
