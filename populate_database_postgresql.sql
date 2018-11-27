@@ -163,7 +163,7 @@ insert into laptop values
 	(22, 13, 'Apple', 'MacBook'),
 	(26, 13, 'Lenovo', 'Yoga'),
 	(28, 15, 'HP', 'EliteBook'),
-	(29, 13, 'Apple', 'Macbook Air'),
+	(29, 13, 'Apple', 'MacBook Air'),
 	(32, 13, 'Lenovo', 'IdeaPad'),
 	(34, 13, 'Toshiba', 'Satellite'),
 	(35, 15, 'Dell', 'Precision'),
@@ -171,8 +171,8 @@ insert into laptop values
 	(47, 11, 'Apple', 'MacBook Air'),
 	(48, 15, 'Asus', 'K501LX'),
 	(53, 10, 'Microsoft', 'Surface Pro'),
-	(58, 15, 'Apple', 'Macbook Pro'),
-	(63, 15, 'Apple', 'Macbook'),
+	(58, 15, 'Apple', 'MacBook Pro'),
+	(63, 15, 'Apple', 'MacBook'),
 	(64, 15, 'Acer', 'Nitro'),
 	(67, 17, 'Asus', 'Notebook'),
 	(69, 15, 'Asus', 'K501UW'),
@@ -512,7 +512,7 @@ insert into person_has_sticker values
 
 ---------------------------
 
--- Stickers for person_ids 1-20
+-- Stickers for person_ids 1-20 (rows 2-21)
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (68, "CCIS", 2, 2, 1, 3),
