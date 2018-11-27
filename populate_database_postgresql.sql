@@ -399,6 +399,19 @@ insert into brand (brand_id, name) values (7, "Harmonix");
 insert into brand (brand_id, name) values (8, "Sony");
 insert into brand (brand_id, name) values (9, "Dirty Floor Brown Ale");
 insert into brand (brand_id, name) values (10, "Heartwood");
+insert into brand (brand_id, name) values (11, "NUPD");
+insert into brand (brand_id, name) values (12, "B-Side Label");
+insert into brand (brand_id, name) values (13, "Bluefish Cove");
+insert into brand (brand_id, name) values (14, "Lamplighter Brewing Company");
+insert into brand (brand_id, name) values (15, "Elizabeth Warren");
+insert into brand (brand_id, name) values (16, "Meiji University");
+insert into brand (brand_id, name) values (17, "Giraffe House");
+insert into brand (brand_id, name) values (18, "Cliff's Tattoo");
+insert into brand (brand_id, name) values (19, "Life is Good");
+
+
+
+
 
 insert into color (color_id, name) values (0, "Black");
 insert into color (color_id, name) values (1, "Red");
@@ -409,6 +422,10 @@ insert into color (color_id, name) values (5, "Silver");
 insert into color (color_id, name) values (6, "Orange");
 insert into color (color_id, name) values (7, "Yellow");
 insert into color (color_id, name) values (8, "Green");
+insert into color (color_id, name) values (9, "Pink");
+insert into color (color_id, name) values (10, "Beige");
+insert into color (color_id, name) values (11, "Purple");
+insert into color (color_id, name) values (12, "Rainbow");
 
 
 
@@ -483,3 +500,101 @@ insert into person_has_sticker (person_id, sticker_id) values (59, 26);
 insert into person_has_sticker (person_id, sticker_id) values (59, 27);
 insert into person_has_sticker (person_id, sticker_id) values (59, 28);
 insert into person_has_sticker (person_id, sticker_id) values (59, 29);
+
+
+-- Rows 21-40 (Persons 20-39) ------------------------
+insert into sticker (sticker_id, text, width, height, color_id, price, brand_id) values
+	(30, "faith > fear", 2, 1, 0, 4, null),
+	(31, "#DANCER", 4, 1, 0, 4, null),
+	(32, "Radiate Positivity", 4, 1, 7, 3, null),
+	(33, "Black Lives Matter",4, 1, 0, 3, null),
+	(34, null, 3, 2, 0, 3, null),
+	(35, "Sigma Kappa", 4, 2, 0, 4, null),
+	(36, "Friends", 4, 1 , 0, 4, 0),
+	(37,"Dogs", 3, 3, 9, 3, null),
+	(38, "all you need is ice cream", 1, 4, 10, 3, null),
+	(39, null, 3, 3, 7, 3, null);
+
+insert into sticker (sticker_id, text, width, height, color_id, price, brand_id) values
+	(40, "Warning: Police Identifiable", 3, 2, 1, 0, 11),
+	(41, "Security Tracking of Office Property", 3, 2, 1, 0, 11);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(42, "Let's Travel", 2, 2, 0, 12),
+	(43, "Bluefish Cove",7, 5, 4, 13),
+	(44, "Lamplighter Brewing Company", 5, 5, 3, 14),
+	(45, "Persist", 4, 13, 1, 14),
+	(46, "Meiji University", 2, 2, 0, 16),
+	(47, "School of Politcal Science and Economics", 2, 2, 0, 16),
+	(48, "Kyoto Limited", 2, 3, 6, 12);
+	
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(49, null, 3, 5, 9, null);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(50, "Dragon Prayer Book", 2, 4, 1, null),
+	(51, "Ni hao", 3, 3, 1, null),
+	(52, "In Darkness Let Me Dwell", 3, 5, 9, 17),
+	(53, "Northeastern University", 8, 4, 1, 3),
+	(54, "NULab", 3, 3, 1, 3),
+	(55, null, 8, 3, 4, null),
+	(57, "Giraffe House", 3, 3, 9, 11);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(58, null, 2, 5, 4, null),
+	(59, null, 3, 3, 2, null),
+	(60, "Cliff's Tattoo", 2, 2, 0, 18),
+	(61, null, 4, 3, 0, null),
+	(62, null, 5, 2, 0, null),
+	(63, "be happy", 4, 3, 12, null),
+	(64, null, 1, 1, 0, null),
+	(65, "Life is Good", 4, 4, 2, 19),
+	(66, null, 4, 2, 11, null),
+	(67, "Ban The Bottle Save The Planet", 3, 3, 4, null);
+
+
+insert into person_has_sticker values
+	(21, 30),
+	(21, 31),
+	(21, 32),
+	(21, 33),
+	(21, 34),
+	(21, 35),
+	(21, 36),
+	(21, 37),
+	(21, 38),
+	(21, 39),
+	(25, 40),
+	(25, 41),
+	(27, 42),
+	(27, 43),
+	(27, 44),
+	(27, 45),
+	(27, 46),
+	(27, 47),
+	(27, 48);
+	(30, 49),
+	(31, 50),
+	(31, 51),
+	(31, 52),
+	(31, 53),
+	(31, 54),
+	(31, 55),
+	(31, 56),
+	(31, 57),
+	(32, 58),
+	(32, 59),
+	(32, 60),
+	(32, 61),
+	(32, 62),
+	(32, 63),
+	(32, 64),
+	(32, 65),
+	(32, 66),
+	(32, 67),
+	(32, 29);
+
+---------------------------
+
+
+
