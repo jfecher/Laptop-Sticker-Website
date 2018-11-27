@@ -343,7 +343,7 @@ insert into color (color_id, name) values (10, "Beige");
 insert into color (color_id, name) values (11, "Purple");
 insert into color (color_id, name) values (12, "Rainbow");
 
-
+-- rows 41-60, person_ids 40-59
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (0, "Dunder Mifflin Paper Company", 2, 1, 0, 0);
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (1, "Swanson Pyramid of Greatness", 4, 3, 1, 0);
