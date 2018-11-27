@@ -50,10 +50,11 @@ def person_tbl(l):
         hometown_id = hometowns.index(row[3])
         survey_loc_id = survey_loc.index(row[4])
         laptop_id = laptops[row[6]]
-        s += "\t({}, {}, {}, {}, {}, {}, {}),\n".format(pk, major_id, hometown_id, survey_loc_id, laptop_id, row[10], row[11])
+        s += "\t({}, {}, {}, {}, {}, {}, {}),\n".format(pk+1, major_id, hometown_id, survey_loc_id, laptop_id, row[10], row[11])
     return s[0:-2]
 
-# insert into laptop (laptop_id, screen_size, brand, model) values (0, 13.0, 'Apple', 'Macbook Air');
+# Returns the list of values in:
+# insert into laptop (laptop_id, screen_size, brand, model) values (0, 13.0, 'Apple', 'Macbook Air'), ..., ...;
 def laptop_tbl(l):
     s = ""
     global laptops
