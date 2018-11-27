@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`sticker` (
   `height` INT NULL,
   `color_id` INT NOT NULL,
   `price` INT NULL,
-  `brand_id` INT NOT NULL,
+  `brand_id` INT NULL,
   PRIMARY KEY (`sticker_id`),
   INDEX `fk_sticker_color1_idx` (`color_id` ASC),
   INDEX `fk_sticker_brand1_idx` (`brand_id` ASC),

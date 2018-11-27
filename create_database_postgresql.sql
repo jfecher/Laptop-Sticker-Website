@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS color (
 DROP TABLE IF EXISTS brand ;
 
 CREATE TABLE IF NOT EXISTS brand (
-  brand_id INT NULL,
+  brand_id INT NOT NULL,
   name VARCHAR(45) NULL,
   PRIMARY KEY (brand_id))
 ;
@@ -150,7 +150,7 @@ CREATE TABLE IF NOT EXISTS sticker (
   height INT NULL,
   color_id INT NOT NULL,
   price INT NULL,
-  brand_id INT NOT NULL,
+  brand_id INT NULL,
   PRIMARY KEY (sticker_id)
  ,
   CONSTRAINT fk_sticker_color1
