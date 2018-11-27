@@ -293,43 +293,6 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(104, 1, 90, 0, 1, 5, 5),
 	(105, 1, 15, 2, 13, 1, 1);
 
-<<<<<<< HEAD
-insert into brand (brand_id, name) values (0, "NBC");
-insert into brand (brand_id, name) values (1, "Barstool Sports");
-insert into brand (brand_id, name) values (2, "Mugatunes");
-insert into brand (brand_id, name) values (3, "Northeastern University");
-insert into brand (brand_id, name) values (4, "Boston.com");
-insert into brand (brand_id, name) values (5, "2K Games");
-insert into brand (brand_id, name) values (6, "MLB");
-insert into brand (brand_id, name) values (7, "Harmonix");
-insert into brand (brand_id, name) values (8, "Sony");
-insert into brand (brand_id, name) values (9, "Dirty Floor Brown Ale");
-insert into brand (brand_id, name) values (10, "Heartwood");
-insert into brand (brand_id, name) values (11, "NUPD");
-insert into brand (brand_id, name) values (12, "B-Side Label");
-insert into brand (brand_id, name) values (13, "Bluefish Cove");
-insert into brand (brand_id, name) values (14, "Lamplighter Brewing Company");
-insert into brand (brand_id, name) values (15, "Elizabeth Warren");
-insert into brand (brand_id, name) values (16, "Meiji University");
-insert into brand (brand_id, name) values (17, "Giraffe House");
-insert into brand (brand_id, name) values (18, "Cliff's Tattoo");
-insert into brand (brand_id, name) values (19, "Life is Good");
-insert into brand (brand_id, name) values (20, "Google");
-insert into brand (brand_id, name) values (21, "Tableau");
-insert into brand (brand_id, name) values (22, "Amazon");
-insert into brand (brand_id, name) values (23, "Github");
-insert into brand (brand_id, name) values (24, "Major League Hacking");
-insert into brand (brand_id, name) values (25, "Hello Kitty");
-insert into brand (brand_id, name) values (26, "Codacity.com");
-insert into brand (brand_id, name) values (27, "Microsoft");
-insert into brand (brand_id, name) values (28, "Star Wars");
-insert into brand (brand_id, name) values (29, "Toms");
-insert into brand (brand_id, name) values (30, "Puravida");
-insert into brand (brand_id, name) values (30, "Snapchat");
-insert into brand (brand_id, name) values (31, "University of New England");
-insert into brand (brand_id, name) values (32, "Pokemon");
-insert into brand (brand_id, name) values (33, "Warner Bros");
-=======
 insert into brand (brand_id, name) values (0, 'NBC');
 insert into brand (brand_id, name) values (1, 'Barstool Sports');
 insert into brand (brand_id, name) values (2, 'Mugatunes');
@@ -362,12 +325,14 @@ insert into brand (brand_id, name) values (28, 'Star Wars');
 insert into brand (brand_id, name) values (29, 'Toms');
 insert into brand (brand_id, name) values (30, 'Puravida');
 insert into brand (brand_id, name) values (31, 'Snapchat');
->>>>>>> ef302bc5cdfda3969082efac296b1386467bd0cc
+insert into brand (brand_id, name) values (32, 'University of New England');
+insert into brand (brand_id, name) values (33, "Pokemon");
+insert into brand (brand_id, name) values (34, "Warner Bros");
 
 
 
 
-<<<<<<< HEAD
+
 insert into color (color_id, name) values (0, "Black");
 insert into color (color_id, name) values (1, "Red");
 insert into color (color_id, name) values (2, "Blue");
@@ -381,21 +346,6 @@ insert into color (color_id, name) values (9, "Pink");
 insert into color (color_id, name) values (10, "Beige");
 insert into color (color_id, name) values (11, "Purple");
 insert into color (color_id, name) values (12, "Rainbow");
-=======
-insert into color (color_id, name) values (0, 'Black');
-insert into color (color_id, name) values (1, 'Red');
-insert into color (color_id, name) values (2, 'Blue');
-insert into color (color_id, name) values (3, 'Gray');
-insert into color (color_id, name) values (4, 'White');
-insert into color (color_id, name) values (5, 'Silver');
-insert into color (color_id, name) values (6, 'Orange');
-insert into color (color_id, name) values (7, 'Yellow');
-insert into color (color_id, name) values (8, 'Green');
-insert into color (color_id, name) values (9, 'Pink');
-insert into color (color_id, name) values (10, 'Beige');
-insert into color (color_id, name) values (11, 'Purple');
-insert into color (color_id, name) values (12, 'Rainbow');
->>>>>>> ef302bc5cdfda3969082efac296b1386467bd0cc
 
 -- rows 41-60, person_ids 40-59
 
@@ -524,15 +474,15 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (114, "N", 4, 4, 1, 3),
-    (115, "UNE Nor'easters", 4, 3, 2, 31),
+    (115, "UNE Nor'easters", 4, 3, 2, 32),
     (116, null, 2, 3, 8, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-    (117, null, 3,2, 2, 32);
+    (117, null, 3,2, 2, 33);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(118, "B R C C", 3, 4, 0, null),
-	(119, "I solemnly swear that I am up to no good", 7, 3, 0, 33),
+	(119, "I solemnly swear that I am up to no good", 7, 3, 0, 34),
 	(120, "Walls are meant for climbing", 3, 4, 0, null),
 	(121, "2017 Eckhardt Northeast Regional Conference", 3, 3, 1, null),
 	(122, null, 2, 2, 1, null), -- Picure of brain
