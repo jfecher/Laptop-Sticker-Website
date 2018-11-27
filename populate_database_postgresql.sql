@@ -281,7 +281,7 @@ insert into laptop values
 	(100, '13"', 'Apple', 'MacBook Air (2015)'),
 	(102, '13"', 'Apple', 'Macbook Air');
 
-insert into person values
+insert into person (person_id, major_id, hometown_location_id, survey_location_id, laptop_id, likelihood_to_buy_more, likelihood_to_put_more) values
 	(1, 63, 21, 7, 0, 1, 1),
 	(2, 14, 6, 38, 1, 7, 8),
 	(3, 44, 88, 14, 1, 4, 6),
@@ -527,7 +527,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(46, "Meiji University", 2, 2, 0, 16),
 	(47, "School of Politcal Science and Economics", 2, 2, 0, 16),
 	(48, "Kyoto Limited", 2, 3, 6, 12);
-	
+
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(49, null, 3, 5, 9, null);
 
@@ -598,3 +598,110 @@ insert into person_has_sticker values
 
 
 
+
+-- date purchased updates
+update person set laptop_purchased_dt='7/20/2017' where player_id=1
+update person set laptop_purchased_dt='1/1/2017' where player_id=2
+update person set laptop_purchased_dt='9/1/2016' where player_id=3
+update person set laptop_purchased_dt='9/1/2017' where player_id=4
+update person set laptop_purchased_dt='1/1/2018' where player_id=5
+update person set laptop_purchased_dt='8/1/2017' where player_id=6
+update person set laptop_purchased_dt='9/2/2018' where player_id=7
+update person set laptop_purchased_dt='6/1/2015' where player_id=8
+update person set laptop_purchased_dt='11/15/2018' where player_id=9
+update person set laptop_purchased_dt='8/1/2013' where player_id=10
+update person set laptop_purchased_dt='1/10/2018' where player_id=11
+update person set laptop_purchased_dt='8/1/2016' where player_id=12
+update person set laptop_purchased_dt='9/4/2017' where player_id=13
+update person set laptop_purchased_dt='3/20/2017' where player_id=14
+update person set laptop_purchased_dt='3/1/2015' where player_id=15
+update person set laptop_purchased_dt='10/1/2014' where player_id=16
+update person set laptop_purchased_dt='6/20/2016' where player_id=17
+update person set laptop_purchased_dt='7/19/2014' where player_id=18
+update person set laptop_purchased_dt='10/1/2013' where player_id=19
+update person set laptop_purchased_dt='11/18/2016' where player_id=20
+update person set laptop_purchased_dt='8/3/2018' where player_id=21
+update person set laptop_purchased_dt='5/1/2016' where player_id=22
+update person set laptop_purchased_dt='6/11/2018' where player_id=23
+update person set laptop_purchased_dt='10/18/2018' where player_id=24
+update person set laptop_purchased_dt='11/10/2017' where player_id=25
+update person set laptop_purchased_dt='8/8/2016' where player_id=26
+update person set laptop_purchased_dt='1/1/2016' where player_id=27
+update person set laptop_purchased_dt='11/1/2016' where player_id=28
+update person set laptop_purchased_dt='6/10/2014' where player_id=29
+update person set laptop_purchased_dt='1/6/2018' where player_id=30
+update person set laptop_purchased_dt='9/1/2013' where player_id=31
+update person set laptop_purchased_dt='12/20/2016' where player_id=32
+update person set laptop_purchased_dt='8/10/2013' where player_id=33
+update person set laptop_purchased_dt='6/15/2017' where player_id=34
+update person set laptop_purchased_dt='5/6/2015' where player_id=35
+update person set laptop_purchased_dt='8/30/2018' where player_id=36
+update person set laptop_purchased_dt='1/1/2015' where player_id=37
+update person set laptop_purchased_dt='11/16/2018' where player_id=38
+update person set laptop_purchased_dt='8/12/2015' where player_id=39
+update person set laptop_purchased_dt='8/22/2018' where player_id=40
+update person set laptop_purchased_dt='8/15/2015' where player_id=41
+update person set laptop_purchased_dt='8/15/2017' where player_id=42
+update person set laptop_purchased_dt='8/28/2017' where player_id=43
+update person set laptop_purchased_dt='6/30/2016' where player_id=44
+update person set laptop_purchased_dt='6/1/2014' where player_id=45
+update person set laptop_purchased_dt='9/1/2017' where player_id=46
+update person set laptop_purchased_dt='11/1/2012' where player_id=47
+update person set laptop_purchased_dt='2/5/2015' where player_id=48
+update person set laptop_purchased_dt='6/9/2016' where player_id=49
+update person set laptop_purchased_dt='12/1/2016' where player_id=50
+update person set laptop_purchased_dt='9/15/2015' where player_id=51
+update person set laptop_purchased_dt='8/15/2015' where player_id=52
+update person set laptop_purchased_dt='1/5/2015' where player_id=53
+update person set laptop_purchased_dt='12/22/2017' where player_id=54
+update person set laptop_purchased_dt='9/1/2016' where player_id=55
+update person set laptop_purchased_dt='6/30/2014' where player_id=56
+update person set laptop_purchased_dt='8/12/2018' where player_id=57
+update person set laptop_purchased_dt='6/1/2013' where player_id=58
+update person set laptop_purchased_dt='8/1/2015' where player_id=59
+update person set laptop_purchased_dt='7/1/2015' where player_id=60
+update person set laptop_purchased_dt='9/1/2018' where player_id=61
+update person set laptop_purchased_dt='8/5/2017' where player_id=62
+update person set laptop_purchased_dt='12/24/2017' where player_id=63
+update person set laptop_purchased_dt='7/15/2016' where player_id=64
+update person set laptop_purchased_dt='11/20/2017' where player_id=65
+update person set laptop_purchased_dt='11/18/2018' where player_id=66
+update person set laptop_purchased_dt='8/1/2018' where player_id=67
+update person set laptop_purchased_dt='12/28/2017' where player_id=68
+update person set laptop_purchased_dt='4/1/2017' where player_id=69
+update person set laptop_purchased_dt='8/17/2017' where player_id=70
+update person set laptop_purchased_dt='8/8/2018' where player_id=71
+update person set laptop_purchased_dt='6/15/2017' where player_id=72
+update person set laptop_purchased_dt='11/26/2017' where player_id=73
+update person set laptop_purchased_dt='6/20/2014' where player_id=74
+update person set laptop_purchased_dt='11/23/2017' where player_id=75
+update person set laptop_purchased_dt='6/1/2018' where player_id=76
+update person set laptop_purchased_dt='8/27/2017' where player_id=77
+update person set laptop_purchased_dt='3/13/2017' where player_id=78
+update person set laptop_purchased_dt='6/6/2018' where player_id=79
+update person set laptop_purchased_dt='6/1/2018' where player_id=80
+update person set laptop_purchased_dt='10/18/2015' where player_id=81
+update person set laptop_purchased_dt='10/15/2018' where player_id=82
+update person set laptop_purchased_dt='12/15/2017' where player_id=83
+update person set laptop_purchased_dt='8/15/2018' where player_id=84
+update person set laptop_purchased_dt='8/24/2017' where player_id=85
+update person set laptop_purchased_dt='11/1/2015' where player_id=86
+update person set laptop_purchased_dt='6/4/2016' where player_id=87
+update person set laptop_purchased_dt='7/8/2016' where player_id=88
+update person set laptop_purchased_dt='2/14/2018' where player_id=89
+update person set laptop_purchased_dt='6/11/2015' where player_id=90
+update person set laptop_purchased_dt='8/17/2017' where player_id=91
+update person set laptop_purchased_dt='6/20/2017' where player_id=92
+update person set laptop_purchased_dt='1/5/2017' where player_id=93
+update person set laptop_purchased_dt='7/5/2018' where player_id=94
+update person set laptop_purchased_dt='9/19/2016' where player_id=95
+update person set laptop_purchased_dt='12/20/2017' where player_id=96
+update person set laptop_purchased_dt='8/1/2015' where player_id=97
+update person set laptop_purchased_dt='7/1/2014' where player_id=98
+update person set laptop_purchased_dt='7/14/2018' where player_id=99
+update person set laptop_purchased_dt='6/8/2017' where player_id=100
+update person set laptop_purchased_dt='1/1/2015' where player_id=101
+update person set laptop_purchased_dt='6/22/2017' where player_id=102
+update person set laptop_purchased_dt='8/1/2015' where player_id=103
+update person set laptop_purchased_dt='8/1/2018' where player_id=104
+update person set laptop_purchased_dt='4/30/2018' where player_id=105
