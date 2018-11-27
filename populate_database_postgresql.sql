@@ -408,7 +408,18 @@ insert into brand (brand_id, name) values (16, "Meiji University");
 insert into brand (brand_id, name) values (17, "Giraffe House");
 insert into brand (brand_id, name) values (18, "Cliff's Tattoo");
 insert into brand (brand_id, name) values (19, "Life is Good");
-
+insert into brand (brand_id, name) values (20, "Google");
+insert into brand (brand_id, name) values (21, "Tableau");
+insert into brand (brand_id, name) values (22, "Amazon");
+insert into brand (brand_id, name) values (23, "Github");
+insert into brand (brand_id, name) values (24, "Major League Hacking");
+insert into brand (brand_id, name) values (25, "Hello Kitty");
+insert into brand (brand_id, name) values (26, "Codacity.com");
+insert into brand (brand_id, name) values (27, "Microsoft");
+insert into brand (brand_id, name) values (28, "Star Wars");
+insert into brand (brand_id, name) values (29, "Toms");
+insert into brand (brand_id, name) values (30, "Puravida");
+insert into brand (brand_id, name) values (30, "Snapchat");
 
 
 
@@ -596,112 +607,221 @@ insert into person_has_sticker values
 
 ---------------------------
 
+-- Stickers for person_ids 1-20
 
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+    (68, "CCIS", 2, 2, 1, 3),
+    (69, "We the People of the United States, I Voted Today", 2, 2, 10, null),
+    (70, "Husky Environmental Action Team HEAT", 3, 3, 10, 3),
+
+    (71, "NUHACKS", 3, 2, 2, 3),
+    (72, "Nuacm", 2, 2, 2, 3),
+
+    (73, "Google", 4, 1, 12, 20),
+    (74, null, 2, 2, 2, null),  -- binoculars inside blue square
+    (75, null, 2, 2, 11, null),  -- atom inside purple square
+    (76, "Awesome Day 2018", 2, 2, 2, 22), -- amazon
+    (77, null, 2, 3, 4, null),  -- robot with blue eyes?
+    (78, "NU ACES", 4, 1, 0, 3),
+    (79, "Who's Your Data?", 2, 2, 2, 21),
+    (80, null, 2, 2, 0, 3), --husky paw print
+
+    (81, "2019 Hackathon Season", 3, 3, 0, 24),
+    (82, null, 3, 2, 4, 20), --gmail
+    (83, null, 2, 3, 8, 20), --android
+    (84, "MLH Hardware Lab Presented By Digi-Key", 4, 2, 8, 24),
+    (85, null, 1, 2, 6, 23), --github bag
+
+    (86, "I ate something yummy", 2, 2, 9, 25),
+
+    (87, "Ask Why", 3, 1, 0, null),
+    (88, "Solve Together", 3, 2, 10, null),
+    (89, "Friends Close, Bad Code Closer!", 2, 3, 0, 26),
+
+    (90, null, 11, 8, 12, null),
+
+    (91, null, 3, 3, 12, 27),
+    (92, "NATIONAL clean Energy WEEK", 4, 4, 4, null), -- yes, it was capitalized like this
+
+    (93, null, 3, 3, 8, 28), -- yoda sticker
+    (94, "We Are All Wonder Women!", 3, 2, 4, null),
+
+    (95, "ふにふに", 2, 1, 4, null), -- "funi funi" in japanese with hamster picture
+
+    (96, "Police Public Call Box", 11, 5, 2, null),
+
+    (97, "TOMS", 4, 3, 2, 29),
+    (98, "CCIS", 2, 1, 4, 3),
+    (99, null, 3, 2, 2, null), -- blue butterfly
+    (100, "puravida bracelets", 3, 1, 2, 30),
+    (101, "N Northeastern", 1, 1, 1, 3),
+    (102, null, 2, 2, 7, null), -- simley face with blurry writing on mouth
+    (103, null, 1, 1, 0, 3), -- face of NU Husky
+    (104, null, 1, 1, 0, 3), -- NU paw print, small version
+    (105, "I [whale] BOSTON", 3, 2, 4, null),
+    (106, null, 1, 1, 4, 31), -- snapchat ghost
+    (107, "Northeastern", 5, 1, 4, 3), -- yet another northeastern sticker
+    (108, null, 3, 3, 11, null), -- some purple flame/symbol?
+    (109, "California Republic", 5, 5, 10, null), -- flag of california
+    (110, "H", 2, 3, 2, null), -- individual letters with pictures of palm trees
+    (111, "E", 2, 3, 2, null),
+    (112, ">", 2, 3, 2, null),
+    (113, "i", 1, 3, 2, null);
+
+-- person then sticker
+insert into person_has_sticker values
+    (2, 68),
+    (2, 69),
+    (2, 70),
+    (3, 71),
+    (3, 72),
+    (4, 73),
+    (4, 74),
+    (4, 75),
+    (4, 76),
+    (4, 77),
+    (4, 78),
+    (4, 79),
+    (4, 80),
+    (6, 81),
+    (6, 82),
+    (6, 83),
+    (6, 84),
+    (6, 85),
+    (8, 86),
+    (10, 87),
+    (10, 88),
+    (10, 89),
+    (11, 90),
+    (12, 91),
+    (12, 92),
+    (14, 93),
+    (14, 94),
+    (16, 80), -- the husky paw print sticker - repeated!
+    (17, 95),
+    (18, 96),
+    (20, 97),
+    (20, 98),
+    (20, 99),
+    (20, 100),
+    (20, 101),
+    (20, 102),
+    (20, 103),
+    (20, 104),
+    (20, 105),
+    (20, 106),
+    (20, 107),
+    (20, 108),
+    (20, 109),
+    (20, 110),
+    (20, 111),
+    (20, 112),
+    (20, 113),
 
 
 -- date purchased updates
-update person set laptop_purchased_dt='7/20/2017' where player_id=1
-update person set laptop_purchased_dt='1/1/2017' where player_id=2
-update person set laptop_purchased_dt='9/1/2016' where player_id=3
-update person set laptop_purchased_dt='9/1/2017' where player_id=4
-update person set laptop_purchased_dt='1/1/2018' where player_id=5
-update person set laptop_purchased_dt='8/1/2017' where player_id=6
-update person set laptop_purchased_dt='9/2/2018' where player_id=7
-update person set laptop_purchased_dt='6/1/2015' where player_id=8
-update person set laptop_purchased_dt='11/15/2018' where player_id=9
-update person set laptop_purchased_dt='8/1/2013' where player_id=10
-update person set laptop_purchased_dt='1/10/2018' where player_id=11
-update person set laptop_purchased_dt='8/1/2016' where player_id=12
-update person set laptop_purchased_dt='9/4/2017' where player_id=13
-update person set laptop_purchased_dt='3/20/2017' where player_id=14
-update person set laptop_purchased_dt='3/1/2015' where player_id=15
-update person set laptop_purchased_dt='10/1/2014' where player_id=16
-update person set laptop_purchased_dt='6/20/2016' where player_id=17
-update person set laptop_purchased_dt='7/19/2014' where player_id=18
-update person set laptop_purchased_dt='10/1/2013' where player_id=19
-update person set laptop_purchased_dt='11/18/2016' where player_id=20
-update person set laptop_purchased_dt='8/3/2018' where player_id=21
-update person set laptop_purchased_dt='5/1/2016' where player_id=22
-update person set laptop_purchased_dt='6/11/2018' where player_id=23
-update person set laptop_purchased_dt='10/18/2018' where player_id=24
-update person set laptop_purchased_dt='11/10/2017' where player_id=25
-update person set laptop_purchased_dt='8/8/2016' where player_id=26
-update person set laptop_purchased_dt='1/1/2016' where player_id=27
-update person set laptop_purchased_dt='11/1/2016' where player_id=28
-update person set laptop_purchased_dt='6/10/2014' where player_id=29
-update person set laptop_purchased_dt='1/6/2018' where player_id=30
-update person set laptop_purchased_dt='9/1/2013' where player_id=31
-update person set laptop_purchased_dt='12/20/2016' where player_id=32
-update person set laptop_purchased_dt='8/10/2013' where player_id=33
-update person set laptop_purchased_dt='6/15/2017' where player_id=34
-update person set laptop_purchased_dt='5/6/2015' where player_id=35
-update person set laptop_purchased_dt='8/30/2018' where player_id=36
-update person set laptop_purchased_dt='1/1/2015' where player_id=37
-update person set laptop_purchased_dt='11/16/2018' where player_id=38
-update person set laptop_purchased_dt='8/12/2015' where player_id=39
-update person set laptop_purchased_dt='8/22/2018' where player_id=40
-update person set laptop_purchased_dt='8/15/2015' where player_id=41
-update person set laptop_purchased_dt='8/15/2017' where player_id=42
-update person set laptop_purchased_dt='8/28/2017' where player_id=43
-update person set laptop_purchased_dt='6/30/2016' where player_id=44
-update person set laptop_purchased_dt='6/1/2014' where player_id=45
-update person set laptop_purchased_dt='9/1/2017' where player_id=46
-update person set laptop_purchased_dt='11/1/2012' where player_id=47
-update person set laptop_purchased_dt='2/5/2015' where player_id=48
-update person set laptop_purchased_dt='6/9/2016' where player_id=49
-update person set laptop_purchased_dt='12/1/2016' where player_id=50
-update person set laptop_purchased_dt='9/15/2015' where player_id=51
-update person set laptop_purchased_dt='8/15/2015' where player_id=52
-update person set laptop_purchased_dt='1/5/2015' where player_id=53
-update person set laptop_purchased_dt='12/22/2017' where player_id=54
-update person set laptop_purchased_dt='9/1/2016' where player_id=55
-update person set laptop_purchased_dt='6/30/2014' where player_id=56
-update person set laptop_purchased_dt='8/12/2018' where player_id=57
-update person set laptop_purchased_dt='6/1/2013' where player_id=58
-update person set laptop_purchased_dt='8/1/2015' where player_id=59
-update person set laptop_purchased_dt='7/1/2015' where player_id=60
-update person set laptop_purchased_dt='9/1/2018' where player_id=61
-update person set laptop_purchased_dt='8/5/2017' where player_id=62
-update person set laptop_purchased_dt='12/24/2017' where player_id=63
-update person set laptop_purchased_dt='7/15/2016' where player_id=64
-update person set laptop_purchased_dt='11/20/2017' where player_id=65
-update person set laptop_purchased_dt='11/18/2018' where player_id=66
-update person set laptop_purchased_dt='8/1/2018' where player_id=67
-update person set laptop_purchased_dt='12/28/2017' where player_id=68
-update person set laptop_purchased_dt='4/1/2017' where player_id=69
-update person set laptop_purchased_dt='8/17/2017' where player_id=70
-update person set laptop_purchased_dt='8/8/2018' where player_id=71
-update person set laptop_purchased_dt='6/15/2017' where player_id=72
-update person set laptop_purchased_dt='11/26/2017' where player_id=73
-update person set laptop_purchased_dt='6/20/2014' where player_id=74
-update person set laptop_purchased_dt='11/23/2017' where player_id=75
-update person set laptop_purchased_dt='6/1/2018' where player_id=76
-update person set laptop_purchased_dt='8/27/2017' where player_id=77
-update person set laptop_purchased_dt='3/13/2017' where player_id=78
-update person set laptop_purchased_dt='6/6/2018' where player_id=79
-update person set laptop_purchased_dt='6/1/2018' where player_id=80
-update person set laptop_purchased_dt='10/18/2015' where player_id=81
-update person set laptop_purchased_dt='10/15/2018' where player_id=82
-update person set laptop_purchased_dt='12/15/2017' where player_id=83
-update person set laptop_purchased_dt='8/15/2018' where player_id=84
-update person set laptop_purchased_dt='8/24/2017' where player_id=85
-update person set laptop_purchased_dt='11/1/2015' where player_id=86
-update person set laptop_purchased_dt='6/4/2016' where player_id=87
-update person set laptop_purchased_dt='7/8/2016' where player_id=88
-update person set laptop_purchased_dt='2/14/2018' where player_id=89
-update person set laptop_purchased_dt='6/11/2015' where player_id=90
-update person set laptop_purchased_dt='8/17/2017' where player_id=91
-update person set laptop_purchased_dt='6/20/2017' where player_id=92
-update person set laptop_purchased_dt='1/5/2017' where player_id=93
-update person set laptop_purchased_dt='7/5/2018' where player_id=94
-update person set laptop_purchased_dt='9/19/2016' where player_id=95
-update person set laptop_purchased_dt='12/20/2017' where player_id=96
-update person set laptop_purchased_dt='8/1/2015' where player_id=97
-update person set laptop_purchased_dt='7/1/2014' where player_id=98
-update person set laptop_purchased_dt='7/14/2018' where player_id=99
-update person set laptop_purchased_dt='6/8/2017' where player_id=100
-update person set laptop_purchased_dt='1/1/2015' where player_id=101
-update person set laptop_purchased_dt='6/22/2017' where player_id=102
-update person set laptop_purchased_dt='8/1/2015' where player_id=103
-update person set laptop_purchased_dt='8/1/2018' where player_id=104
-update person set laptop_purchased_dt='4/30/2018' where player_id=105
+update person set laptop_purchased_dt='7/20/2017' where person_id=1
+update person set laptop_purchased_dt='1/1/2017' where person_id=2
+update person set laptop_purchased_dt='9/1/2016' where person_id=3
+update person set laptop_purchased_dt='9/1/2017' where person_id=4
+update person set laptop_purchased_dt='1/1/2018' where person_id=5
+update person set laptop_purchased_dt='8/1/2017' where person_id=6
+update person set laptop_purchased_dt='9/2/2018' where person_id=7
+update person set laptop_purchased_dt='6/1/2015' where person_id=8
+update person set laptop_purchased_dt='11/15/2018' where person_id=9
+update person set laptop_purchased_dt='8/1/2013' where person_id=10
+update person set laptop_purchased_dt='1/10/2018' where person_id=11
+update person set laptop_purchased_dt='8/1/2016' where person_id=12
+update person set laptop_purchased_dt='9/4/2017' where person_id=13
+update person set laptop_purchased_dt='3/20/2017' where person_id=14
+update person set laptop_purchased_dt='3/1/2015' where person_id=15
+update person set laptop_purchased_dt='10/1/2014' where person_id=16
+update person set laptop_purchased_dt='6/20/2016' where person_id=17
+update person set laptop_purchased_dt='7/19/2014' where person_id=18
+update person set laptop_purchased_dt='10/1/2013' where person_id=19
+update person set laptop_purchased_dt='11/18/2016' where person_id=20
+update person set laptop_purchased_dt='8/3/2018' where person_id=21
+update person set laptop_purchased_dt='5/1/2016' where person_id=22
+update person set laptop_purchased_dt='6/11/2018' where person_id=23
+update person set laptop_purchased_dt='10/18/2018' where person_id=24
+update person set laptop_purchased_dt='11/10/2017' where person_id=25
+update person set laptop_purchased_dt='8/8/2016' where person_id=26
+update person set laptop_purchased_dt='1/1/2016' where person_id=27
+update person set laptop_purchased_dt='11/1/2016' where person_id=28
+update person set laptop_purchased_dt='6/10/2014' where person_id=29
+update person set laptop_purchased_dt='1/6/2018' where person_id=30
+update person set laptop_purchased_dt='9/1/2013' where person_id=31
+update person set laptop_purchased_dt='12/20/2016' where person_id=32
+update person set laptop_purchased_dt='8/10/2013' where person_id=33
+update person set laptop_purchased_dt='6/15/2017' where person_id=34
+update person set laptop_purchased_dt='5/6/2015' where person_id=35
+update person set laptop_purchased_dt='8/30/2018' where person_id=36
+update person set laptop_purchased_dt='1/1/2015' where person_id=37
+update person set laptop_purchased_dt='11/16/2018' where person_id=38
+update person set laptop_purchased_dt='8/12/2015' where person_id=39
+update person set laptop_purchased_dt='8/22/2018' where person_id=40
+update person set laptop_purchased_dt='8/15/2015' where person_id=41
+update person set laptop_purchased_dt='8/15/2017' where person_id=42
+update person set laptop_purchased_dt='8/28/2017' where person_id=43
+update person set laptop_purchased_dt='6/30/2016' where person_id=44
+update person set laptop_purchased_dt='6/1/2014' where person_id=45
+update person set laptop_purchased_dt='9/1/2017' where person_id=46
+update person set laptop_purchased_dt='11/1/2012' where person_id=47
+update person set laptop_purchased_dt='2/5/2015' where person_id=48
+update person set laptop_purchased_dt='6/9/2016' where person_id=49
+update person set laptop_purchased_dt='12/1/2016' where person_id=50
+update person set laptop_purchased_dt='9/15/2015' where person_id=51
+update person set laptop_purchased_dt='8/15/2015' where person_id=52
+update person set laptop_purchased_dt='1/5/2015' where person_id=53
+update person set laptop_purchased_dt='12/22/2017' where person_id=54
+update person set laptop_purchased_dt='9/1/2016' where person_id=55
+update person set laptop_purchased_dt='6/30/2014' where person_id=56
+update person set laptop_purchased_dt='8/12/2018' where person_id=57
+update person set laptop_purchased_dt='6/1/2013' where person_id=58
+update person set laptop_purchased_dt='8/1/2015' where person_id=59
+update person set laptop_purchased_dt='7/1/2015' where person_id=60
+update person set laptop_purchased_dt='9/1/2018' where person_id=61
+update person set laptop_purchased_dt='8/5/2017' where person_id=62
+update person set laptop_purchased_dt='12/24/2017' where person_id=63
+update person set laptop_purchased_dt='7/15/2016' where person_id=64
+update person set laptop_purchased_dt='11/20/2017' where person_id=65
+update person set laptop_purchased_dt='11/18/2018' where person_id=66
+update person set laptop_purchased_dt='8/1/2018' where person_id=67
+update person set laptop_purchased_dt='12/28/2017' where person_id=68
+update person set laptop_purchased_dt='4/1/2017' where person_id=69
+update person set laptop_purchased_dt='8/17/2017' where person_id=70
+update person set laptop_purchased_dt='8/8/2018' where person_id=71
+update person set laptop_purchased_dt='6/15/2017' where person_id=72
+update person set laptop_purchased_dt='11/26/2017' where person_id=73
+update person set laptop_purchased_dt='6/20/2014' where person_id=74
+update person set laptop_purchased_dt='11/23/2017' where person_id=75
+update person set laptop_purchased_dt='6/1/2018' where person_id=76
+update person set laptop_purchased_dt='8/27/2017' where person_id=77
+update person set laptop_purchased_dt='3/13/2017' where person_id=78
+update person set laptop_purchased_dt='6/6/2018' where person_id=79
+update person set laptop_purchased_dt='6/1/2018' where person_id=80
+update person set laptop_purchased_dt='10/18/2015' where person_id=81
+update person set laptop_purchased_dt='10/15/2018' where person_id=82
+update person set laptop_purchased_dt='12/15/2017' where person_id=83
+update person set laptop_purchased_dt='8/15/2018' where person_id=84
+update person set laptop_purchased_dt='8/24/2017' where person_id=85
+update person set laptop_purchased_dt='11/1/2015' where person_id=86
+update person set laptop_purchased_dt='6/4/2016' where person_id=87
+update person set laptop_purchased_dt='7/8/2016' where person_id=88
+update person set laptop_purchased_dt='2/14/2018' where person_id=89
+update person set laptop_purchased_dt='6/11/2015' where person_id=90
+update person set laptop_purchased_dt='8/17/2017' where person_id=91
+update person set laptop_purchased_dt='6/20/2017' where person_id=92
+update person set laptop_purchased_dt='1/5/2017' where person_id=93
+update person set laptop_purchased_dt='7/5/2018' where person_id=94
+update person set laptop_purchased_dt='9/19/2016' where person_id=95
+update person set laptop_purchased_dt='12/20/2017' where person_id=96
+update person set laptop_purchased_dt='8/1/2015' where person_id=97
+update person set laptop_purchased_dt='7/1/2014' where person_id=98
+update person set laptop_purchased_dt='7/14/2018' where person_id=99
+update person set laptop_purchased_dt='6/8/2017' where person_id=100
+update person set laptop_purchased_dt='1/1/2015' where person_id=101
+update person set laptop_purchased_dt='6/22/2017' where person_id=102
+update person set laptop_purchased_dt='8/1/2015' where person_id=103
+update person set laptop_purchased_dt='8/1/2018' where person_id=104
+update person set laptop_purchased_dt='4/30/2018' where person_id=105
