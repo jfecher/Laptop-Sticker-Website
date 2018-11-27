@@ -448,27 +448,38 @@ insert into sticker (sticker_id, text, width, height, color_id) values (27, "Rad
 insert into sticker (sticker_id, width, height, color_id) values (28, 3, 3, 8);
 insert into sticker (sticker_id, width, height, color_id) values (29, 2, 1, 0);
 
-insert into person_has_sticker (person_id, sticker_id) values (45, 0);
-insert into person_has_sticker (person_id, sticker_id) values (45, 1);
+insert into person_has_sticker (person_id, sticker_id) values (44, 0);
+insert into person_has_sticker (person_id, sticker_id) values (44, 1);
 
-insert into person_has_sticker (person_id, sticker_id) values (46, 2);
-insert into person_has_sticker (person_id, sticker_id) values (46, 3);
-insert into person_has_sticker (person_id, sticker_id) values (46, 4);
-insert into person_has_sticker (person_id, sticker_id) values (46, 5);
-insert into person_has_sticker (person_id, sticker_id) values (46, 6);
+insert into person_has_sticker (person_id, sticker_id) values (45, 2);
+insert into person_has_sticker (person_id, sticker_id) values (45, 3);
+insert into person_has_sticker (person_id, sticker_id) values (45, 4);
+insert into person_has_sticker (person_id, sticker_id) values (45, 5);
+insert into person_has_sticker (person_id, sticker_id) values (45, 6);
 
-insert into person_has_sticker (person_id, sticker_id) values (51, 7);
-insert into person_has_sticker (person_id, sticker_id) values (51, 8);
-insert into person_has_sticker (person_id, sticker_id) values (51, 9);
-insert into person_has_sticker (person_id, sticker_id) values (51, 10);
-insert into person_has_sticker (person_id, sticker_id) values (51, 11);
-insert into person_has_sticker (person_id, sticker_id) values (51, 12);
-insert into person_has_sticker (person_id, sticker_id) values (51, 13);
+insert into person_has_sticker (person_id, sticker_id) values (50, 7);
+insert into person_has_sticker (person_id, sticker_id) values (50, 8);
+insert into person_has_sticker (person_id, sticker_id) values (50, 9);
+insert into person_has_sticker (person_id, sticker_id) values (50, 10);
+insert into person_has_sticker (person_id, sticker_id) values (50, 11);
+insert into person_has_sticker (person_id, sticker_id) values (50, 12);
+insert into person_has_sticker (person_id, sticker_id) values (50, 13);
 
-insert into person_has_sticker (person_id, sticker_id) values (52, 14);
+insert into person_has_sticker (person_id, sticker_id) values (51, 14);
 
-insert into person_has_sticker (person_id, sticker_id) values (59, 15);
-insert into person_has_sticker (person_id, sticker_id) values (59, 16);
-insert into person_has_sticker (person_id, sticker_id) values (59, 17);
-insert into person_has_sticker (person_id, sticker_id) values (59, 18);
-insert into person_has_sticker (person_id, sticker_id) values (59, 19);
+insert into person_has_sticker (person_id, sticker_id) values (58, 15);
+insert into person_has_sticker (person_id, sticker_id) values (58, 16);
+insert into person_has_sticker (person_id, sticker_id) values (58, 17);
+insert into person_has_sticker (person_id, sticker_id) values (58, 18);
+insert into person_has_sticker (person_id, sticker_id) values (58, 19);
+
+insert into person_has_sticker (person_id, sticker_id) values (59, 20);
+insert into person_has_sticker (person_id, sticker_id) values (59, 21);
+insert into person_has_sticker (person_id, sticker_id) values (59, 22);
+insert into person_has_sticker (person_id, sticker_id) values (59, 23);
+insert into person_has_sticker (person_id, sticker_id) values (59, 24);
+insert into person_has_sticker (person_id, sticker_id) values (59, 25);
+insert into person_has_sticker (person_id, sticker_id) values (59, 26);
+insert into person_has_sticker (person_id, sticker_id) values (59, 27);
+insert into person_has_sticker (person_id, sticker_id) values (59, 28);
+insert into person_has_sticker (person_id, sticker_id) values (59, 29);
