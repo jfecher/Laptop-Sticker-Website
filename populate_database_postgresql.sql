@@ -325,6 +325,9 @@ insert into brand (brand_id, name) values (28, "Star Wars");
 insert into brand (brand_id, name) values (29, "Toms");
 insert into brand (brand_id, name) values (30, "Puravida");
 insert into brand (brand_id, name) values (30, "Snapchat");
+insert into brand (brand_id, name) values (31, "University of New England");
+insert into brand (brand_id, name) values (32, "Pokemon");
+insert into brand (brand_id, name) values (33, "Warner Bros");
 
 
 
@@ -468,6 +471,29 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(66, null, 4, 2, 11, null),
 	(67, "Ban The Bottle Save The Planet", 3, 3, 4, null);
 
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+    (114, "N", 4, 4, 1, 3),
+    (115, "UNE Nor'easters", 4, 3, 2, 31),
+    (116, null, 2, 3, 8, null);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+    (117, null, 3,2, 2, 32);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(118, "B R C C", 3, 4, 0, null),
+	(119, "I solemnly swear that I am up to no good", 7, 3, 0, 33),
+	(120, "Walls are meant for climbing", 3, 4, 0, null),
+	(121, "2017 Eckhardt Northeast Regional Conference", 3, 3, 1, null),
+	(122, null, 2, 2, 1, null), -- Picure of brain
+	(123, "Northeastern University AIChe", 3, 2, 0, 3),
+	(124, "HOME", 4, 3, 7, null), -- Picture of PA
+	(125, null, 3, 3, 0, null) -- Picture of girl grabbing building
+	(126, "Corrosive Materials", 4, 2, 0, null),
+	(127, "United Nations", 3, 3, 2, null),
+	(128, "Friction", 4, 3, 0, null);
+
+
+
 
 insert into person_has_sticker values
 	(21, 30),
@@ -508,7 +534,24 @@ insert into person_has_sticker values
 	(32, 65),
 	(32, 66),
 	(32, 67),
-	(32, 29);
+	(32, 29),
+	(33, 114),
+    (33, 115),
+    (33, 116),
+    (38, 117);
+    (39, 10),
+	(39, 118),
+	(39, 119),
+	(39, 120),
+	(39, 121),
+	(39, 122),
+	(39, 123),
+	(39, 124),
+	(39, 125),
+	(39, 126),
+	(39, 127),
+	(39, 128);
+
 
 ---------------------------
 
