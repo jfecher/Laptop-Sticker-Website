@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS major ;
 
 CREATE TABLE IF NOT EXISTS major (
   major_id INT NOT NULL,
-  name VARCHAR(45) NOT NULL,
+  name VARCHAR(100) NOT NULL,
   PRIMARY KEY (major_id))
 ;
 
@@ -36,9 +36,9 @@ DROP TABLE IF EXISTS hometown_location ;
 
 CREATE TABLE IF NOT EXISTS hometown_location (
   location_id INT NOT NULL,
-  city VARCHAR(45) NULL,
-  state VARCHAR(45) NULL,
-  country VARCHAR(45) NOT NULL,
+  city VARCHAR(100) NULL,
+  state VARCHAR(100) NULL,
+  country VARCHAR(100) NOT NULL,
   PRIMARY KEY (location_id))
 ;
 
@@ -51,8 +51,8 @@ DROP TABLE IF EXISTS laptop ;
 CREATE TABLE IF NOT EXISTS laptop (
   laptop_id INT NOT NULL,
   screen_size INT NOT NULL,
-  brand VARCHAR(45) NULL,
-  model VARCHAR(45) NULL,
+  brand VARCHAR(100) NULL,
+  model VARCHAR(100) NULL,
   PRIMARY KEY (laptop_id))
 ;
 
@@ -64,7 +64,7 @@ DROP TABLE IF EXISTS survey_location ;
 
 CREATE TABLE IF NOT EXISTS survey_location (
   survey_location_id INT NOT NULL,
-  name VARCHAR(45) NULL,
+  name VARCHAR(100) NULL,
   PRIMARY KEY (survey_location_id))
 ;
 
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS person (
   hometown_location_id INT NOT NULL,
   laptop_id INT NOT NULL,
   laptop_purchased_dt TIMESTAMP(0) NULL,
-  laptop_picture_url VARCHAR(50) NULL,
+  laptop_picture_url VARCHAR(100) NULL,
   likelihood_to_buy_more INT NULL,
   likelihood_to_put_more INT NULL,
   survey_location_id INT NOT NULL,
@@ -121,7 +121,7 @@ DROP TABLE IF EXISTS color ;
 
 CREATE TABLE IF NOT EXISTS color (
   color_id INT NOT NULL,
-  name VARCHAR(45) NULL,
+  name VARCHAR(100) NULL,
   PRIMARY KEY (color_id))
 ;
 
@@ -133,7 +133,7 @@ DROP TABLE IF EXISTS brand ;
 
 CREATE TABLE IF NOT EXISTS brand (
   brand_id INT NOT NULL,
-  name VARCHAR(45) NULL,
+  name VARCHAR(100) NULL,
   PRIMARY KEY (brand_id))
 ;
 
@@ -145,7 +145,7 @@ DROP TABLE IF EXISTS sticker ;
 
 CREATE TABLE IF NOT EXISTS sticker (
   sticker_id INT NOT NULL,
-  text VARCHAR(45) NULL,
+  text VARCHAR(100) NULL,
   width INT NULL,
   height INT NULL,
   color_id INT NOT NULL,

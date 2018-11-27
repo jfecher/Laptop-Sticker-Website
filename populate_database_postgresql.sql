@@ -146,7 +146,7 @@ insert into survey_location values
 	(2, 'Off-Campus'),
 	(5, 'West Village H Lab'),
 	(14, 'Snell Library'),
-	(30, 'Shillman Hall'),
+	(30, 'Shillman Hall');
 
 insert into laptop values
 	(0, 13, 'Dell', 'Inspiron'),
@@ -220,10 +220,10 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(31, 51, 83, 30, 1, 10, 10),
 	(32, 11, 12, 30, 1, 4, 10),
 	(33, 26, 14, 30, 32, 4, 4),
-	(34, 64, 49, 14, 33, 1, 5),
+	(34, 64, 49, 14, 13, 1, 5),
 	(35, 28, 43, 30, 34, 1, 2),
 	(36, 29, 91, 0, 35, 6, 8),
-	(37, 71, 27, 49, 22, 1, 1),
+	(37, 71, 27, 1, 22, 1, 1),
 	(38, 33, 35, 30, 0, 7, 7),
 	(39, 42, 40, 0, 0, 8, 8),
 	(40, 1, 0, 0, 1, 5, 2),
@@ -293,6 +293,7 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(104, 1, 90, 0, 1, 5, 5),
 	(105, 1, 15, 2, 13, 1, 1);
 
+<<<<<<< HEAD
 insert into brand (brand_id, name) values (0, "NBC");
 insert into brand (brand_id, name) values (1, "Barstool Sports");
 insert into brand (brand_id, name) values (2, "Mugatunes");
@@ -328,10 +329,45 @@ insert into brand (brand_id, name) values (30, "Snapchat");
 insert into brand (brand_id, name) values (31, "University of New England");
 insert into brand (brand_id, name) values (32, "Pokemon");
 insert into brand (brand_id, name) values (33, "Warner Bros");
+=======
+insert into brand (brand_id, name) values (0, 'NBC');
+insert into brand (brand_id, name) values (1, 'Barstool Sports');
+insert into brand (brand_id, name) values (2, 'Mugatunes');
+insert into brand (brand_id, name) values (3, 'Northeastern University');
+insert into brand (brand_id, name) values (4, 'Boston.com');
+insert into brand (brand_id, name) values (5, '2K Games');
+insert into brand (brand_id, name) values (6, 'MLB');
+insert into brand (brand_id, name) values (7, 'Harmonix');
+insert into brand (brand_id, name) values (8, 'Sony');
+insert into brand (brand_id, name) values (9, 'Dirty Floor Brown Ale');
+insert into brand (brand_id, name) values (10, 'Heartwood');
+insert into brand (brand_id, name) values (11, 'NUPD');
+insert into brand (brand_id, name) values (12, 'B-Side Label');
+insert into brand (brand_id, name) values (13, 'Bluefish Cove');
+insert into brand (brand_id, name) values (14, 'Lamplighter Brewing Company');
+insert into brand (brand_id, name) values (15, 'Elizabeth Warren');
+insert into brand (brand_id, name) values (16, 'Meiji University');
+insert into brand (brand_id, name) values (17, 'Giraffe House');
+insert into brand (brand_id, name) values (18, 'Cliff''s Tattoo');
+insert into brand (brand_id, name) values (19, 'Life is Good');
+insert into brand (brand_id, name) values (20, 'Google');
+insert into brand (brand_id, name) values (21, 'Tableau');
+insert into brand (brand_id, name) values (22, 'Amazon');
+insert into brand (brand_id, name) values (23, 'Github');
+insert into brand (brand_id, name) values (24, 'Major League Hacking');
+insert into brand (brand_id, name) values (25, 'Hello Kitty');
+insert into brand (brand_id, name) values (26, 'Codacity.com');
+insert into brand (brand_id, name) values (27, 'Microsoft');
+insert into brand (brand_id, name) values (28, 'Star Wars');
+insert into brand (brand_id, name) values (29, 'Toms');
+insert into brand (brand_id, name) values (30, 'Puravida');
+insert into brand (brand_id, name) values (31, 'Snapchat');
+>>>>>>> ef302bc5cdfda3969082efac296b1386467bd0cc
 
 
 
 
+<<<<<<< HEAD
 insert into color (color_id, name) values (0, "Black");
 insert into color (color_id, name) values (1, "Red");
 insert into color (color_id, name) values (2, "Blue");
@@ -345,6 +381,21 @@ insert into color (color_id, name) values (9, "Pink");
 insert into color (color_id, name) values (10, "Beige");
 insert into color (color_id, name) values (11, "Purple");
 insert into color (color_id, name) values (12, "Rainbow");
+=======
+insert into color (color_id, name) values (0, 'Black');
+insert into color (color_id, name) values (1, 'Red');
+insert into color (color_id, name) values (2, 'Blue');
+insert into color (color_id, name) values (3, 'Gray');
+insert into color (color_id, name) values (4, 'White');
+insert into color (color_id, name) values (5, 'Silver');
+insert into color (color_id, name) values (6, 'Orange');
+insert into color (color_id, name) values (7, 'Yellow');
+insert into color (color_id, name) values (8, 'Green');
+insert into color (color_id, name) values (9, 'Pink');
+insert into color (color_id, name) values (10, 'Beige');
+insert into color (color_id, name) values (11, 'Purple');
+insert into color (color_id, name) values (12, 'Rainbow');
+>>>>>>> ef302bc5cdfda3969082efac296b1386467bd0cc
 
 -- rows 41-60, person_ids 40-59
 
@@ -361,7 +412,7 @@ insert into sticker (sticker_id, width, height, color_id) values (7, 3, 3, 3);
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (8, 'Just Dewitt.', 3, 4, 0, 5);
 insert into sticker (sticker_id, text, width, height, color_id) values (9, '10p', 3, 4, 1);
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (10, 'NUSCI', 3, 3, 4, 3);
-insert into sticker (sticker_id, text, width, height, color_id) values (11, 'boston.com Keep up.', 3, 6, 0, 4);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (11, 'boston.com Keep up.', 3, 6, 0, 4);
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (12, 3, 3, 5, 5);
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (13, 'Oakland Athletics', 4, 4, 4, 6);
 
@@ -371,7 +422,7 @@ insert into sticker (sticker_id, width, height, color_id, brand_id) values (15, 
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (16, 2, 2, 2, 8);
 insert into sticker (sticker_id, text, width, height, color_id) values (17, 'The Taco & Ice Cream Joint', 5, 3, 1);
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (18, 'We Live Together', 3, 3, 4, 9);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, 'Can\'t You', 3, 3, 4, 10);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, 'Can''t You', 3, 3, 4, 10);
 
 insert into sticker (sticker_id, text, width, height, color_id) values (20, 'God is within her she will not fall', 3, 4, 0);
 insert into sticker (sticker_id, text, width, height, color_id) values (21, 'You are my sunshine', 3, 1, 0);
@@ -439,7 +490,7 @@ insert into sticker (sticker_id, text, width, height, color_id, price, brand_id)
 	(41, 'Security Tracking of Office Property', 3, 2, 1, 0, 11);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-	(42, 'Let\'s Travel', 2, 2, 0, 12),
+	(42, 'Let''s Travel', 2, 2, 0, 12),
 	(43, 'Bluefish Cove',7, 5, 4, 13),
 	(44, 'Lamplighter Brewing Company', 5, 5, 3, 14),
 	(45, 'Persist', 4, 13, 1, 14),
@@ -462,7 +513,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(58, null, 2, 5, 4, null),
 	(59, null, 3, 3, 2, null),
-	(60, 'Cliff\'s Tattoo', 2, 2, 0, 18),
+	(60, 'Cliff''s Tattoo', 2, 2, 0, 18),
 	(61, null, 4, 3, 0, null),
 	(62, null, 5, 2, 0, null),
 	(63, 'be happy', 4, 3, 12, null),
@@ -514,7 +565,7 @@ insert into person_has_sticker values
 	(27, 45),
 	(27, 46),
 	(27, 47),
-	(27, 48);
+	(27, 48),
 	(30, 49),
 	(31, 50),
 	(31, 51),
@@ -522,7 +573,6 @@ insert into person_has_sticker values
 	(31, 53),
 	(31, 54),
 	(31, 55),
-	(31, 56),
 	(31, 57),
 	(32, 58),
 	(32, 59),
@@ -571,7 +621,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (76, 'Awesome Day 2018', 2, 2, 2, 22), -- amazon
     (77, null, 2, 3, 4, null),  -- robot with blue eyes?
     (78, 'NU ACES', 4, 1, 0, 3),
-    (79, 'Who\'s Your Data?', 2, 2, 2, 21),
+    (79, 'Who''s Your Data?', 2, 2, 2, 21),
     (80, null, 2, 2, 0, 3), --husky paw print
 
     (81, '2019 Hackathon Season', 3, 3, 0, 24),
