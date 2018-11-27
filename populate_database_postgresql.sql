@@ -311,7 +311,7 @@ insert into brand (brand_id, name) values (14, 'Lamplighter Brewing Company');
 insert into brand (brand_id, name) values (15, 'Elizabeth Warren');
 insert into brand (brand_id, name) values (16, 'Meiji University');
 insert into brand (brand_id, name) values (17, 'Giraffe House');
-insert into brand (brand_id, name) values (18, 'Cliff's Tattoo');
+insert into brand (brand_id, name) values (18, 'Cliff\'s Tattoo');
 insert into brand (brand_id, name) values (19, 'Life is Good');
 insert into brand (brand_id, name) values (20, 'Google');
 insert into brand (brand_id, name) values (21, 'Tableau');
@@ -368,7 +368,7 @@ insert into sticker (sticker_id, width, height, color_id, brand_id) values (15, 
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (16, 2, 2, 2, 8);
 insert into sticker (sticker_id, text, width, height, color_id) values (17, 'The Taco & Ice Cream Joint', 5, 3, 1);
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (18, 'We Live Together', 3, 3, 4, 9);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, 'Can't You', 3, 3, 4, 10);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, 'Can\'t You', 3, 3, 4, 10);
 
 insert into sticker (sticker_id, text, width, height, color_id) values (20, 'God is within her she will not fall', 3, 4, 0);
 insert into sticker (sticker_id, text, width, height, color_id) values (21, 'You are my sunshine', 3, 1, 0);
@@ -436,7 +436,7 @@ insert into sticker (sticker_id, text, width, height, color_id, price, brand_id)
 	(41, 'Security Tracking of Office Property', 3, 2, 1, 0, 11);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-	(42, 'Let's Travel', 2, 2, 0, 12),
+	(42, 'Let\'s Travel', 2, 2, 0, 12),
 	(43, 'Bluefish Cove',7, 5, 4, 13),
 	(44, 'Lamplighter Brewing Company', 5, 5, 3, 14),
 	(45, 'Persist', 4, 13, 1, 14),
@@ -459,7 +459,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(58, null, 2, 5, 4, null),
 	(59, null, 3, 3, 2, null),
-	(60, 'Cliff's Tattoo', 2, 2, 0, 18),
+	(60, 'Cliff\'s Tattoo', 2, 2, 0, 18),
 	(61, null, 4, 3, 0, null),
 	(62, null, 5, 2, 0, null),
 	(63, 'be happy', 4, 3, 12, null),
@@ -528,7 +528,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (76, 'Awesome Day 2018', 2, 2, 2, 22), -- amazon
     (77, null, 2, 3, 4, null),  -- robot with blue eyes?
     (78, 'NU ACES', 4, 1, 0, 3),
-    (79, 'Who's Your Data?', 2, 2, 2, 21),
+    (79, 'Who\'s Your Data?', 2, 2, 2, 21),
     (80, null, 2, 2, 0, 3), --husky paw print
 
     (81, '2019 Hackathon Season', 3, 3, 0, 24),
