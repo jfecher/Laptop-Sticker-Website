@@ -348,39 +348,39 @@ insert into color (color_id, name) values (12, "Rainbow");
 
 -- rows 41-60, person_ids 40-59
 
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (0, "Dunder Mifflin Paper Company", 2, 1, 0, 0);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (1, "Swanson Pyramid of Greatness", 4, 3, 1, 0);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (0, 'Dunder Mifflin Paper Company', 2, 1, 0, 0);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (1, 'Swanson Pyramid of Greatness', 4, 3, 1, 0);
 
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (2, "Viva La", 5, 4, 0, 1);
-insert into sticker (sticker_id, text, width, height, color_id) values (3, "Las Olas Tacqueria", 4, 2, 2);
-insert into sticker (sticker_id, text, width, height, color_id) values (4, "Trezor", 4, 2, 0);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (5, "#NoShittyMusic", 8, 2, 0, 2);
-insert into sticker (sticker_id, text, width, height, color_id) values (6, "Blenders Rocked With Pride Worldwide", 3, 3, 2);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (2, 'Viva La', 5, 4, 0, 1);
+insert into sticker (sticker_id, text, width, height, color_id) values (3, 'Las Olas Tacqueria', 4, 2, 2);
+insert into sticker (sticker_id, text, width, height, color_id) values (4, 'Trezor', 4, 2, 0);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (5, '#NoShittyMusic', 8, 2, 0, 2);
+insert into sticker (sticker_id, text, width, height, color_id) values (6, 'Blenders Rocked With Pride Worldwide', 3, 3, 2);
 
 insert into sticker (sticker_id, width, height, color_id) values (7, 3, 3, 3);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (8, "Just Dewitt.", 3, 4, 0, 5);
-insert into sticker (sticker_id, text, width, height, color_id) values (9, "10p", 3, 4, 1);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (10, "NUSCI", 3, 3, 4, 3);
-insert into sticker (sticker_id, text, width, height, color_id) values (11, "boston.com Keep up.", 3, 6, 0, 4);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (8, 'Just Dewitt.', 3, 4, 0, 5);
+insert into sticker (sticker_id, text, width, height, color_id) values (9, '10p', 3, 4, 1);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (10, 'NUSCI', 3, 3, 4, 3);
+insert into sticker (sticker_id, text, width, height, color_id) values (11, 'boston.com Keep up.', 3, 6, 0, 4);
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (12, 3, 3, 5, 5);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (13, "Oakland Athletics", 4, 4, 4, 6);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (13, 'Oakland Athletics', 4, 4, 4, 6);
 
-insert into sticker (sticker_id, text, width, height, color_id) values (14, "Cardly", 4, 2, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (14, 'Cardly', 4, 2, 0);
 
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (15, 4, 4, 4, 7);
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (16, 2, 2, 2, 8);
-insert into sticker (sticker_id, text, width, height, color_id) values (17, "The Taco & Ice Cream Joint", 5, 3, 1);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (18, "We Live Together", 3, 3, 4, 9);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, "Can't You", 3, 3, 4, 10);
+insert into sticker (sticker_id, text, width, height, color_id) values (17, 'The Taco & Ice Cream Joint', 5, 3, 1);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (18, 'We Live Together', 3, 3, 4, 9);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, 'Can\'t You', 3, 3, 4, 10);
 
-insert into sticker (sticker_id, text, width, height, color_id) values (20, "God is within her she will not fall", 3, 4, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (21, "You are my sunshine", 3, 1, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (22, "Boston", 4, 2, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (23, "Colorado", 3, 1, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (24, "Visit Uganda", 3, 3, 6);
+insert into sticker (sticker_id, text, width, height, color_id) values (20, 'God is within her she will not fall', 3, 4, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (21, 'You are my sunshine', 3, 1, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (22, 'Boston', 4, 2, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (23, 'Colorado', 3, 1, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (24, 'Visit Uganda', 3, 3, 6);
 insert into sticker (sticker_id, width, height, color_id) values (25, 2, 4, 0);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (26, "Northeastern University", 4, 2, 0, 3);
-insert into sticker (sticker_id, text, width, height, color_id) values (27, "Radiate Positivity", 3, 3, 7);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (26, 'Northeastern University', 4, 2, 0, 3);
+insert into sticker (sticker_id, text, width, height, color_id) values (27, 'Radiate Positivity', 3, 3, 7);
 insert into sticker (sticker_id, width, height, color_id) values (28, 3, 3, 8);
 insert into sticker (sticker_id, width, height, color_id) values (29, 2, 1, 0);
 
@@ -423,53 +423,53 @@ insert into person_has_sticker (person_id, sticker_id) values (59, 29);
 
 -- Rows 21-40 (Persons 20-39) ------------------------
 insert into sticker (sticker_id, text, width, height, color_id, price, brand_id) values
-	(30, "faith > fear", 2, 1, 0, 4, null),
-	(31, "#DANCER", 4, 1, 0, 4, null),
-	(32, "Radiate Positivity", 4, 1, 7, 3, null),
-	(33, "Black Lives Matter",4, 1, 0, 3, null),
+	(30, 'faith > fear', 2, 1, 0, 4, null),
+	(31, '#DANCER', 4, 1, 0, 4, null),
+	(32, 'Radiate Positivity', 4, 1, 7, 3, null),
+	(33, 'Black Lives Matter',4, 1, 0, 3, null),
 	(34, null, 3, 2, 0, 3, null),
-	(35, "Sigma Kappa", 4, 2, 0, 4, null),
-	(36, "Friends", 4, 1 , 0, 4, 0),
-	(37,"Dogs", 3, 3, 9, 3, null),
-	(38, "all you need is ice cream", 1, 4, 10, 3, null),
+	(35, 'Sigma Kappa', 4, 2, 0, 4, null),
+	(36, 'Friends', 4, 1 , 0, 4, 0),
+	(37,'Dogs', 3, 3, 9, 3, null),
+	(38, 'all you need is ice cream', 1, 4, 10, 3, null),
 	(39, null, 3, 3, 7, 3, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, price, brand_id) values
-	(40, "Warning: Police Identifiable", 3, 2, 1, 0, 11),
-	(41, "Security Tracking of Office Property", 3, 2, 1, 0, 11);
+	(40, 'Warning: Police Identifiable', 3, 2, 1, 0, 11),
+	(41, 'Security Tracking of Office Property', 3, 2, 1, 0, 11);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-	(42, "Let's Travel", 2, 2, 0, 12),
-	(43, "Bluefish Cove",7, 5, 4, 13),
-	(44, "Lamplighter Brewing Company", 5, 5, 3, 14),
-	(45, "Persist", 4, 13, 1, 14),
-	(46, "Meiji University", 2, 2, 0, 16),
-	(47, "School of Politcal Science and Economics", 2, 2, 0, 16),
-	(48, "Kyoto Limited", 2, 3, 6, 12);
+	(42, 'Let\'s Travel', 2, 2, 0, 12),
+	(43, 'Bluefish Cove',7, 5, 4, 13),
+	(44, 'Lamplighter Brewing Company', 5, 5, 3, 14),
+	(45, 'Persist', 4, 13, 1, 14),
+	(46, 'Meiji University', 2, 2, 0, 16),
+	(47, 'School of Politcal Science and Economics', 2, 2, 0, 16),
+	(48, 'Kyoto Limited', 2, 3, 6, 12);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(49, null, 3, 5, 9, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-	(50, "Dragon Prayer Book", 2, 4, 1, null),
-	(51, "Ni hao", 3, 3, 1, null),
-	(52, "In Darkness Let Me Dwell", 3, 5, 9, 17),
-	(53, "Northeastern University", 8, 4, 1, 3),
-	(54, "NULab", 3, 3, 1, 3),
+	(50, 'Dragon Prayer Book', 2, 4, 1, null),
+	(51, 'Ni hao', 3, 3, 1, null),
+	(52, 'In Darkness Let Me Dwell', 3, 5, 9, 17),
+	(53, 'Northeastern University', 8, 4, 1, 3),
+	(54, 'NULab', 3, 3, 1, 3),
 	(55, null, 8, 3, 4, null),
-	(57, "Giraffe House", 3, 3, 9, 11);
+	(57, 'Giraffe House', 3, 3, 9, 11);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(58, null, 2, 5, 4, null),
 	(59, null, 3, 3, 2, null),
-	(60, "Cliff's Tattoo", 2, 2, 0, 18),
+	(60, 'Cliff\'s Tattoo', 2, 2, 0, 18),
 	(61, null, 4, 3, 0, null),
 	(62, null, 5, 2, 0, null),
-	(63, "be happy", 4, 3, 12, null),
+	(63, 'be happy', 4, 3, 12, null),
 	(64, null, 1, 1, 0, null),
-	(65, "Life is Good", 4, 4, 2, 19),
+	(65, 'Life is Good', 4, 4, 2, 19),
 	(66, null, 4, 2, 11, null),
-	(67, "Ban The Bottle Save The Planet", 3, 3, 4, null);
+	(67, 'Ban The Bottle Save The Planet', 3, 3, 4, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (114, "N", 4, 4, 1, 3),
@@ -558,63 +558,63 @@ insert into person_has_sticker values
 -- Stickers for person_ids 1-20 (rows 2-21)
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-    (68, "CCIS", 2, 2, 1, 3),
-    (69, "We the People of the United States, I Voted Today", 2, 2, 10, null),
-    (70, "Husky Environmental Action Team HEAT", 3, 3, 10, 3),
+    (68, 'CCIS', 2, 2, 1, 3),
+    (69, 'We the People of the United States, I Voted Today', 2, 2, 10, null),
+    (70, 'Husky Environmental Action Team HEAT', 3, 3, 10, 3),
 
-    (71, "NUHACKS", 3, 2, 2, 3),
-    (72, "Nuacm", 2, 2, 2, 3),
+    (71, 'NUHACKS', 3, 2, 2, 3),
+    (72, 'Nuacm', 2, 2, 2, 3),
 
-    (73, "Google", 4, 1, 12, 20),
+    (73, 'Google', 4, 1, 12, 20),
     (74, null, 2, 2, 2, null),  -- binoculars inside blue square
     (75, null, 2, 2, 11, null),  -- atom inside purple square
-    (76, "Awesome Day 2018", 2, 2, 2, 22), -- amazon
+    (76, 'Awesome Day 2018', 2, 2, 2, 22), -- amazon
     (77, null, 2, 3, 4, null),  -- robot with blue eyes?
-    (78, "NU ACES", 4, 1, 0, 3),
-    (79, "Who's Your Data?", 2, 2, 2, 21),
+    (78, 'NU ACES', 4, 1, 0, 3),
+    (79, 'Who\'s Your Data?', 2, 2, 2, 21),
     (80, null, 2, 2, 0, 3), --husky paw print
 
-    (81, "2019 Hackathon Season", 3, 3, 0, 24),
+    (81, '2019 Hackathon Season', 3, 3, 0, 24),
     (82, null, 3, 2, 4, 20), --gmail
     (83, null, 2, 3, 8, 20), --android
-    (84, "MLH Hardware Lab Presented By Digi-Key", 4, 2, 8, 24),
+    (84, 'MLH Hardware Lab Presented By Digi-Key', 4, 2, 8, 24),
     (85, null, 1, 2, 6, 23), --github bag
 
-    (86, "I ate something yummy", 2, 2, 9, 25),
+    (86, 'I ate something yummy', 2, 2, 9, 25),
 
-    (87, "Ask Why", 3, 1, 0, null),
-    (88, "Solve Together", 3, 2, 10, null),
-    (89, "Friends Close, Bad Code Closer!", 2, 3, 0, 26),
+    (87, 'Ask Why', 3, 1, 0, null),
+    (88, 'Solve Together', 3, 2, 10, null),
+    (89, 'Friends Close, Bad Code Closer!', 2, 3, 0, 26),
 
     (90, null, 11, 8, 12, null),
 
     (91, null, 3, 3, 12, 27),
-    (92, "NATIONAL clean Energy WEEK", 4, 4, 4, null), -- yes, it was capitalized like this
+    (92, 'NATIONAL clean Energy WEEK', 4, 4, 4, null), -- yes, it was capitalized like this
 
     (93, null, 3, 3, 8, 28), -- yoda sticker
-    (94, "We Are All Wonder Women!", 3, 2, 4, null),
+    (94, 'We Are All Wonder Women!', 3, 2, 4, null),
 
-    (95, "ふにふに", 2, 1, 4, null), -- "funi funi" in japanese with hamster picture
+    (95, 'ふにふに', 2, 1, 4, null), -- 'funi funi' in japanese with hamster picture
 
-    (96, "Police Public Call Box", 11, 5, 2, null),
+    (96, 'Police Public Call Box', 11, 5, 2, null),
 
-    (97, "TOMS", 4, 3, 2, 29),
-    (98, "CCIS", 2, 1, 4, 3),
+    (97, 'TOMS', 4, 3, 2, 29),
+    (98, 'CCIS', 2, 1, 4, 3),
     (99, null, 3, 2, 2, null), -- blue butterfly
-    (100, "puravida bracelets", 3, 1, 2, 30),
-    (101, "N Northeastern", 1, 1, 1, 3),
+    (100, 'puravida bracelets', 3, 1, 2, 30),
+    (101, 'N Northeastern', 1, 1, 1, 3),
     (102, null, 2, 2, 7, null), -- simley face with blurry writing on mouth
     (103, null, 1, 1, 0, 3), -- face of NU Husky
     (104, null, 1, 1, 0, 3), -- NU paw print, small version
-    (105, "I [whale] BOSTON", 3, 2, 4, null),
+    (105, 'I [whale] BOSTON', 3, 2, 4, null),
     (106, null, 1, 1, 4, 31), -- snapchat ghost
-    (107, "Northeastern", 5, 1, 4, 3), -- yet another northeastern sticker
+    (107, 'Northeastern', 5, 1, 4, 3), -- yet another northeastern sticker
     (108, null, 3, 3, 11, null), -- some purple flame/symbol?
-    (109, "California Republic", 5, 5, 10, null), -- flag of california
-    (110, "H", 2, 3, 2, null), -- individual letters with pictures of palm trees
-    (111, "E", 2, 3, 2, null),
-    (112, ">", 2, 3, 2, null),
-    (113, "i", 1, 3, 2, null);
+    (109, 'California Republic', 5, 5, 10, null), -- flag of california
+    (110, 'H', 2, 3, 2, null), -- individual letters with pictures of palm trees
+    (111, 'E', 2, 3, 2, null),
+    (112, '>', 2, 3, 2, null),
+    (113, 'i', 1, 3, 2, null);
 
 -- person then sticker
 insert into person_has_sticker values
@@ -664,112 +664,112 @@ insert into person_has_sticker values
     (19, 110),
     (19, 111),
     (19, 112),
-    (19, 113),
+    (19, 113);
 
 
 -- date purchased updates
-update person set laptop_purchased_dt='7/20/2017' where person_id=1
-update person set laptop_purchased_dt='1/1/2017' where person_id=2
-update person set laptop_purchased_dt='9/1/2016' where person_id=3
-update person set laptop_purchased_dt='9/1/2017' where person_id=4
-update person set laptop_purchased_dt='1/1/2018' where person_id=5
-update person set laptop_purchased_dt='8/1/2017' where person_id=6
-update person set laptop_purchased_dt='9/2/2018' where person_id=7
-update person set laptop_purchased_dt='6/1/2015' where person_id=8
-update person set laptop_purchased_dt='11/15/2018' where person_id=9
-update person set laptop_purchased_dt='8/1/2013' where person_id=10
-update person set laptop_purchased_dt='1/10/2018' where person_id=11
-update person set laptop_purchased_dt='8/1/2016' where person_id=12
-update person set laptop_purchased_dt='9/4/2017' where person_id=13
-update person set laptop_purchased_dt='3/20/2017' where person_id=14
-update person set laptop_purchased_dt='3/1/2015' where person_id=15
-update person set laptop_purchased_dt='10/1/2014' where person_id=16
-update person set laptop_purchased_dt='6/20/2016' where person_id=17
-update person set laptop_purchased_dt='7/19/2014' where person_id=18
-update person set laptop_purchased_dt='10/1/2013' where person_id=19
-update person set laptop_purchased_dt='11/18/2016' where person_id=20
-update person set laptop_purchased_dt='8/3/2018' where person_id=21
-update person set laptop_purchased_dt='5/1/2016' where person_id=22
-update person set laptop_purchased_dt='6/11/2018' where person_id=23
-update person set laptop_purchased_dt='10/18/2018' where person_id=24
-update person set laptop_purchased_dt='11/10/2017' where person_id=25
-update person set laptop_purchased_dt='8/8/2016' where person_id=26
-update person set laptop_purchased_dt='1/1/2016' where person_id=27
-update person set laptop_purchased_dt='11/1/2016' where person_id=28
-update person set laptop_purchased_dt='6/10/2014' where person_id=29
-update person set laptop_purchased_dt='1/6/2018' where person_id=30
-update person set laptop_purchased_dt='9/1/2013' where person_id=31
-update person set laptop_purchased_dt='12/20/2016' where person_id=32
-update person set laptop_purchased_dt='8/10/2013' where person_id=33
-update person set laptop_purchased_dt='6/15/2017' where person_id=34
-update person set laptop_purchased_dt='5/6/2015' where person_id=35
-update person set laptop_purchased_dt='8/30/2018' where person_id=36
-update person set laptop_purchased_dt='1/1/2015' where person_id=37
-update person set laptop_purchased_dt='11/16/2018' where person_id=38
-update person set laptop_purchased_dt='8/12/2015' where person_id=39
-update person set laptop_purchased_dt='8/22/2018' where person_id=40
-update person set laptop_purchased_dt='8/15/2015' where person_id=41
-update person set laptop_purchased_dt='8/15/2017' where person_id=42
-update person set laptop_purchased_dt='8/28/2017' where person_id=43
-update person set laptop_purchased_dt='6/30/2016' where person_id=44
-update person set laptop_purchased_dt='6/1/2014' where person_id=45
-update person set laptop_purchased_dt='9/1/2017' where person_id=46
-update person set laptop_purchased_dt='11/1/2012' where person_id=47
-update person set laptop_purchased_dt='2/5/2015' where person_id=48
-update person set laptop_purchased_dt='6/9/2016' where person_id=49
-update person set laptop_purchased_dt='12/1/2016' where person_id=50
-update person set laptop_purchased_dt='9/15/2015' where person_id=51
-update person set laptop_purchased_dt='8/15/2015' where person_id=52
-update person set laptop_purchased_dt='1/5/2015' where person_id=53
-update person set laptop_purchased_dt='12/22/2017' where person_id=54
-update person set laptop_purchased_dt='9/1/2016' where person_id=55
-update person set laptop_purchased_dt='6/30/2014' where person_id=56
-update person set laptop_purchased_dt='8/12/2018' where person_id=57
-update person set laptop_purchased_dt='6/1/2013' where person_id=58
-update person set laptop_purchased_dt='8/1/2015' where person_id=59
-update person set laptop_purchased_dt='7/1/2015' where person_id=60
-update person set laptop_purchased_dt='9/1/2018' where person_id=61
-update person set laptop_purchased_dt='8/5/2017' where person_id=62
-update person set laptop_purchased_dt='12/24/2017' where person_id=63
-update person set laptop_purchased_dt='7/15/2016' where person_id=64
-update person set laptop_purchased_dt='11/20/2017' where person_id=65
-update person set laptop_purchased_dt='11/18/2018' where person_id=66
-update person set laptop_purchased_dt='8/1/2018' where person_id=67
-update person set laptop_purchased_dt='12/28/2017' where person_id=68
-update person set laptop_purchased_dt='4/1/2017' where person_id=69
-update person set laptop_purchased_dt='8/17/2017' where person_id=70
-update person set laptop_purchased_dt='8/8/2018' where person_id=71
-update person set laptop_purchased_dt='6/15/2017' where person_id=72
-update person set laptop_purchased_dt='11/26/2017' where person_id=73
-update person set laptop_purchased_dt='6/20/2014' where person_id=74
-update person set laptop_purchased_dt='11/23/2017' where person_id=75
-update person set laptop_purchased_dt='6/1/2018' where person_id=76
-update person set laptop_purchased_dt='8/27/2017' where person_id=77
-update person set laptop_purchased_dt='3/13/2017' where person_id=78
-update person set laptop_purchased_dt='6/6/2018' where person_id=79
-update person set laptop_purchased_dt='6/1/2018' where person_id=80
-update person set laptop_purchased_dt='10/18/2015' where person_id=81
-update person set laptop_purchased_dt='10/15/2018' where person_id=82
-update person set laptop_purchased_dt='12/15/2017' where person_id=83
-update person set laptop_purchased_dt='8/15/2018' where person_id=84
-update person set laptop_purchased_dt='8/24/2017' where person_id=85
-update person set laptop_purchased_dt='11/1/2015' where person_id=86
-update person set laptop_purchased_dt='6/4/2016' where person_id=87
-update person set laptop_purchased_dt='7/8/2016' where person_id=88
-update person set laptop_purchased_dt='2/14/2018' where person_id=89
-update person set laptop_purchased_dt='6/11/2015' where person_id=90
-update person set laptop_purchased_dt='8/17/2017' where person_id=91
-update person set laptop_purchased_dt='6/20/2017' where person_id=92
-update person set laptop_purchased_dt='1/5/2017' where person_id=93
-update person set laptop_purchased_dt='7/5/2018' where person_id=94
-update person set laptop_purchased_dt='9/19/2016' where person_id=95
-update person set laptop_purchased_dt='12/20/2017' where person_id=96
-update person set laptop_purchased_dt='8/1/2015' where person_id=97
-update person set laptop_purchased_dt='7/1/2014' where person_id=98
-update person set laptop_purchased_dt='7/14/2018' where person_id=99
-update person set laptop_purchased_dt='6/8/2017' where person_id=100
-update person set laptop_purchased_dt='1/1/2015' where person_id=101
-update person set laptop_purchased_dt='6/22/2017' where person_id=102
-update person set laptop_purchased_dt='8/1/2015' where person_id=103
-update person set laptop_purchased_dt='8/1/2018' where person_id=104
-update person set laptop_purchased_dt='4/30/2018' where person_id=105
+update person set laptop_purchased_dt='7/20/2017' where person_id=1;
+update person set laptop_purchased_dt='1/1/2017' where person_id=2;
+update person set laptop_purchased_dt='9/1/2016' where person_id=3;
+update person set laptop_purchased_dt='9/1/2017' where person_id=4;
+update person set laptop_purchased_dt='1/1/2018' where person_id=5;
+update person set laptop_purchased_dt='8/1/2017' where person_id=6;
+update person set laptop_purchased_dt='9/2/2018' where person_id=7;
+update person set laptop_purchased_dt='6/1/2015' where person_id=8;
+update person set laptop_purchased_dt='11/15/2018' where person_id=9;
+update person set laptop_purchased_dt='8/1/2013' where person_id=10;
+update person set laptop_purchased_dt='1/10/2018' where person_id=11;
+update person set laptop_purchased_dt='8/1/2016' where person_id=12;
+update person set laptop_purchased_dt='9/4/2017' where person_id=13;
+update person set laptop_purchased_dt='3/20/2017' where person_id=14;
+update person set laptop_purchased_dt='3/1/2015' where person_id=15;
+update person set laptop_purchased_dt='10/1/2014' where person_id=16;
+update person set laptop_purchased_dt='6/20/2016' where person_id=17;
+update person set laptop_purchased_dt='7/19/2014' where person_id=18;
+update person set laptop_purchased_dt='10/1/2013' where person_id=19;
+update person set laptop_purchased_dt='11/18/2016' where person_id=20;
+update person set laptop_purchased_dt='8/3/2018' where person_id=21;
+update person set laptop_purchased_dt='5/1/2016' where person_id=22;
+update person set laptop_purchased_dt='6/11/2018' where person_id=23;
+update person set laptop_purchased_dt='10/18/2018' where person_id=24;
+update person set laptop_purchased_dt='11/10/2017' where person_id=25;
+update person set laptop_purchased_dt='8/8/2016' where person_id=26;
+update person set laptop_purchased_dt='1/1/2016' where person_id=27;
+update person set laptop_purchased_dt='11/1/2016' where person_id=28;
+update person set laptop_purchased_dt='6/10/2014' where person_id=29;
+update person set laptop_purchased_dt='1/6/2018' where person_id=30;
+update person set laptop_purchased_dt='9/1/2013' where person_id=31;
+update person set laptop_purchased_dt='12/20/2016' where person_id=32;
+update person set laptop_purchased_dt='8/10/2013' where person_id=33;
+update person set laptop_purchased_dt='6/15/2017' where person_id=34;
+update person set laptop_purchased_dt='5/6/2015' where person_id=35;
+update person set laptop_purchased_dt='8/30/2018' where person_id=36;
+update person set laptop_purchased_dt='1/1/2015' where person_id=37;
+update person set laptop_purchased_dt='11/16/2018' where person_id=38;
+update person set laptop_purchased_dt='8/12/2015' where person_id=39;
+update person set laptop_purchased_dt='8/22/2018' where person_id=40;
+update person set laptop_purchased_dt='8/15/2015' where person_id=41;
+update person set laptop_purchased_dt='8/15/2017' where person_id=42;
+update person set laptop_purchased_dt='8/28/2017' where person_id=43;
+update person set laptop_purchased_dt='6/30/2016' where person_id=44;
+update person set laptop_purchased_dt='6/1/2014' where person_id=45;
+update person set laptop_purchased_dt='9/1/2017' where person_id=46;
+update person set laptop_purchased_dt='11/1/2012' where person_id=47;
+update person set laptop_purchased_dt='2/5/2015' where person_id=48;
+update person set laptop_purchased_dt='6/9/2016' where person_id=49;
+update person set laptop_purchased_dt='12/1/2016' where person_id=50;
+update person set laptop_purchased_dt='9/15/2015' where person_id=51;
+update person set laptop_purchased_dt='8/15/2015' where person_id=52;
+update person set laptop_purchased_dt='1/5/2015' where person_id=53;
+update person set laptop_purchased_dt='12/22/2017' where person_id=54;
+update person set laptop_purchased_dt='9/1/2016' where person_id=55;
+update person set laptop_purchased_dt='6/30/2014' where person_id=56;
+update person set laptop_purchased_dt='8/12/2018' where person_id=57;
+update person set laptop_purchased_dt='6/1/2013' where person_id=58;
+update person set laptop_purchased_dt='8/1/2015' where person_id=59;
+update person set laptop_purchased_dt='7/1/2015' where person_id=60;
+update person set laptop_purchased_dt='9/1/2018' where person_id=61;
+update person set laptop_purchased_dt='8/5/2017' where person_id=62;
+update person set laptop_purchased_dt='12/24/2017' where person_id=63;
+update person set laptop_purchased_dt='7/15/2016' where person_id=64;
+update person set laptop_purchased_dt='11/20/2017' where person_id=65;
+update person set laptop_purchased_dt='11/18/2018' where person_id=66;
+update person set laptop_purchased_dt='8/1/2018' where person_id=67;
+update person set laptop_purchased_dt='12/28/2017' where person_id=68;
+update person set laptop_purchased_dt='4/1/2017' where person_id=69;
+update person set laptop_purchased_dt='8/17/2017' where person_id=70;
+update person set laptop_purchased_dt='8/8/2018' where person_id=71;
+update person set laptop_purchased_dt='6/15/2017' where person_id=72;
+update person set laptop_purchased_dt='11/26/2017' where person_id=73;
+update person set laptop_purchased_dt='6/20/2014' where person_id=74;
+update person set laptop_purchased_dt='11/23/2017' where person_id=75;
+update person set laptop_purchased_dt='6/1/2018' where person_id=76;
+update person set laptop_purchased_dt='8/27/2017' where person_id=77;
+update person set laptop_purchased_dt='3/13/2017' where person_id=78;
+update person set laptop_purchased_dt='6/6/2018' where person_id=79;
+update person set laptop_purchased_dt='6/1/2018' where person_id=80;
+update person set laptop_purchased_dt='10/18/2015' where person_id=81;
+update person set laptop_purchased_dt='10/15/2018' where person_id=82;
+update person set laptop_purchased_dt='12/15/2017' where person_id=83;
+update person set laptop_purchased_dt='8/15/2018' where person_id=84;
+update person set laptop_purchased_dt='8/24/2017' where person_id=85;
+update person set laptop_purchased_dt='11/1/2015' where person_id=86;
+update person set laptop_purchased_dt='6/4/2016' where person_id=87;
+update person set laptop_purchased_dt='7/8/2016' where person_id=88;
+update person set laptop_purchased_dt='2/14/2018' where person_id=89;
+update person set laptop_purchased_dt='6/11/2015' where person_id=90;
+update person set laptop_purchased_dt='8/17/2017' where person_id=91;
+update person set laptop_purchased_dt='6/20/2017' where person_id=92;
+update person set laptop_purchased_dt='1/5/2017' where person_id=93;
+update person set laptop_purchased_dt='7/5/2018' where person_id=94;
+update person set laptop_purchased_dt='9/19/2016' where person_id=95;
+update person set laptop_purchased_dt='12/20/2017' where person_id=96;
+update person set laptop_purchased_dt='8/1/2015' where person_id=97;
+update person set laptop_purchased_dt='7/1/2014' where person_id=98;
+update person set laptop_purchased_dt='7/14/2018' where person_id=99;
+update person set laptop_purchased_dt='6/8/2017' where person_id=100;
+update person set laptop_purchased_dt='1/1/2015' where person_id=101;
+update person set laptop_purchased_dt='6/22/2017' where person_id=102;
+update person set laptop_purchased_dt='8/1/2015' where person_id=103;
+update person set laptop_purchased_dt='8/1/2018' where person_id=104;
+update person set laptop_purchased_dt='4/30/2018' where person_id=105;
