@@ -326,26 +326,39 @@ insert into brand (brand_id, name) values (29, 'Toms');
 insert into brand (brand_id, name) values (30, 'Puravida');
 insert into brand (brand_id, name) values (31, 'Snapchat');
 insert into brand (brand_id, name) values (32, 'University of New England');
-insert into brand (brand_id, name) values (33, "Pokemon");
-insert into brand (brand_id, name) values (34, "Warner Bros");
+insert into brand (brand_id, name) values (33, 'Pokemon');
+insert into brand (brand_id, name) values (34, 'Warner Bros');
+insert into brand (brand_id, name) values (35, 'Girls Who Code');
+insert into brand (brand_id, name) values (36, 'Facebook');
+insert into brand (brand_id, name) values (37, 'Twitter');
+insert into brand (brand_id, name) values (38, 'HubSpot');
+insert into brand (brand_id, name) values (39, 'Bike Benefits');
+insert into brand (brand_id, name) values (40, 'Star Trek');
 
 
 
 
 
-insert into color (color_id, name) values (0, "Black");
-insert into color (color_id, name) values (1, "Red");
-insert into color (color_id, name) values (2, "Blue");
-insert into color (color_id, name) values (3, "Gray");
-insert into color (color_id, name) values (4, "White");
-insert into color (color_id, name) values (5, "Silver");
-insert into color (color_id, name) values (6, "Orange");
-insert into color (color_id, name) values (7, "Yellow");
-insert into color (color_id, name) values (8, "Green");
-insert into color (color_id, name) values (9, "Pink");
-insert into color (color_id, name) values (10, "Beige");
-insert into color (color_id, name) values (11, "Purple");
-insert into color (color_id, name) values (12, "Rainbow");
+
+
+
+
+
+insert into color (color_id, name) values (0, 'Black');
+insert into color (color_id, name) values (1, 'Red');
+insert into color (color_id, name) values (2, 'Blue');
+insert into color (color_id, name) values (3, 'Gray');
+insert into color (color_id, name) values (4, 'White');
+insert into color (color_id, name) values (5, 'Silver');
+insert into color (color_id, name) values (6, 'Orange');
+insert into color (color_id, name) values (7, 'Yellow');
+insert into color (color_id, name) values (8, 'Green');
+insert into color (color_id, name) values (9, 'Pink');
+insert into color (color_id, name) values (10, 'Beige');
+insert into color (color_id, name) values (11, 'Purple');
+insert into color (color_id, name) values (12, 'Rainbow');
+insert into color (color_id, name) values (13, 'Brown');
+
 
 -- rows 41-60, person_ids 40-59
 
@@ -473,25 +486,25 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(67, 'Ban The Bottle Save The Planet', 3, 3, 4, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-    (114, "N", 4, 4, 1, 3),
-    (115, "UNE Nor'easters", 4, 3, 2, 32),
+    (114, 'N', 4, 4, 1, 3),
+    (115, 'UNE Nor''easters', 4, 3, 2, 32),
     (116, null, 2, 3, 8, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (117, null, 3,2, 2, 33);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-	(118, "B R C C", 3, 4, 0, null),
-	(119, "I solemnly swear that I am up to no good", 7, 3, 0, 34),
-	(120, "Walls are meant for climbing", 3, 4, 0, null),
-	(121, "2017 Eckhardt Northeast Regional Conference", 3, 3, 1, null),
+	(118, 'B R C C', 3, 4, 0, null),
+	(119, 'I solemnly swear that I am up to no good', 7, 3, 0, 34),
+	(120, 'Walls are meant for climbing', 3, 4, 0, null),
+	(121, '2017 Eckhardt Northeast Regional Conference', 3, 3, 1, null),
 	(122, null, 2, 2, 1, null), -- Picure of brain
-	(123, "Northeastern University AIChe", 3, 2, 0, 3),
-	(124, "HOME", 4, 3, 7, null), -- Picture of PA
+	(123, 'Northeastern University AIChe', 3, 2, 0, 3),
+	(124, 'HOME', 4, 3, 7, null), -- Picture of PA
 	(125, null, 3, 3, 0, null) -- Picture of girl grabbing building
-	(126, "Corrosive Materials", 4, 2, 0, null),
-	(127, "United Nations", 3, 3, 2, null),
-	(128, "Friction", 4, 3, 0, null);
+	(126, 'Corrosive Materials', 4, 2, 0, null),
+	(127, 'United Nations', 3, 3, 2, null),
+	(128, 'Friction', 4, 3, 0, null);
 
 
 
@@ -553,7 +566,143 @@ insert into person_has_sticker values
 	(39, 128);
 
 
+
+
 ---------------------------
+
+
+-- Stickers for person_ids 92-105 (rows 93-106)
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(300, 'New Schoolers', 4, 4, 0, null),
+	(301, 'Best Summer Ever * Momentum Ski Camps', 4, 3, 8, null),
+	(302, 'University', 4, 1, 2, null),
+
+	(303, 'Concepts', 6, 2, 8, null),
+	(304, 'Parade', 2, 2, 0, null),
+	
+	(305, 'prime student', 3, 2, 2, 22),
+
+	(306, 'CCIS', 2, 2, 1, 3), -- Red N, black squares, white ccis text
+	(307, 'Hack Beanpot', 3 ,2 0, null),
+	(308, 'Hack', 2, 2, 4, null), -- white background
+	(309, '#GHC16', 4, 2, 0, 35),
+	(310, 'girls who code', 4, 3, 8, 35),
+	(311, 'Hack', 2, 2, 13, null),
+	(312, 'NUWIT', 4, 3, 8, 3), -- Bottom right
+	(313, 'GitHub', 2, 1, 4, 23),
+	(314, 'YouTube', 4, 2, 1, 20),
+	(315, 'Ice Age', 3, 3, 2, null),
+	(316, 'HH', 3, 4, 2, 3), -- Husky Hacks logo
+	(318, null, 2, 1, 13, null), -- Sleeping Dog
+	(319, null, 3, 3, 0, null), -- Two upside down white triangles
+	(320, null, 2, 2, 2, null), -- Blue power button
+	(321, null, 3, 4, 13, null), -- Brown backpack
+	(322, null, 2, 2, 2, 36), -- Blue messenger icon
+	(323, null, 2, 2, 11, 36), -- Instagram icon
+	(324, null, 3, 4, 7, null), -- Yellow dog
+	(325, null, 2, 2, 13, null), -- Dog with coffee
+	(326, null, 2, 2, 2, 37), -- Twitter logo
+	(327, null, 2, 2, 0, null), -- Black Square
+	(328, null, 4, 4, 4, null), -- Angry ramen
+	(329, null, 1, 1, 13, null), --Guy on cloud
+	(330, null, 1, 1, 9, null), -- Spaceship pink thing
+	(331, null, 1, 2, 13, null), -- Dog with hamburger
+	(332, null, 1, 2, 2, null), -- Blue lightbulb
+	(333, null, 2, 1, 0, null), -- Penguin
+	(334, null, 2, 3, 0, null), -- Howling husky
+	(335, null, 2, 2, 2, 36), -- Facebook logo
+	(336, null, 2, 3, 2, null), -- TARDIS blue telephone box
+	(337, null, 2, 2, 2, null), -- Blue background, white turn on button
+
+	(338, 'HubSpot', 4, 1, 0, 38),
+	(339, 'NUWIT', 3, 3, 2, 3),
+	(340, 'Boston', 3, 2, 1, null),
+	(341, 'Bike Benefits BikeBenefits.org', 1, 2, 39),
+	(342, null, 1, 1, 2, null), -- Rocket ship
+	(343, null, 1, 1, 1, null), -- Lightning bolt
+	(344, null, 1, 1, 7, null), -- Star
+	(345, null, 1, 1, 8, null), -- Green donut
+	(346, null, 4, 4, 6, 38),  -- HubSpot thing
+
+	(347, 'Black Red', 3, 3, 4, 3),
+
+	(348, 'Make It So.', 4, 5, 1, 40);
+
+
+
+insert into person_has_sticker values 
+	(92, 300),
+	(92, 301),
+	(92, 302),
+	(94, 303),
+	(94, 304),
+	(96, 305),
+	(97, 71),
+	(97, 72),
+	(97, 83),
+	(97, 306),
+	(97, 307),
+	(97, 308),
+	(97, 309),
+	(97, 310),
+	(97, 311),
+	(97, 312),
+	(97, 313),
+	(97, 314),
+	(97, 315),
+	(97, 316),
+	(97, 318),
+	(97, 319),
+	(97, 320),
+	(97, 321),
+	(97, 322),
+	(97, 323),
+	(97, 324),
+	(97, 325),
+	(97, 326),
+	(97, 327),
+	(97, 328),
+	(97, 329),
+	(97, 330),
+	(97, 331),
+	(97, 332),
+	(97, 333),
+	(97, 334),
+	(97, 335),
+	(97, 336),
+	(97, 337),
+	(97, 99),
+	(98, 338),
+	(98, 339),
+	(98, 340),
+	(98, 341),
+	(98, 342),
+	(98, 343),
+	(98, 344),
+	(98, 345),
+	(98, 346),
+	(99, 40),
+	(99, 41),
+	(100, 306),
+	(101, 41),
+	(101, 40),
+	(103, 347),
+	(104, 348);
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+---------------------
 
 -- Stickers for person_ids 1-20 (rows 2-21)
 
@@ -600,7 +749,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 
     (97, 'TOMS', 4, 3, 2, 29),
     (98, 'CCIS', 2, 1, 4, 3),
-    (99, null, 3, 2, 2, null), -- blue butterfly
+    (99, 'NUWIT', 3, 2, 2, null), -- blue butterfly
     (100, 'puravida bracelets', 3, 1, 2, 30),
     (101, 'N Northeastern', 1, 1, 1, 3),
     (102, null, 2, 2, 7, null), -- simley face with blurry writing on mouth
