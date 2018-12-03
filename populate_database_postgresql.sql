@@ -579,7 +579,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 
 	(303, 'Concepts', 6, 2, 8, null),
 	(304, 'Parade', 2, 2, 0, null),
-	
+
 	(305, 'prime student', 3, 2, 2, 22),
 
 	(306, 'CCIS', 2, 2, 1, 3), -- Red N, black squares, white ccis text
@@ -630,7 +630,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 
 
 
-insert into person_has_sticker values 
+insert into person_has_sticker values
 	(92, 300),
 	(92, 301),
 	(92, 302),
@@ -695,9 +695,9 @@ insert into person_has_sticker values
 
 
 
-	
 
-	
+
+
 
 
 
@@ -922,3 +922,122 @@ update person set laptop_purchased_dt='6/22/2017' where person_id=102;
 update person set laptop_purchased_dt='8/1/2015' where person_id=103;
 update person set laptop_purchased_dt='8/1/2018' where person_id=104;
 update person set laptop_purchased_dt='4/30/2018' where person_id=105;
+
+
+
+--- person IDs 60-75 (rows 61-76), using sticker_ids 1000-2000 (except for already existing ones)
+--60 none
+--61 none
+--62 none
+--63 none
+--64 none
+--65
+--66 none
+--67
+--68 none
+--69 none
+--70 none
+--71 none
+--72 none
+--73 none
+--74
+
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1000, 'Cambridge Science Festival', 4, 3, 8);
+insert into sticker (sticker_id, text, brand_id, width, height, color_id) values
+(1001, 'it.', 38, 3, 2, 0);
+
+insert into sticker (sticker_id, width, height, color_id) values
+(1002, 4, 5, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1003, 'x', 4, 4, 6);
+insert into sticker (sticker_id, width, height, color_id) values
+(1004, 2, 4, 5);
+
+insert into sticker (sticker_id, text, width, height, color_id) values --i voted sticker
+(1005, 'I Voted', 2, 1, 2);
+insert into sticker (sticker_id, width, height, color_id) values
+(1006, 2, 2, 9);
+insert into brand (brand_id, name) values
+(1000, 'Downeast');
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values --downeast
+(1007, 'Downeast Unfiltered', 2, 1, 2, 1000);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1008, 'Eat your coffee', 3, 3, 4);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1009, 'Emerald Lake Canada', 3, 3, 1);
+insert into sticker (sticker_id, width, height, color_id) values -- turtle
+(1010, 2, 2, 8);
+insert into sticker (sticker_id, width, height, color_id) values
+(1011, 4, 1, 2);
+
+insert into sticker (sticker_id, text, width, height, color_id) values -- js
+(1012, 'js', 2, 2, 8);
+insert into sticker (sticker_id, width, height, color_id) values --hand with flower
+(1013, 2, 4, 1);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1014, 'Utena', 3, 3, 9);
+insert into brand (brand_id, name) values
+(1001, 'Nintendo');
+insert into sticker (sticker_id, width, height, color_id, brand_id) values -- pokemon, torchic
+(1015, 1, 2, 6, 1001);
+insert into sticker (sticker_id, width, height, color_id, brand_id) values -- pokemon, mudkip
+(1016, 1, 2, 2, 1001);
+insert into sticker (sticker_id, width, height, color_id, brand_id) values -- pitt from kid icarus
+(1017, 2, 3, 4, 1001);
+insert into sticker (sticker_id, width, height, color_id) values
+(1018, 2, 2, 0);
+insert into sticker (sticker_id, width, height, color_id) values
+(1019, 3, 3, 8);
+insert into sticker (sticker_id, width, height, color_id) values
+(1020, 2, 2, 0);
+insert into sticker (sticker_id, width, height, color_id) values
+(1021, 3, 3, 9);
+insert into sticker (sticker_id, width, height, color_id) values
+(1022, 3, 4, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1023, 'Our Turn.', 3, 6, 6);
+insert into sticker (sticker_id, width, height, color_id, brand_id) values --pokemon, treecko
+(1024, 1, 2, 8, 1001);
+insert into sticker (sticker_id, text, width, height, color_id) values --html5
+(1025, 'html5', 2, 2, 6);
+insert into sticker (sticker_id,  width, height, color_id, brand_id) values --html5
+(1026, 3, 3, 11, 1001);
+insert into sticker (sticker_id,  width, height, color_id, brand_id) values --html5
+(1027, 4, 4, 1, 3);
+
+
+insert into person_has_sticker (person_id, sticker_id) values
+(65, 346),
+(65, 1000),
+(65, 1001),
+
+(67, 1002),
+(67, 1003),
+(67, 1004),
+
+(74, 1005),
+(74, 1006),
+(74, 1007),
+(74, 1008),
+(74, 26),
+(74, 1009),
+(74, 1010),
+(74, 1011),
+
+(75, 1012),
+(75, 1013),
+(75, 1014),
+(75, 1015),
+(75, 1016),
+(75, 1017),
+(75, 1018),
+(75, 1019),
+(75, 1020),
+(75, 1021),
+(75, 1022),
+(75, 1023),
+(75, 1024),
+(75, 1025),
+(75, 1026),
+(75, 1027);
