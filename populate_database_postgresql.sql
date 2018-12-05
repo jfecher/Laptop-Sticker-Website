@@ -324,7 +324,8 @@ insert into brand (brand_id, name) values (27, "Microsoft");
 insert into brand (brand_id, name) values (28, "Star Wars");
 insert into brand (brand_id, name) values (29, "Toms");
 insert into brand (brand_id, name) values (30, "Puravida");
-insert into brand (brand_id, name) values (30, "Snapchat");
+insert into brand (brand_id, name) values (31, "Snapchat");
+insert into brand (brand_id, name) values (32, "Fox");
 
 
 
@@ -622,6 +623,47 @@ insert into person_has_sticker values
     (19, 111),
     (19, 112),
     (19, 113),
+
+
+
+-- stickers for ids 76-91 (rows 77-92)
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+    (214, "N", 2, 2, 1, 3),
+    (215, "Slurm", 2, 2, 8, 32), -- futurama slurm
+    (216, null, 1, 1, 4, null), -- white paw print (unknown if it is northeastern?)
+    (217, "V", 2, 2, 0, null), -- black v with leaf on right and circle around it
+    (218, null, 2, 2, 2, null), -- Gunther penguin from adventure time
+    (219, null, 2, 2, 10, null), -- idk, the drag race show maybe?
+    (220, "Vans off the wall", 3, 1, 4, null),
+    (221, null, 2, 2, 1, null), -- maple leaf
+    (221, null, 2, 2, 0, null), -- hand prints
+    (221, "Target", 2, 2, 0, null), -- Target sticker with name omitted
+    (221, "Pura Vida", 2, 2, 2, 30), -- peace wagon
+
+    (222, null, 2, 2, 2, 30), -- stitch from lilo and stitch
+    (223, "Supernova", 2, 2, 2, 30), -- generic "supernova" comic-book effect
+    (224, "FUCK the PATRIARCHY", 2, 2, 2, 30),
+    (225, "スタジオジブリ STUDIO GHIBLI", 2, 2, 2, 30), -- Studio ghibli with Totora picture
+    (226, "GHOST", 2, 2, 2, 30), -- Dog named ghost, may be a brand/comic but idk
+    (227, null, 2, 2, 2, 30), -- white dog circular sticker
+    (228, "Music Is All We Got", 2, 2, 2, 30),
+    (229, "devil worshippers social outcasts", 2, 2, 2, 30),
+    (230, "Don't touch my stuff", 2, 2, 2, 30), -- Louise from bob's burgers
+    (231, "FEMINISM is not here to dictate you. It's not prescriptive, it's not dogmatic.  All we are here to do is GIVE YOU A CHOICE.  If you want to run for Prime Minister, you can.  If you don't that's wonderful too.  GENDER EQUALITY is your issue too.  Both MEN and WOMEN should feel FREE to be STRONG. All we are here to do is to give you a CHOICE.", 2, 2, 2, 30),
+    (232, "S.T.A.R. Laboratories", 2, 2, 2, 30),
+    (233, "Fight Like A Girl", 2, 2, 2, 30),
+    (234, "Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Little Haiti Miami", 2, 2, 2, 30),
+
+-- person then sticker
+insert into person_has_sticker values
+    (77, 214),
+    (77, 215),
+    (77, 216),
+    (77, 217),
+    (77, 218),
+    (77, 219),
+    (77, 220),
+    (77, 221),
 
 
 -- date purchased updates
