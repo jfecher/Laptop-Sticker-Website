@@ -146,7 +146,7 @@ insert into survey_location values
 	(2, 'Off-Campus'),
 	(5, 'West Village H Lab'),
 	(14, 'Snell Library'),
-	(30, 'Shillman Hall'),
+	(30, 'Shillman Hall');
 
 insert into laptop values
 	(0, 13, 'Dell', 'Inspiron'),
@@ -220,10 +220,10 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(31, 51, 83, 30, 1, 10, 10),
 	(32, 11, 12, 30, 1, 4, 10),
 	(33, 26, 14, 30, 32, 4, 4),
-	(34, 64, 49, 14, 33, 1, 5),
+	(34, 64, 49, 14, 13, 1, 5),
 	(35, 28, 43, 30, 34, 1, 2),
 	(36, 29, 91, 0, 35, 6, 8),
-	(37, 71, 27, 49, 22, 1, 1),
+	(37, 71, 27, 1, 22, 1, 1),
 	(38, 33, 35, 30, 0, 7, 7),
 	(39, 42, 40, 0, 0, 8, 8),
 	(40, 1, 0, 0, 1, 5, 2),
@@ -293,42 +293,6 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(104, 1, 90, 0, 1, 5, 5),
 	(105, 1, 15, 2, 13, 1, 1);
 
-insert into brand (brand_id, name) values (0, "NBC");
-insert into brand (brand_id, name) values (1, "Barstool Sports");
-insert into brand (brand_id, name) values (2, "Mugatunes");
-insert into brand (brand_id, name) values (3, "Northeastern University");
-insert into brand (brand_id, name) values (4, "Boston.com");
-insert into brand (brand_id, name) values (5, "2K Games");
-insert into brand (brand_id, name) values (6, "MLB");
-insert into brand (brand_id, name) values (7, "Harmonix");
-insert into brand (brand_id, name) values (8, "Sony");
-insert into brand (brand_id, name) values (9, "Dirty Floor Brown Ale");
-insert into brand (brand_id, name) values (10, "Heartwood");
-insert into brand (brand_id, name) values (11, "NUPD");
-insert into brand (brand_id, name) values (12, "B-Side Label");
-insert into brand (brand_id, name) values (13, "Bluefish Cove");
-insert into brand (brand_id, name) values (14, "Lamplighter Brewing Company");
-insert into brand (brand_id, name) values (15, "Elizabeth Warren");
-insert into brand (brand_id, name) values (16, "Meiji University");
-insert into brand (brand_id, name) values (17, "Giraffe House");
-insert into brand (brand_id, name) values (18, "Cliff's Tattoo");
-insert into brand (brand_id, name) values (19, "Life is Good");
-insert into brand (brand_id, name) values (20, "Google");
-insert into brand (brand_id, name) values (21, "Tableau");
-insert into brand (brand_id, name) values (22, "Amazon");
-insert into brand (brand_id, name) values (23, "Github");
-insert into brand (brand_id, name) values (24, "Major League Hacking");
-insert into brand (brand_id, name) values (25, "Hello Kitty");
-insert into brand (brand_id, name) values (26, "Codacity.com");
-insert into brand (brand_id, name) values (27, "Microsoft");
-insert into brand (brand_id, name) values (28, "Star Wars");
-insert into brand (brand_id, name) values (29, "Toms");
-insert into brand (brand_id, name) values (30, "Puravida");
-insert into brand (brand_id, name) values (31, "Snapchat");
-insert into brand (brand_id, name) values (32, "Fox");
-
-
-
 
 insert into color (color_id, name) values (0, "Black");
 insert into color (color_id, name) values (1, "Red");
@@ -343,42 +307,90 @@ insert into color (color_id, name) values (9, "Pink");
 insert into color (color_id, name) values (10, "Beige");
 insert into color (color_id, name) values (11, "Purple");
 insert into color (color_id, name) values (12, "Rainbow");
+insert into color (color_id, name) values (13, 'Brown');
+
+
+insert into brand (brand_id, name) values (0, 'NBC');
+insert into brand (brand_id, name) values (1, 'Barstool Sports');
+insert into brand (brand_id, name) values (2, 'Mugatunes');
+insert into brand (brand_id, name) values (3, 'Northeastern University');
+insert into brand (brand_id, name) values (4, 'Boston.com');
+insert into brand (brand_id, name) values (5, '2K Games');
+insert into brand (brand_id, name) values (6, 'MLB');
+insert into brand (brand_id, name) values (7, 'Harmonix');
+insert into brand (brand_id, name) values (8, 'Sony');
+insert into brand (brand_id, name) values (9, 'Dirty Floor Brown Ale');
+insert into brand (brand_id, name) values (10, 'Heartwood');
+insert into brand (brand_id, name) values (11, 'NUPD');
+insert into brand (brand_id, name) values (12, 'B-Side Label');
+insert into brand (brand_id, name) values (13, 'Bluefish Cove');
+insert into brand (brand_id, name) values (14, 'Lamplighter Brewing Company');
+insert into brand (brand_id, name) values (15, 'Elizabeth Warren');
+insert into brand (brand_id, name) values (16, 'Meiji University');
+insert into brand (brand_id, name) values (17, 'Giraffe House');
+insert into brand (brand_id, name) values (18, 'Cliff''s Tattoo');
+insert into brand (brand_id, name) values (19, 'Life is Good');
+insert into brand (brand_id, name) values (20, 'Google');
+insert into brand (brand_id, name) values (21, 'Tableau');
+insert into brand (brand_id, name) values (22, 'Amazon');
+insert into brand (brand_id, name) values (23, 'Github');
+insert into brand (brand_id, name) values (24, 'Major League Hacking');
+insert into brand (brand_id, name) values (25, 'Hello Kitty');
+insert into brand (brand_id, name) values (26, 'Codacity.com');
+insert into brand (brand_id, name) values (27, 'Microsoft');
+insert into brand (brand_id, name) values (28, 'Star Wars');
+insert into brand (brand_id, name) values (29, 'Toms');
+insert into brand (brand_id, name) values (30, 'Puravida');
+insert into brand (brand_id, name) values (31, 'Snapchat');
+insert into brand (brand_id, name) values (32, 'University of New England');
+insert into brand (brand_id, name) values (33, 'Pokemon');
+insert into brand (brand_id, name) values (34, 'Warner Bros');
+insert into brand (brand_id, name) values (35, 'Girls Who Code');
+insert into brand (brand_id, name) values (36, 'Facebook');
+insert into brand (brand_id, name) values (37, 'Twitter');
+insert into brand (brand_id, name) values (38, 'HubSpot');
+insert into brand (brand_id, name) values (39, 'Bike Benefits');
+insert into brand (brand_id, name) values (40, 'Star Trek');
+insert into brand (brand_id, name) values (41, "Fox");
+
+
+
 
 -- rows 41-60, person_ids 40-59
 
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (0, "Dunder Mifflin Paper Company", 2, 1, 0, 0);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (1, "Swanson Pyramid of Greatness", 4, 3, 1, 0);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (0, 'Dunder Mifflin Paper Company', 2, 1, 0, 0);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (1, 'Swanson Pyramid of Greatness', 4, 3, 1, 0);
 
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (2, "Viva La", 5, 4, 0, 1);
-insert into sticker (sticker_id, text, width, height, color_id) values (3, "Las Olas Tacqueria", 4, 2, 2);
-insert into sticker (sticker_id, text, width, height, color_id) values (4, "Trezor", 4, 2, 0);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (5, "#NoShittyMusic", 8, 2, 0, 2);
-insert into sticker (sticker_id, text, width, height, color_id) values (6, "Blenders Rocked With Pride Worldwide", 3, 3, 2);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (2, 'Viva La', 5, 4, 0, 1);
+insert into sticker (sticker_id, text, width, height, color_id) values (3, 'Las Olas Tacqueria', 4, 2, 2);
+insert into sticker (sticker_id, text, width, height, color_id) values (4, 'Trezor', 4, 2, 0);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (5, '#NoShittyMusic', 8, 2, 0, 2);
+insert into sticker (sticker_id, text, width, height, color_id) values (6, 'Blenders Rocked With Pride Worldwide', 3, 3, 2);
 
 insert into sticker (sticker_id, width, height, color_id) values (7, 3, 3, 3);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (8, "Just Dewitt.", 3, 4, 0, 5);
-insert into sticker (sticker_id, text, width, height, color_id) values (9, "10p", 3, 4, 1);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (10, "NUSCI", 3, 3, 4, 3);
-insert into sticker (sticker_id, text, width, height, color_id) values (11, "boston.com Keep up.", 3, 6, 0, 4);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (8, 'Just Dewitt.', 3, 4, 0, 5);
+insert into sticker (sticker_id, text, width, height, color_id) values (9, '10p', 3, 4, 1);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (10, 'NUSCI', 3, 3, 4, 3);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (11, 'boston.com Keep up.', 3, 6, 0, 4);
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (12, 3, 3, 5, 5);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (13, "Oakland Athletics", 4, 4, 4, 6);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (13, 'Oakland Athletics', 4, 4, 4, 6);
 
-insert into sticker (sticker_id, text, width, height, color_id) values (14, "Cardly", 4, 2, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (14, 'Cardly', 4, 2, 0);
 
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (15, 4, 4, 4, 7);
 insert into sticker (sticker_id, width, height, color_id, brand_id) values (16, 2, 2, 2, 8);
-insert into sticker (sticker_id, text, width, height, color_id) values (17, "The Taco & Ice Cream Joint", 5, 3, 1);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (18, "We Live Together", 3, 3, 4, 9);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, "Can't You", 3, 3, 4, 10);
+insert into sticker (sticker_id, text, width, height, color_id) values (17, 'The Taco & Ice Cream Joint', 5, 3, 1);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (18, 'We Live Together', 3, 3, 4, 9);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (19, 'Can''t You', 3, 3, 4, 10);
 
-insert into sticker (sticker_id, text, width, height, color_id) values (20, "God is within her she will not fall", 3, 4, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (21, "You are my sunshine", 3, 1, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (22, "Boston", 4, 2, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (23, "Colorado", 3, 1, 0);
-insert into sticker (sticker_id, text, width, height, color_id) values (24, "Visit Uganda", 3, 3, 6);
+insert into sticker (sticker_id, text, width, height, color_id) values (20, 'God is within her she will not fall', 3, 4, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (21, 'You are my sunshine', 3, 1, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (22, 'Boston', 4, 2, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (23, 'Colorado', 3, 1, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values (24, 'Visit Uganda', 3, 3, 6);
 insert into sticker (sticker_id, width, height, color_id) values (25, 2, 4, 0);
-insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (26, "Northeastern University", 4, 2, 0, 3);
-insert into sticker (sticker_id, text, width, height, color_id) values (27, "Radiate Positivity", 3, 3, 7);
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values (26, 'Northeastern University', 4, 2, 0, 3);
+insert into sticker (sticker_id, text, width, height, color_id) values (27, 'Radiate Positivity', 3, 3, 7);
 insert into sticker (sticker_id, width, height, color_id) values (28, 3, 3, 8);
 insert into sticker (sticker_id, width, height, color_id) values (29, 2, 1, 0);
 
@@ -421,53 +433,76 @@ insert into person_has_sticker (person_id, sticker_id) values (59, 29);
 
 -- Rows 21-40 (Persons 20-39) ------------------------
 insert into sticker (sticker_id, text, width, height, color_id, price, brand_id) values
-	(30, "faith > fear", 2, 1, 0, 4, null),
-	(31, "#DANCER", 4, 1, 0, 4, null),
-	(32, "Radiate Positivity", 4, 1, 7, 3, null),
-	(33, "Black Lives Matter",4, 1, 0, 3, null),
+	(30, 'faith > fear', 2, 1, 0, 4, null),
+	(31, '#DANCER', 4, 1, 0, 4, null),
+	(32, 'Radiate Positivity', 4, 1, 7, 3, null),
+	(33, 'Black Lives Matter',4, 1, 0, 3, null),
 	(34, null, 3, 2, 0, 3, null),
-	(35, "Sigma Kappa", 4, 2, 0, 4, null),
-	(36, "Friends", 4, 1 , 0, 4, 0),
-	(37,"Dogs", 3, 3, 9, 3, null),
-	(38, "all you need is ice cream", 1, 4, 10, 3, null),
+	(35, 'Sigma Kappa', 4, 2, 0, 4, null),
+	(36, 'Friends', 4, 1 , 0, 4, 0),
+	(37,'Dogs', 3, 3, 9, 3, null),
+	(38, 'all you need is ice cream', 1, 4, 10, 3, null),
 	(39, null, 3, 3, 7, 3, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, price, brand_id) values
-	(40, "Warning: Police Identifiable", 3, 2, 1, 0, 11),
-	(41, "Security Tracking of Office Property", 3, 2, 1, 0, 11);
+	(40, 'Warning: Police Identifiable', 3, 2, 1, 0, 11),
+	(41, 'Security Tracking of Office Property', 3, 2, 1, 0, 11);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-	(42, "Let's Travel", 2, 2, 0, 12),
-	(43, "Bluefish Cove",7, 5, 4, 13),
-	(44, "Lamplighter Brewing Company", 5, 5, 3, 14),
-	(45, "Persist", 4, 13, 1, 14),
-	(46, "Meiji University", 2, 2, 0, 16),
-	(47, "School of Politcal Science and Economics", 2, 2, 0, 16),
-	(48, "Kyoto Limited", 2, 3, 6, 12);
+	(42, 'Let''s Travel', 2, 2, 0, 12),
+	(43, 'Bluefish Cove',7, 5, 4, 13),
+	(44, 'Lamplighter Brewing Company', 5, 5, 3, 14),
+	(45, 'Persist', 4, 13, 1, 14),
+	(46, 'Meiji University', 2, 2, 0, 16),
+	(47, 'School of Politcal Science and Economics', 2, 2, 0, 16),
+	(48, 'Kyoto Limited', 2, 3, 6, 12);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(49, null, 3, 5, 9, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-	(50, "Dragon Prayer Book", 2, 4, 1, null),
-	(51, "Ni hao", 3, 3, 1, null),
-	(52, "In Darkness Let Me Dwell", 3, 5, 9, 17),
-	(53, "Northeastern University", 8, 4, 1, 3),
-	(54, "NULab", 3, 3, 1, 3),
+	(50, 'Dragon Prayer Book', 2, 4, 1, null),
+	(51, 'Ni hao', 3, 3, 1, null),
+	(52, 'In Darkness Let Me Dwell', 3, 5, 9, 17),
+	(53, 'Northeastern University', 8, 4, 1, 3),
+	(54, 'NULab', 3, 3, 1, 3),
 	(55, null, 8, 3, 4, null),
-	(57, "Giraffe House", 3, 3, 9, 11);
+	(57, 'Giraffe House', 3, 3, 9, 11);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(58, null, 2, 5, 4, null),
 	(59, null, 3, 3, 2, null),
-	(60, "Cliff's Tattoo", 2, 2, 0, 18),
+	(60, 'Cliff''s Tattoo', 2, 2, 0, 18),
 	(61, null, 4, 3, 0, null),
 	(62, null, 5, 2, 0, null),
-	(63, "be happy", 4, 3, 12, null),
+	(63, 'be happy', 4, 3, 12, null),
 	(64, null, 1, 1, 0, null),
-	(65, "Life is Good", 4, 4, 2, 19),
+	(65, 'Life is Good', 4, 4, 2, 19),
 	(66, null, 4, 2, 11, null),
-	(67, "Ban The Bottle Save The Planet", 3, 3, 4, null);
+	(67, 'Ban The Bottle Save The Planet', 3, 3, 4, null);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+    (114, 'N', 4, 4, 1, 3),
+    (115, 'UNE Nor''easters', 4, 3, 2, 32),
+    (116, null, 2, 3, 8, null);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+    (117, null, 3,2, 2, 33);
+
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(118, 'B R C C', 3, 4, 0, null),
+	(119, 'I solemnly swear that I am up to no good', 7, 3, 0, 34),
+	(120, 'Walls are meant for climbing', 3, 4, 0, null),
+	(121, '2017 Eckhardt Northeast Regional Conference', 3, 3, 1, null),
+	(122, null, 2, 2, 1, null), -- Picure of brain
+	(123, 'Northeastern University AIChe', 3, 2, 0, 3),
+	(124, 'HOME', 4, 3, 7, null), -- Picture of PA
+	(125, null, 3, 3, 0, null) -- Picture of girl grabbing building
+	(126, 'Corrosive Materials', 4, 2, 0, null),
+	(127, 'United Nations', 3, 3, 2, null),
+	(128, 'Friction', 4, 3, 0, null);
+
+
 
 
 insert into person_has_sticker values
@@ -489,7 +524,7 @@ insert into person_has_sticker values
 	(27, 45),
 	(27, 46),
 	(27, 47),
-	(27, 48);
+	(27, 48),
 	(30, 49),
 	(31, 50),
 	(31, 51),
@@ -497,7 +532,6 @@ insert into person_has_sticker values
 	(31, 53),
 	(31, 54),
 	(31, 55),
-	(31, 56),
 	(31, 57),
 	(32, 58),
 	(32, 59),
@@ -509,70 +543,223 @@ insert into person_has_sticker values
 	(32, 65),
 	(32, 66),
 	(32, 67),
-	(32, 29);
+	(32, 29),
+	(33, 114),
+    (33, 115),
+    (33, 116),
+    (38, 117),
+    (39, 10),
+	(39, 118),
+	(39, 119),
+	(39, 120),
+	(39, 121),
+	(39, 122),
+	(39, 123),
+	(39, 124),
+	(39, 125),
+	(39, 126),
+	(39, 127),
+	(39, 128);
+
+
+
 
 ---------------------------
+
+
+-- Stickers for person_ids 92-105 (rows 93-106)
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
+	(300, 'New Schoolers', 4, 4, 0, null),
+	(301, 'Best Summer Ever * Momentum Ski Camps', 4, 3, 8, null),
+	(302, 'University', 4, 1, 2, null),
+
+	(303, 'Concepts', 6, 2, 8, null),
+	(304, 'Parade', 2, 2, 0, null),
+
+	(305, 'prime student', 3, 2, 2, 22),
+
+	(306, 'CCIS', 2, 2, 1, 3), -- Red N, black squares, white ccis text
+	(307, 'Hack Beanpot', 3 ,2 0, null),
+	(308, 'Hack', 2, 2, 4, null), -- white background
+	(309, '#GHC16', 4, 2, 0, 35),
+	(310, 'girls who code', 4, 3, 8, 35),
+	(311, 'Hack', 2, 2, 13, null),
+	(312, 'NUWIT', 4, 3, 8, 3), -- Bottom right
+	(313, 'GitHub', 2, 1, 4, 23),
+	(314, 'YouTube', 4, 2, 1, 20),
+	(315, 'Ice Age', 3, 3, 2, null),
+	(316, 'HH', 3, 4, 2, 3), -- Husky Hacks logo
+	(318, null, 2, 1, 13, null), -- Sleeping Dog
+	(319, null, 3, 3, 0, null), -- Two upside down white triangles
+	(320, null, 2, 2, 2, null), -- Blue power button
+	(321, null, 3, 4, 13, null), -- Brown backpack
+	(322, null, 2, 2, 2, 36), -- Blue messenger icon
+	(323, null, 2, 2, 11, 36), -- Instagram icon
+	(324, null, 3, 4, 7, null), -- Yellow dog
+	(325, null, 2, 2, 13, null), -- Dog with coffee
+	(326, null, 2, 2, 2, 37), -- Twitter logo
+	(327, null, 2, 2, 0, null), -- Black Square
+	(328, null, 4, 4, 4, null), -- Angry ramen
+	(329, null, 1, 1, 13, null), --Guy on cloud
+	(330, null, 1, 1, 9, null), -- Spaceship pink thing
+	(331, null, 1, 2, 13, null), -- Dog with hamburger
+	(332, null, 1, 2, 2, null), -- Blue lightbulb
+	(333, null, 2, 1, 0, null), -- Penguin
+	(334, null, 2, 3, 0, null), -- Howling husky
+	(335, null, 2, 2, 2, 36), -- Facebook logo
+	(336, null, 2, 3, 2, null), -- TARDIS blue telephone box
+	(337, null, 2, 2, 2, null), -- Blue background, white turn on button
+
+	(338, 'HubSpot', 4, 1, 0, 38),
+	(339, 'NUWIT', 3, 3, 2, 3),
+	(340, 'Boston', 3, 2, 1, null),
+	(341, 'Bike Benefits BikeBenefits.org', 1, 2, 39),
+	(342, null, 1, 1, 2, null), -- Rocket ship
+	(343, null, 1, 1, 1, null), -- Lightning bolt
+	(344, null, 1, 1, 7, null), -- Star
+	(345, null, 1, 1, 8, null), -- Green donut
+	(346, null, 4, 4, 6, 38),  -- HubSpot thing
+
+	(347, 'Black Red', 3, 3, 4, 3),
+
+	(348, 'Make It So.', 4, 5, 1, 40);
+
+
+
+insert into person_has_sticker values
+	(92, 300),
+	(92, 301),
+	(92, 302),
+	(94, 303),
+	(94, 304),
+	(96, 305),
+	(97, 71),
+	(97, 72),
+	(97, 83),
+	(97, 306),
+	(97, 307),
+	(97, 308),
+	(97, 309),
+	(97, 310),
+	(97, 311),
+	(97, 312),
+	(97, 313),
+	(97, 314),
+	(97, 315),
+	(97, 316),
+	(97, 318),
+	(97, 319),
+	(97, 320),
+	(97, 321),
+	(97, 322),
+	(97, 323),
+	(97, 324),
+	(97, 325),
+	(97, 326),
+	(97, 327),
+	(97, 328),
+	(97, 329),
+	(97, 330),
+	(97, 331),
+	(97, 332),
+	(97, 333),
+	(97, 334),
+	(97, 335),
+	(97, 336),
+	(97, 337),
+	(97, 99),
+	(98, 338),
+	(98, 339),
+	(98, 340),
+	(98, 341),
+	(98, 342),
+	(98, 343),
+	(98, 344),
+	(98, 345),
+	(98, 346),
+	(99, 40),
+	(99, 41),
+	(100, 306),
+	(101, 41),
+	(101, 40),
+	(103, 347),
+	(104, 348);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------
 
 -- Stickers for person_ids 1-20 (rows 2-21)
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-    (68, "CCIS", 2, 2, 1, 3),
-    (69, "We the People of the United States, I Voted Today", 2, 2, 10, null),
-    (70, "Husky Environmental Action Team HEAT", 3, 3, 10, 3),
+    (68, 'CCIS', 2, 2, 1, 3),
+    (69, 'We the People of the United States, I Voted Today', 2, 2, 10, null),
+    (70, 'Husky Environmental Action Team HEAT', 3, 3, 10, 3),
 
-    (71, "NUHACKS", 3, 2, 2, 3),
-    (72, "Nuacm", 2, 2, 2, 3),
+    (71, 'NUHACKS', 3, 2, 2, 3),
+    (72, 'Nuacm', 2, 2, 2, 3),
 
-    (73, "Google", 4, 1, 12, 20),
+    (73, 'Google', 4, 1, 12, 20),
     (74, null, 2, 2, 2, null),  -- binoculars inside blue square
     (75, null, 2, 2, 11, null),  -- atom inside purple square
-    (76, "Awesome Day 2018", 2, 2, 2, 22), -- amazon
+    (76, 'Awesome Day 2018', 2, 2, 2, 22), -- amazon
     (77, null, 2, 3, 4, null),  -- robot with blue eyes?
-    (78, "NU ACES", 4, 1, 0, 3),
-    (79, "Who's Your Data?", 2, 2, 2, 21),
+    (78, 'NU ACES', 4, 1, 0, 3),
+    (79, 'Who''s Your Data?', 2, 2, 2, 21),
     (80, null, 2, 2, 0, 3), --husky paw print
 
-    (81, "2019 Hackathon Season", 3, 3, 0, 24),
+    (81, '2019 Hackathon Season', 3, 3, 0, 24),
     (82, null, 3, 2, 4, 20), --gmail
     (83, null, 2, 3, 8, 20), --android
-    (84, "MLH Hardware Lab Presented By Digi-Key", 4, 2, 8, 24),
+    (84, 'MLH Hardware Lab Presented By Digi-Key', 4, 2, 8, 24),
     (85, null, 1, 2, 6, 23), --github bag
 
-    (86, "I ate something yummy", 2, 2, 9, 25),
+    (86, 'I ate something yummy', 2, 2, 9, 25),
 
-    (87, "Ask Why", 3, 1, 0, null),
-    (88, "Solve Together", 3, 2, 10, null),
-    (89, "Friends Close, Bad Code Closer!", 2, 3, 0, 26),
+    (87, 'Ask Why', 3, 1, 0, null),
+    (88, 'Solve Together', 3, 2, 10, null),
+    (89, 'Friends Close, Bad Code Closer!', 2, 3, 0, 26),
 
     (90, null, 11, 8, 12, null),
 
     (91, null, 3, 3, 12, 27),
-    (92, "NATIONAL clean Energy WEEK", 4, 4, 4, null), -- yes, it was capitalized like this
+    (92, 'NATIONAL clean Energy WEEK', 4, 4, 4, null), -- yes, it was capitalized like this
 
     (93, null, 3, 3, 8, 28), -- yoda sticker
-    (94, "We Are All Wonder Women!", 3, 2, 4, null),
+    (94, 'We Are All Wonder Women!', 3, 2, 4, null),
 
-    (95, "ふにふに", 2, 1, 4, null), -- "funi funi" in japanese with hamster picture
+    (95, 'ふにふに', 2, 1, 4, null), -- 'funi funi' in japanese with hamster picture
 
-    (96, "Police Public Call Box", 11, 5, 2, null),
+    (96, 'Police Public Call Box', 11, 5, 2, null),
 
-    (97, "TOMS", 4, 3, 2, 29),
-    (98, "CCIS", 2, 1, 4, 3),
-    (99, null, 3, 2, 2, null), -- blue butterfly
-    (100, "puravida bracelets", 3, 1, 2, 30),
-    (101, "N Northeastern", 1, 1, 1, 3),
+    (97, 'TOMS', 4, 3, 2, 29),
+    (98, 'CCIS', 2, 1, 4, 3),
+    (99, 'NUWIT', 3, 2, 2, null), -- blue butterfly
+    (100, 'puravida bracelets', 3, 1, 2, 30),
+    (101, 'N Northeastern', 1, 1, 1, 3),
     (102, null, 2, 2, 7, null), -- simley face with blurry writing on mouth
     (103, null, 1, 1, 0, 3), -- face of NU Husky
     (104, null, 1, 1, 0, 3), -- NU paw print, small version
-    (105, "I [whale] BOSTON", 3, 2, 4, null),
+    (105, 'I [whale] BOSTON', 3, 2, 4, null),
     (106, null, 1, 1, 4, 31), -- snapchat ghost
-    (107, "Northeastern", 5, 1, 4, 3), -- yet another northeastern sticker
+    (107, 'Northeastern', 5, 1, 4, 3), -- yet another northeastern sticker
     (108, null, 3, 3, 11, null), -- some purple flame/symbol?
-    (109, "California Republic", 5, 5, 10, null), -- flag of california
-    (110, "H", 2, 3, 2, null), -- individual letters with pictures of palm trees
-    (111, "E", 2, 3, 2, null),
-    (112, ">", 2, 3, 2, null),
-    (113, "i", 1, 3, 2, null);
+    (109, 'California Republic', 5, 5, 10, null), -- flag of california
+    (110, 'H', 2, 3, 2, null), -- individual letters with pictures of palm trees
+    (111, 'E', 2, 3, 2, null),
+    (112, '>', 2, 3, 2, null),
+    (113, 'i', 1, 3, 2, null);
 
 -- person then sticker
 insert into person_has_sticker values
@@ -622,14 +809,14 @@ insert into person_has_sticker values
     (19, 110),
     (19, 111),
     (19, 112),
-    (19, 113),
+    (19, 113);
 
 
 
 -- stickers for ids 76-91 (rows 77-92)
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (214, "N", 2, 2, 1, 3),
-    (215, "Slurm", 2, 2, 8, 32), -- futurama slurm
+    (215, "Slurm", 2, 2, 8, 41), -- futurama slurm
     (216, null, 1, 1, 4, null), -- white paw print (unknown if it is northeastern?)
     (217, "V", 2, 2, 0, null), -- black v with leaf on right and circle around it
     (218, null, 2, 2, 2, null), -- Gunther penguin from adventure time
@@ -640,19 +827,71 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (221, "Target", 2, 2, 0, null), -- Target sticker with name omitted
     (221, "Pura Vida", 2, 2, 2, 30), -- peace wagon
 
-    (222, null, 2, 2, 2, 30), -- stitch from lilo and stitch
-    (223, "Supernova", 2, 2, 2, 30), -- generic "supernova" comic-book effect
-    (224, "FUCK the PATRIARCHY", 2, 2, 2, 30),
-    (225, "スタジオジブリ STUDIO GHIBLI", 2, 2, 2, 30), -- Studio ghibli with Totora picture
-    (226, "GHOST", 2, 2, 2, 30), -- Dog named ghost, may be a brand/comic but idk
-    (227, null, 2, 2, 2, 30), -- white dog circular sticker
-    (228, "Music Is All We Got", 2, 2, 2, 30),
-    (229, "devil worshippers social outcasts", 2, 2, 2, 30),
-    (230, "Don't touch my stuff", 2, 2, 2, 30), -- Louise from bob's burgers
-    (231, "FEMINISM is not here to dictate you. It's not prescriptive, it's not dogmatic.  All we are here to do is GIVE YOU A CHOICE.  If you want to run for Prime Minister, you can.  If you don't that's wonderful too.  GENDER EQUALITY is your issue too.  Both MEN and WOMEN should feel FREE to be STRONG. All we are here to do is to give you a CHOICE.", 2, 2, 2, 30),
-    (232, "S.T.A.R. Laboratories", 2, 2, 2, 30),
-    (233, "Fight Like A Girl", 2, 2, 2, 30),
-    (234, "Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Little Haiti Miami", 2, 2, 2, 30),
+    (222, null, 2, 3, 2, null), -- stitch from lilo and stitch
+    (223, "Supernova", 1, 1, 1, null), -- generic "supernova" comic-book effect
+    (224, "FUCK the PATRIARCHY", 2, 2, 1, null),
+    (225, "スタジオジブリ STUDIO GHIBLI", 3, 2, 2, null), -- Studio ghibli with Totora picture
+    (226, "GHOST", 2, 2, 4, null), -- Dog named ghost, may be a brand/comic but idk
+    (227, null, 2, 2, 4, null), -- white dog circular sticker
+    (228, "Music Is All We Got", 2, 3, 4, null),
+    (229, "devil worshippers social outcasts", 2, 1, 0, null),
+    (230, "Don't touch my stuff", 2, 2, 9, null), -- Louise from bob's burgers
+    (231, "FEMINISM is not here to dictate you. It's not prescriptive, it's not dogmatic.  All we are here to do is GIVE YOU A CHOICE.  If you want to run for Prime Minister, you can.  If you don't that's wonderful too.  GENDER EQUALITY is your issue too.  Both MEN and WOMEN should feel FREE to be STRONG. All we are here to do is to give you a CHOICE.", 2, 3, 0, null),
+    (232, "S.T.A.R. Laboratories", 3, 2, 0, null),
+    (233, "Fight Like A Girl", 2, 2, 1, null),
+    (234, "Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Little Haiti Miami", 2, 2, 4, null),
+
+    (235, "amazon", 2, 1, 4, 22),
+    (236, null, 1, 1, 4, null),
+
+    (237, "\"It's from a vine.\"", 3, 1, 4, null),
+    (238, null, 3, 3, 2, null), -- backwards 7 flag?
+    (239, null, 1, 3, 11, null), -- purple flowers
+    (240, "Ramah Camping Movement", 3, 2, 8, null),
+    (241, null, 1, 3, 2, null), -- 3 cats stacked on another
+    (242, "spread hummus not hate", 3, 3, 0, null),
+    (243, null, 1, 1, 1, null), -- red cartoon cat drawing
+    (244, null, 1, 1, 1, null), -- some sort of apple that is also a box in a magician hat
+    (245, null, 3, 2, 12, null), -- guitar pedals
+
+    (246, "1+", 1, 1, 1, null), -- 1+ (one plus) logo
+    (247, "Noided", 3, 1, 1, null),
+    (248, "SPARROWS", 3, 3, 1, null),
+    (249, null, 3, 3, 2, null), -- no idea, looks like a coaster or well
+
+    (250, "I Stand with planned parenthood #StandwithPP", 2, 2, 9, null),
+    (251, "Cats Against Cat Calls", 2, 2, 10, null),
+    (252, null, 2, 2, 2, null), -- blue painting
+    (253, null, 2, 2, 12, null),
+    (254, "The greatest city in the world", 3, 1, 0, null),
+    (255, null, 2, 3, 7, null), -- painting of flowers
+    (256, "DARWIN", 3, 1, 0, null), -- darwin fish
+    (257, null, 2, 2, 13, null), -- another abstract painting
+    (258, null, 3, 3, 8, null), -- paintings...
+    (259, "Northeastern University Boston, Massachusetts", 3, 3, 1, 3),
+    (260, null, 3, 2, 10, null), -- classical/medieval painting
+    (261, null, 3, 1, 1, null), -- lightning mcqueen
+    (262, "Kerchoo", 1, 1, 4, null), -- custom kerchoo
+    (263, null, 2, 2, 7, null), -- pasta farianism
+    (264, "May you be touched by his noodly appendage", 3, 1, 1, null),
+
+    (265, "Supreme", 5, 2, 1, null),
+    (266, null, 2, 2, 7, null),
+    (267, null, 1, 2, 4, null),
+    (268, null, 4, 2, 4, null),
+
+    (269, null, 2, 3, 8, null),
+    (270, null, 2, 2, 13, null),
+    (271, "That the powerful play goes on and you may contribute a verse", 2, 3, 0, null),
+    (272, "Walt Whitman", 1, 1, 0, null),
+    (273, "Renewable Energy? I'm a big fan", 3, 2, 2, null),
+    (274, "Love is Love is Love is Love is Love is Love is Love is Love", 3, 3, 12, null),
+    (275, null, 2, 3, 2, null), --blue bird
+    (276, null, 2, 3, 1, null), --red cane thing
+    (277, "Que tengo un lindo dia", 4, 2, 4, null),
+    (278, null, 2, 2, 2, null), --pigeon
+    (279, null, 1, 1, 7, null), --yellow thing
+    (280, "Cymru", 3, 1, 8, null),
 
 -- person then sticker
 insert into person_has_sticker values
@@ -665,110 +904,295 @@ insert into person_has_sticker values
     (77, 220),
     (77, 221),
 
+    (78, 222),
+    (78, 223),
+    (78, 224),
+    (78, 225),
+    (78, 226),
+    (78, 227),
+    (78, 228),
+    (78, 229),
+    (78, 230),
+    (78, 231),
+    (78, 232),
+    (78, 233),
+    (78, 234),
+
+    (79, 235),
+    (79, 236),
+
+    (84, 237),
+    (84, 238),
+    (84, 239),
+    (84, 240),
+    (84, 241),
+    (84, 242),
+    (84, 243),
+    (84, 244),
+    (84, 245),
+
+    (85, 246),
+    (85, 247),
+    (85, 248),
+    (85, 249),
+
+    (86, 250),
+    (86, 251),
+    (86, 252),
+    (86, 253),
+    (86, 254),
+    (86, 255),
+    (86, 256),
+    (86, 257),
+    (86, 258),
+    (86, 259),
+    (86, 260),
+    (86, 261),
+    (86, 262),
+    (86, 263),
+    (86, 264),
+
+    (88, 265),
+    (88, 266),
+    (88, 267),
+    (88, 268),
+
+    (91, 269),
+    (91, 270),
+    (91, 271),
+    (91, 272),
+    (91, 273),
+    (91, 274),
+    (91, 275),
+    (91, 276),
+    (91, 277),
+    (91, 278),
+    (91, 279),
+    (91, 280),
+
 
 -- date purchased updates
-update person set laptop_purchased_dt='7/20/2017' where person_id=1
-update person set laptop_purchased_dt='1/1/2017' where person_id=2
-update person set laptop_purchased_dt='9/1/2016' where person_id=3
-update person set laptop_purchased_dt='9/1/2017' where person_id=4
-update person set laptop_purchased_dt='1/1/2018' where person_id=5
-update person set laptop_purchased_dt='8/1/2017' where person_id=6
-update person set laptop_purchased_dt='9/2/2018' where person_id=7
-update person set laptop_purchased_dt='6/1/2015' where person_id=8
-update person set laptop_purchased_dt='11/15/2018' where person_id=9
-update person set laptop_purchased_dt='8/1/2013' where person_id=10
-update person set laptop_purchased_dt='1/10/2018' where person_id=11
-update person set laptop_purchased_dt='8/1/2016' where person_id=12
-update person set laptop_purchased_dt='9/4/2017' where person_id=13
-update person set laptop_purchased_dt='3/20/2017' where person_id=14
-update person set laptop_purchased_dt='3/1/2015' where person_id=15
-update person set laptop_purchased_dt='10/1/2014' where person_id=16
-update person set laptop_purchased_dt='6/20/2016' where person_id=17
-update person set laptop_purchased_dt='7/19/2014' where person_id=18
-update person set laptop_purchased_dt='10/1/2013' where person_id=19
-update person set laptop_purchased_dt='11/18/2016' where person_id=20
-update person set laptop_purchased_dt='8/3/2018' where person_id=21
-update person set laptop_purchased_dt='5/1/2016' where person_id=22
-update person set laptop_purchased_dt='6/11/2018' where person_id=23
-update person set laptop_purchased_dt='10/18/2018' where person_id=24
-update person set laptop_purchased_dt='11/10/2017' where person_id=25
-update person set laptop_purchased_dt='8/8/2016' where person_id=26
-update person set laptop_purchased_dt='1/1/2016' where person_id=27
-update person set laptop_purchased_dt='11/1/2016' where person_id=28
-update person set laptop_purchased_dt='6/10/2014' where person_id=29
-update person set laptop_purchased_dt='1/6/2018' where person_id=30
-update person set laptop_purchased_dt='9/1/2013' where person_id=31
-update person set laptop_purchased_dt='12/20/2016' where person_id=32
-update person set laptop_purchased_dt='8/10/2013' where person_id=33
-update person set laptop_purchased_dt='6/15/2017' where person_id=34
-update person set laptop_purchased_dt='5/6/2015' where person_id=35
-update person set laptop_purchased_dt='8/30/2018' where person_id=36
-update person set laptop_purchased_dt='1/1/2015' where person_id=37
-update person set laptop_purchased_dt='11/16/2018' where person_id=38
-update person set laptop_purchased_dt='8/12/2015' where person_id=39
-update person set laptop_purchased_dt='8/22/2018' where person_id=40
-update person set laptop_purchased_dt='8/15/2015' where person_id=41
-update person set laptop_purchased_dt='8/15/2017' where person_id=42
-update person set laptop_purchased_dt='8/28/2017' where person_id=43
-update person set laptop_purchased_dt='6/30/2016' where person_id=44
-update person set laptop_purchased_dt='6/1/2014' where person_id=45
-update person set laptop_purchased_dt='9/1/2017' where person_id=46
-update person set laptop_purchased_dt='11/1/2012' where person_id=47
-update person set laptop_purchased_dt='2/5/2015' where person_id=48
-update person set laptop_purchased_dt='6/9/2016' where person_id=49
-update person set laptop_purchased_dt='12/1/2016' where person_id=50
-update person set laptop_purchased_dt='9/15/2015' where person_id=51
-update person set laptop_purchased_dt='8/15/2015' where person_id=52
-update person set laptop_purchased_dt='1/5/2015' where person_id=53
-update person set laptop_purchased_dt='12/22/2017' where person_id=54
-update person set laptop_purchased_dt='9/1/2016' where person_id=55
-update person set laptop_purchased_dt='6/30/2014' where person_id=56
-update person set laptop_purchased_dt='8/12/2018' where person_id=57
-update person set laptop_purchased_dt='6/1/2013' where person_id=58
-update person set laptop_purchased_dt='8/1/2015' where person_id=59
-update person set laptop_purchased_dt='7/1/2015' where person_id=60
-update person set laptop_purchased_dt='9/1/2018' where person_id=61
-update person set laptop_purchased_dt='8/5/2017' where person_id=62
-update person set laptop_purchased_dt='12/24/2017' where person_id=63
-update person set laptop_purchased_dt='7/15/2016' where person_id=64
-update person set laptop_purchased_dt='11/20/2017' where person_id=65
-update person set laptop_purchased_dt='11/18/2018' where person_id=66
-update person set laptop_purchased_dt='8/1/2018' where person_id=67
-update person set laptop_purchased_dt='12/28/2017' where person_id=68
-update person set laptop_purchased_dt='4/1/2017' where person_id=69
-update person set laptop_purchased_dt='8/17/2017' where person_id=70
-update person set laptop_purchased_dt='8/8/2018' where person_id=71
-update person set laptop_purchased_dt='6/15/2017' where person_id=72
-update person set laptop_purchased_dt='11/26/2017' where person_id=73
-update person set laptop_purchased_dt='6/20/2014' where person_id=74
-update person set laptop_purchased_dt='11/23/2017' where person_id=75
-update person set laptop_purchased_dt='6/1/2018' where person_id=76
-update person set laptop_purchased_dt='8/27/2017' where person_id=77
-update person set laptop_purchased_dt='3/13/2017' where person_id=78
-update person set laptop_purchased_dt='6/6/2018' where person_id=79
-update person set laptop_purchased_dt='6/1/2018' where person_id=80
-update person set laptop_purchased_dt='10/18/2015' where person_id=81
-update person set laptop_purchased_dt='10/15/2018' where person_id=82
-update person set laptop_purchased_dt='12/15/2017' where person_id=83
-update person set laptop_purchased_dt='8/15/2018' where person_id=84
-update person set laptop_purchased_dt='8/24/2017' where person_id=85
-update person set laptop_purchased_dt='11/1/2015' where person_id=86
-update person set laptop_purchased_dt='6/4/2016' where person_id=87
-update person set laptop_purchased_dt='7/8/2016' where person_id=88
-update person set laptop_purchased_dt='2/14/2018' where person_id=89
-update person set laptop_purchased_dt='6/11/2015' where person_id=90
-update person set laptop_purchased_dt='8/17/2017' where person_id=91
-update person set laptop_purchased_dt='6/20/2017' where person_id=92
-update person set laptop_purchased_dt='1/5/2017' where person_id=93
-update person set laptop_purchased_dt='7/5/2018' where person_id=94
-update person set laptop_purchased_dt='9/19/2016' where person_id=95
-update person set laptop_purchased_dt='12/20/2017' where person_id=96
-update person set laptop_purchased_dt='8/1/2015' where person_id=97
-update person set laptop_purchased_dt='7/1/2014' where person_id=98
-update person set laptop_purchased_dt='7/14/2018' where person_id=99
-update person set laptop_purchased_dt='6/8/2017' where person_id=100
-update person set laptop_purchased_dt='1/1/2015' where person_id=101
-update person set laptop_purchased_dt='6/22/2017' where person_id=102
-update person set laptop_purchased_dt='8/1/2015' where person_id=103
-update person set laptop_purchased_dt='8/1/2018' where person_id=104
-update person set laptop_purchased_dt='4/30/2018' where person_id=105
+update person set laptop_purchased_dt='7/20/2017' where person_id=1;
+update person set laptop_purchased_dt='1/1/2017' where person_id=2;
+update person set laptop_purchased_dt='9/1/2016' where person_id=3;
+update person set laptop_purchased_dt='9/1/2017' where person_id=4;
+update person set laptop_purchased_dt='1/1/2018' where person_id=5;
+update person set laptop_purchased_dt='8/1/2017' where person_id=6;
+update person set laptop_purchased_dt='9/2/2018' where person_id=7;
+update person set laptop_purchased_dt='6/1/2015' where person_id=8;
+update person set laptop_purchased_dt='11/15/2018' where person_id=9;
+update person set laptop_purchased_dt='8/1/2013' where person_id=10;
+update person set laptop_purchased_dt='1/10/2018' where person_id=11;
+update person set laptop_purchased_dt='8/1/2016' where person_id=12;
+update person set laptop_purchased_dt='9/4/2017' where person_id=13;
+update person set laptop_purchased_dt='3/20/2017' where person_id=14;
+update person set laptop_purchased_dt='3/1/2015' where person_id=15;
+update person set laptop_purchased_dt='10/1/2014' where person_id=16;
+update person set laptop_purchased_dt='6/20/2016' where person_id=17;
+update person set laptop_purchased_dt='7/19/2014' where person_id=18;
+update person set laptop_purchased_dt='10/1/2013' where person_id=19;
+update person set laptop_purchased_dt='11/18/2016' where person_id=20;
+update person set laptop_purchased_dt='8/3/2018' where person_id=21;
+update person set laptop_purchased_dt='5/1/2016' where person_id=22;
+update person set laptop_purchased_dt='6/11/2018' where person_id=23;
+update person set laptop_purchased_dt='10/18/2018' where person_id=24;
+update person set laptop_purchased_dt='11/10/2017' where person_id=25;
+update person set laptop_purchased_dt='8/8/2016' where person_id=26;
+update person set laptop_purchased_dt='1/1/2016' where person_id=27;
+update person set laptop_purchased_dt='11/1/2016' where person_id=28;
+update person set laptop_purchased_dt='6/10/2014' where person_id=29;
+update person set laptop_purchased_dt='1/6/2018' where person_id=30;
+update person set laptop_purchased_dt='9/1/2013' where person_id=31;
+update person set laptop_purchased_dt='12/20/2016' where person_id=32;
+update person set laptop_purchased_dt='8/10/2013' where person_id=33;
+update person set laptop_purchased_dt='6/15/2017' where person_id=34;
+update person set laptop_purchased_dt='5/6/2015' where person_id=35;
+update person set laptop_purchased_dt='8/30/2018' where person_id=36;
+update person set laptop_purchased_dt='1/1/2015' where person_id=37;
+update person set laptop_purchased_dt='11/16/2018' where person_id=38;
+update person set laptop_purchased_dt='8/12/2015' where person_id=39;
+update person set laptop_purchased_dt='8/22/2018' where person_id=40;
+update person set laptop_purchased_dt='8/15/2015' where person_id=41;
+update person set laptop_purchased_dt='8/15/2017' where person_id=42;
+update person set laptop_purchased_dt='8/28/2017' where person_id=43;
+update person set laptop_purchased_dt='6/30/2016' where person_id=44;
+update person set laptop_purchased_dt='6/1/2014' where person_id=45;
+update person set laptop_purchased_dt='9/1/2017' where person_id=46;
+update person set laptop_purchased_dt='11/1/2012' where person_id=47;
+update person set laptop_purchased_dt='2/5/2015' where person_id=48;
+update person set laptop_purchased_dt='6/9/2016' where person_id=49;
+update person set laptop_purchased_dt='12/1/2016' where person_id=50;
+update person set laptop_purchased_dt='9/15/2015' where person_id=51;
+update person set laptop_purchased_dt='8/15/2015' where person_id=52;
+update person set laptop_purchased_dt='1/5/2015' where person_id=53;
+update person set laptop_purchased_dt='12/22/2017' where person_id=54;
+update person set laptop_purchased_dt='9/1/2016' where person_id=55;
+update person set laptop_purchased_dt='6/30/2014' where person_id=56;
+update person set laptop_purchased_dt='8/12/2018' where person_id=57;
+update person set laptop_purchased_dt='6/1/2013' where person_id=58;
+update person set laptop_purchased_dt='8/1/2015' where person_id=59;
+update person set laptop_purchased_dt='7/1/2015' where person_id=60;
+update person set laptop_purchased_dt='9/1/2018' where person_id=61;
+update person set laptop_purchased_dt='8/5/2017' where person_id=62;
+update person set laptop_purchased_dt='12/24/2017' where person_id=63;
+update person set laptop_purchased_dt='7/15/2016' where person_id=64;
+update person set laptop_purchased_dt='11/20/2017' where person_id=65;
+update person set laptop_purchased_dt='11/18/2018' where person_id=66;
+update person set laptop_purchased_dt='8/1/2018' where person_id=67;
+update person set laptop_purchased_dt='12/28/2017' where person_id=68;
+update person set laptop_purchased_dt='4/1/2017' where person_id=69;
+update person set laptop_purchased_dt='8/17/2017' where person_id=70;
+update person set laptop_purchased_dt='8/8/2018' where person_id=71;
+update person set laptop_purchased_dt='6/15/2017' where person_id=72;
+update person set laptop_purchased_dt='11/26/2017' where person_id=73;
+update person set laptop_purchased_dt='6/20/2014' where person_id=74;
+update person set laptop_purchased_dt='11/23/2017' where person_id=75;
+update person set laptop_purchased_dt='6/1/2018' where person_id=76;
+update person set laptop_purchased_dt='8/27/2017' where person_id=77;
+update person set laptop_purchased_dt='3/13/2017' where person_id=78;
+update person set laptop_purchased_dt='6/6/2018' where person_id=79;
+update person set laptop_purchased_dt='6/1/2018' where person_id=80;
+update person set laptop_purchased_dt='10/18/2015' where person_id=81;
+update person set laptop_purchased_dt='10/15/2018' where person_id=82;
+update person set laptop_purchased_dt='12/15/2017' where person_id=83;
+update person set laptop_purchased_dt='8/15/2018' where person_id=84;
+update person set laptop_purchased_dt='8/24/2017' where person_id=85;
+update person set laptop_purchased_dt='11/1/2015' where person_id=86;
+update person set laptop_purchased_dt='6/4/2016' where person_id=87;
+update person set laptop_purchased_dt='7/8/2016' where person_id=88;
+update person set laptop_purchased_dt='2/14/2018' where person_id=89;
+update person set laptop_purchased_dt='6/11/2015' where person_id=90;
+update person set laptop_purchased_dt='8/17/2017' where person_id=91;
+update person set laptop_purchased_dt='6/20/2017' where person_id=92;
+update person set laptop_purchased_dt='1/5/2017' where person_id=93;
+update person set laptop_purchased_dt='7/5/2018' where person_id=94;
+update person set laptop_purchased_dt='9/19/2016' where person_id=95;
+update person set laptop_purchased_dt='12/20/2017' where person_id=96;
+update person set laptop_purchased_dt='8/1/2015' where person_id=97;
+update person set laptop_purchased_dt='7/1/2014' where person_id=98;
+update person set laptop_purchased_dt='7/14/2018' where person_id=99;
+update person set laptop_purchased_dt='6/8/2017' where person_id=100;
+update person set laptop_purchased_dt='1/1/2015' where person_id=101;
+update person set laptop_purchased_dt='6/22/2017' where person_id=102;
+update person set laptop_purchased_dt='8/1/2015' where person_id=103;
+update person set laptop_purchased_dt='8/1/2018' where person_id=104;
+update person set laptop_purchased_dt='4/30/2018' where person_id=105;
+
+
+
+--- person IDs 60-75 (rows 61-76), using sticker_ids 1000-2000 (except for already existing ones)
+--60 none
+--61 none
+--62 none
+--63 none
+--64 none
+--65
+--66 none
+--67
+--68 none
+--69 none
+--70 none
+--71 none
+--72 none
+--73 none
+--74
+
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1000, 'Cambridge Science Festival', 4, 3, 8);
+insert into sticker (sticker_id, text, brand_id, width, height, color_id) values
+(1001, 'it.', 38, 3, 2, 0);
+
+insert into sticker (sticker_id, width, height, color_id) values
+(1002, 4, 5, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1003, 'x', 4, 4, 6);
+insert into sticker (sticker_id, width, height, color_id) values
+(1004, 2, 4, 5);
+
+insert into sticker (sticker_id, text, width, height, color_id) values --i voted sticker
+(1005, 'I Voted', 2, 1, 2);
+insert into sticker (sticker_id, width, height, color_id) values
+(1006, 2, 2, 9);
+insert into brand (brand_id, name) values
+(1000, 'Downeast');
+insert into sticker (sticker_id, text, width, height, color_id, brand_id) values --downeast
+(1007, 'Downeast Unfiltered', 2, 1, 2, 1000);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1008, 'Eat your coffee', 3, 3, 4);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1009, 'Emerald Lake Canada', 3, 3, 1);
+insert into sticker (sticker_id, width, height, color_id) values -- turtle
+(1010, 2, 2, 8);
+insert into sticker (sticker_id, width, height, color_id) values
+(1011, 4, 1, 2);
+
+insert into sticker (sticker_id, text, width, height, color_id) values -- js
+(1012, 'js', 2, 2, 8);
+insert into sticker (sticker_id, width, height, color_id) values --hand with flower
+(1013, 2, 4, 1);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1014, 'Utena', 3, 3, 9);
+insert into brand (brand_id, name) values
+(1001, 'Nintendo');
+insert into sticker (sticker_id, width, height, color_id, brand_id) values -- pokemon, torchic
+(1015, 1, 2, 6, 1001);
+insert into sticker (sticker_id, width, height, color_id, brand_id) values -- pokemon, mudkip
+(1016, 1, 2, 2, 1001);
+insert into sticker (sticker_id, width, height, color_id, brand_id) values -- pitt from kid icarus
+(1017, 2, 3, 4, 1001);
+insert into sticker (sticker_id, width, height, color_id) values
+(1018, 2, 2, 0);
+insert into sticker (sticker_id, width, height, color_id) values
+(1019, 3, 3, 8);
+insert into sticker (sticker_id, width, height, color_id) values
+(1020, 2, 2, 0);
+insert into sticker (sticker_id, width, height, color_id) values
+(1021, 3, 3, 9);
+insert into sticker (sticker_id, width, height, color_id) values
+(1022, 3, 4, 0);
+insert into sticker (sticker_id, text, width, height, color_id) values
+(1023, 'Our Turn.', 3, 6, 6);
+insert into sticker (sticker_id, width, height, color_id, brand_id) values --pokemon, treecko
+(1024, 1, 2, 8, 1001);
+insert into sticker (sticker_id, text, width, height, color_id) values --html5
+(1025, 'html5', 2, 2, 6);
+insert into sticker (sticker_id,  width, height, color_id, brand_id) values --html5
+(1026, 3, 3, 11, 1001);
+insert into sticker (sticker_id,  width, height, color_id, brand_id) values --html5
+(1027, 4, 4, 1, 3);
+
+
+insert into person_has_sticker (person_id, sticker_id) values
+(65, 346),
+(65, 1000),
+(65, 1001),
+
+(67, 1002),
+(67, 1003),
+(67, 1004),
+
+(74, 1005),
+(74, 1006),
+(74, 1007),
+(74, 1008),
+(74, 26),
+(74, 1009),
+(74, 1010),
+(74, 1011),
+
+(75, 1012),
+(75, 1013),
+(75, 1014),
+(75, 1015),
+(75, 1016),
+(75, 1017),
+(75, 1018),
+(75, 1019),
+(75, 1020),
+(75, 1021),
+(75, 1022),
+(75, 1023),
+(75, 1024),
+(75, 1025),
+(75, 1026),
+(75, 1027);

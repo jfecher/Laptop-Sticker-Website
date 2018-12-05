@@ -1,122 +1,164 @@
-<div id="chartDiv" style="width: 500; height: 500px">
-    <canvas id="myChart" width="400" height="400"></canvas>
-</div>
-<select id="xaxis" name="xaxis">
-    <option value="major">
-        Major
-    </option>
-    <option value="hometown_location">
-        Hometown
-    </option>
-    <option value="laptop">
-        Laptop Brand
-    </option>
-</select>
-<select id="yaxis" name="yaxis">
-    <option value="likelihood_to_buy_more">
-        Likelihood to Buy More Stickers
-    </option>
-    <option value="likelihood_to_put_more">
-        Likelihood to Put on More Stickers
-    </option>
-    <option value="brand.name">
-        Sticker Brand
-    </option>
-</select>
-<button onclick="refreshGraph()">
-    Update Axes!
-</button>
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<title>Hello, world!</title>
+</head>
+<body>
+	<header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Stickers of NEU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sticker Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+	<div id="chartDiv" style="width: 500; height: 500px">
+		<canvas id="myChart" width="400" height="400"></canvas>
+	</div>
+	<select id="xaxis" name="xaxis">
+		<option value="major">
+			Major
+		</option>
+		<option value="hometown_location">
+			Hometown
+		</option>
+		<option value="laptop">
+			Laptop Brand
+		</option>
+	</select>
+	<select id="yaxis" name="yaxis">
+		<option value="likelihood_to_buy_more">
+			Likelihood to Buy More Stickers
+		</option>
+		<option value="likelihood_to_put_more">
+			Likelihood to Put on More Stickers
+		</option>
+		<option value="brand.name">
+			Sticker Brand
+		</option>
+	</select>
+	<button onclick="refreshGraph()">
+		Update Axes!
+	</button>
 
 </select>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js>
 </script>
 <script>
 
-const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stickers",
-                        "likelihood_to_put_more" : "Likelihood to Put on More Stickers",
-                        "laptop" : "Laptop Brand",
-                        "hometown_location": "Hometown",
-                        "major": "Major",
-                        "brand.name": "Sticker Brand"};
+	const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stickers",
+	"likelihood_to_put_more" : "Likelihood to Put on More Stickers",
+	"laptop" : "Laptop Brand",
+	"hometown_location": "Hometown",
+	"major": "Major",
+	"brand.name": "Sticker Brand"};
 
-function makeHttpObject()
-{
-  try {return new XMLHttpRequest();}
-  catch (error) {}
-  try {return new ActiveXObject("Msxml2.XMLHTTP");}
-  catch (error) {}
-  try {return new ActiveXObject("Microsoft.XMLHTTP");}
-  catch (error) {}
+	function makeHttpObject()
+	{
+		try {return new XMLHttpRequest();}
+		catch (error) {}
+		try {return new ActiveXObject("Msxml2.XMLHTTP");}
+		catch (error) {}
+		try {return new ActiveXObject("Microsoft.XMLHTTP");}
+		catch (error) {}
 
-  throw new Error("Could not create HTTP request object.");
-}
+		throw new Error("Could not create HTTP request object.");
+	}
 
-function simpleHttpRequest(url, success, failure)
-{
-  var request = makeHttpObject();
-  request.open("GET", url, true);
-  request.send(null);
-  request.onreadystatechange = function() {
-    if (request.readyState == 4) {
-      if (request.status == 200)
-        success(JSON.parse(request.responseText));
-      else if (failure)
-        failure(request.status, request.statusText);
-    }
-  };
-}
-var myChart;
+	function simpleHttpRequest(url, success, failure)
+	{
+		var request = makeHttpObject();
+		request.open("GET", url, true);
+		request.send(null);
+		request.onreadystatechange = function() {
+			if (request.readyState == 4) {
+				if (request.status == 200)
+					success(JSON.parse(request.responseText));
+				else if (failure)
+					failure(request.status, request.statusText);
+			}
+		};
+	}
+	var myChart;
 
-function createChart(sqlResults)
-{
-    if (myChart)
-    {
-        myChart.destroy();
-    }
-    var ctx = document.getElementById("myChart").getContext('2d');
-    myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: sqlResults.xValues,
-            datasets: [{
-                label: valueToNameDict[document.getElementById("xaxis").value],
-                data: sqlResults.yValues,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            }
-        }
-    });
-}
-function refreshGraph()
-{
-    simpleHttpRequest("/api/" + document.getElementById("xaxis").value + "/" + document.getElementById("yaxis").value, createChart, console.log);
-}
+	function createChart(sqlResults)
+	{
+		if (myChart)
+		{
+			myChart.destroy();
+		}
+		var ctx = document.getElementById("myChart").getContext('2d');
+		myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: sqlResults.xValues,
+				datasets: [{
+					label: valueToNameDict[document.getElementById("xaxis").value],
+					data: sqlResults.yValues,
+					backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+					],
+					borderColor: [
+					'rgba(255,99,132,1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero:true
+						}
+					}]
+				}
+			}
+		});
+	}
+	function refreshGraph()
+	{
+		simpleHttpRequest("/api/" + document.getElementById("xaxis").value + "/" + document.getElementById("yaxis").value, createChart, console.log);
+	}
 
-simpleHttpRequest("/api/major/likelihood_to_put_more", createChart, console.log);
+	simpleHttpRequest("/api/major/likelihood_to_put_more", createChart, console.log);
 
 
 </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
