@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "module": "ES5",
+        "module": "system",
         "esModuleInterop": true,
         "target": "es6",
         "noImplicitAny": false,
