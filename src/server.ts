@@ -11,7 +11,7 @@ app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/stickerAnalytics', (req, res) => res.sendFile(__dirname + '/stickerAnalytics.html'));
 app.get('/about', (req, res) => res.sendFile(__dirname + '/about.html'));
 app.get('/gallery', (req, res) => res.sendFile(__dirname + '/gallery.html'));
-app.get('/:scriptName.js', (req, res) => res.sendFile(__dirname + req.params['scriptName'] + 'js'));
+app.get('/:scriptName.js', (req, res) => res.sendFile(__dirname + '/' req.params['scriptName'] + '.js'));
 
 
 
