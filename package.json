@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "build-ts": "tsc --lib es6,dom,scripthost",
+    "build-ts": "tsc",
     "postinstall": "npm run build-ts && cp html/* dist/",
     "start": "npm run serve",
     "serve": "node dist/server.js"
