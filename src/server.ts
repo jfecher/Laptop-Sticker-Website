@@ -8,6 +8,9 @@ client.connect();
 var port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
+app.get('/stickerAnalytics', (req, res) => res.sendFile(__dirname + '/stickerAnalytics.html'));
+
+
 app.get('/api/:xaxis/:yaxis',
     (req, res) =>
     {
