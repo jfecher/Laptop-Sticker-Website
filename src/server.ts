@@ -114,7 +114,7 @@ app.get('/api/avgStickers', (req, res) => {
     }
 );
 
-app.get('api/avgArea', (req, res) => {
+app.get('/api/avgArea', (req, res) => {
     var queryString = "select ROUND(avg(width) * avg(height)::decimal, 2) from sticker"
     const query = client.query(queryString);
 
