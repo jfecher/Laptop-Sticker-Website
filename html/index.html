@@ -1,95 +1,105 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<title></title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+
+	<title>Stickers of NEU</title>
 </head>
 <body>
-	<!doctype html>
-	<html lang="en">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<header>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<a class="navbar-brand" href="#">Stickers of NEU</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/stickerAnalytics">Sticker Analytics</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/gallery">Gallery</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-		<title>Stickers of NEU</title>
-	</head>
-	<header>
-	  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-	    <a class="navbar-brand" href="#">Stickers of NEU</a>
-	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"></span>
-	    </button>
-	    <div class="collapse navbar-collapse" id="navbarCollapse">
-	      <ul class="navbar-nav mr-auto">
-	        <li class="nav-item active">
-	          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="/about">About</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="/stickerAnalytics">Sticker Analytics</a>
-	        </li>
-	        <li class="nav-item">
-	          <a class="nav-link" href="/gallery">Gallery</a>
-	        </li>
-	      </ul>
-	    </div>
-	  </nav>
-	</header>
-
-	<div class="container" style="margin-top: 65px;">
-			<div class="col-12 col-md-12">
-				<p class="float-right hidden-md-up"></p>
-				<div class="jumbotron">
-					<h1>Stickers of NEU</h1>
-					<p>We collected info on laptop stickers from students around Northeastern University. Explore this website to see some of the results. Start with some of our stats below
-						at a glance...
-					</p>
-				</div>
-				<div class="row">
-					<div class="col-6 col-lg-4">
-						<h2 id = "myNumPersons"></h2>
-						<p>People surveyed at NEU</p>
-					</div><!--/span-->
-					<div class="col-6 col-lg-4">
-						<h2 id = "myNumStickers"></h2>
-						<p>Unique stickers collected</p>
-					</div><!--/span-->
-					<div class="col-6 col-lg-4">
-						<h2 id = "myNumHometowns"></h2>
-						<p>Unique hometowns</p>
-					</div><!--/span-->
-					<div class="col-6 col-lg-4">
-						<h2 id = "myNumMajors"></h2>
-						<p>Unique majors that we had</p>
-					</div><!--/span-->
-					<div class="col-6 col-lg-4">
-						<h2 id = "myNumBrands">Heading</h2>
-						<p>Unique sticker brands</p>
-					</div><!--/span-->
-					<div class="col-6 col-lg-4">
-						<h2 id="myNumLaptop"></h2>
-						<p>Unique laptop models</p>
-					</div><!--/span-->
-				</div><!--/row-->
-			</div><!--/span-->
+<div class="container" style="margin-top: 65px;">
+	<div class="col-12 col-md-12">
+		<p class="float-right hidden-md-up"></p>
+		<div class="jumbotron">
+			<h1>Stickers of NEU</h1>
+			<p>We collected info on laptop stickers from students around Northeastern University. Explore this website to see
+				some of the results. Start with some of our stats below
+				at a glance...
+			</p>
+		</div>
+		<div class="row">
+			<div class="col-6 col-lg-4">
+				<h2 id="myNumPersons"></h2>
+				<p>People surveyed at NEU</p>
+			</div>
+			<!--/span-->
+			<div class="col-6 col-lg-4">
+				<h2 id="myNumStickers"></h2>
+				<p>Unique stickers collected</p>
+			</div>
+			<!--/span-->
+			<div class="col-6 col-lg-4">
+				<h2 id="myNumHometowns"></h2>
+				<p>Unique hometowns</p>
+			</div>
+			<!--/span-->
+			<div class="col-6 col-lg-4">
+				<h2 id="myNumMajors"></h2>
+				<p>Unique majors that we had</p>
+			</div>
+			<!--/span-->
+			<div class="col-6 col-lg-4">
+				<h2 id="myNumBrands"></h2>
+				<p>Unique sticker brands</p>
+			</div>
+			<!--/span-->
+			<div class="col-6 col-lg-4">
+				<h2 id="myNumLaptop"></h2>
+				<p>Unique laptop models</p>
+			</div>
+			<div class="col-6 col-lg-4">
+				<h2 id="myPeopleHadStickers"></h2>
+				<p>People had stickers on their laptops</p>
+			</div>
+			<!--/span-->
+		</div>
+		<!--/row-->
 	</div>
-	
-	
+	<!--/span-->
+</div>
 
-	<script src=/homepage.js></script>
-	<script src=/simpleHttp.js></script>
-	<script>
-		simpleHttpRequest("/api/countTable/person", getNumPersons, console.log);
-		simpleHttpRequest("/api/countTable/sticker", getNumStickers, console.log);
-		simpleHttpRequest("/api/countTable/hometown_location", getNumHometowns, console.log);
-		simpleHttpRequest("/api/countTable/major", getMajors, console.log);
-		simpleHttpRequest("/api/countTable/brand", getBrands, console.log);
-		simpleHttpRequest("/api/countTable/laptop", getLaptops, console.log);
-	</script>
- </body>
+
+
+<script src=/homepage.js> </script> <script src=/simpleHttp.js> </script> <script>
+	simpleHttpRequest("/api/countTable/person", getNumPersons, console.log);
+	simpleHttpRequest("/api/countTable/sticker", getNumStickers, console.log);
+	simpleHttpRequest("/api/countTable/hometown_location", getNumHometowns, console.log);
+	simpleHttpRequest("/api/countTable/major", getMajors, console.log);
+	simpleHttpRequest("/api/countTable/brand", getBrands, console.log);
+	simpleHttpRequest("/api/countTable/laptop", getLaptops, console.log);
+	simpleHttpRequest("/api/peopleHadStickers", getPeopleHadStickers, console.log);
+</script>
+</body>
 </html>

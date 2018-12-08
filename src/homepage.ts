@@ -32,4 +32,10 @@ function getLaptops(sqlResults) {
     var headingElement = <HTMLHeadingElement> document.getElementById("myNumLaptop");
     headingElement.innerHTML = sqlResults.numRecords.count;
 }
+
+function getPeopleHadStickers(sqlResults) {
+    console.log(sqlResults);
+    var headingElement = <HTMLHeadingElement> document.getElementById("myPeopleHadStickers");
+    headingElement.innerHTML = sqlResults.numRecords.count;
+}
  

@@ -63,6 +63,31 @@ app.get('/api/countTable/:tableName', (req, res) => {
     }
 );
 
+app.get('/api/peopleHadStickers', (req, res) => {
+    var queryString = "select count(distinct person_id) from person_has_sticker;"
+    const query = client.query(queryString);
+
+    query.then(
+        (result : any) =>
+        {
+            let toBeSent : any = {'numRecords': 0};
+            result.rows.forEach(
+                (num : any) =>
+                {
+                    toBeSent.numRecords = num;
+                }
+            );
+            res.json(toBeSent);
+        }
+    ).catch(
+        (err : any) =>
+        {
+            console.log(err)
+        }
+      );
+    }
+);
+
 
 //----------------------------
 app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
