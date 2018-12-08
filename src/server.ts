@@ -126,6 +126,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         var xAxis = "";
         var sort = "";
         var queryString = "";
+        var limit = " limit 12; ";
         var scatterQuery = false;
 
 
@@ -147,8 +148,9 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         if (req.params['xaxis'] == "laptop_purchased_dt")
         {
-            xAxis = " person.laptop_purchased_dt";
+            xAxis = " concat(to_char(person.laptop_purchased_dt, 'MON'), extract(year from person.laptop_purchased_dt)) as xAxis";
             scatterQuery = true;
+            limit = "";
         }
 
         if (req.params['xaxis'] == "gender")
@@ -195,26 +197,14 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         sort = req.params['sort'];
 
-        var query;
-        if (scatterQuery) {
-            queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
-                        " , to_char(laptop_purchased_dt, 'MON') as mmm, extract(year from laptop_purchased_dt) as yyyy " +
-                        " from person " +
-                        joins +
-                        " group by mmm, yyyy " +
-                        " order by yAxis " + sort;
-            console.log(queryString);
-            query = client.query(queryString);
-        }  else {
-            queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
+        const queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
                             " from person " +
                             joins +
                             " group by " + xAxis +
                             " order by yAxis " + sort +
-                            " limit 6;";
-            console.log(queryString);
-            query = client.query(queryString);
-        }
+                            limit;
+        console.log(queryString);
+        query = client.query(queryString);
 
         query.then(
             (result : any) =>
