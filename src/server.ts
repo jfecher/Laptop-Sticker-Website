@@ -86,18 +86,19 @@ app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
     var endStr = " order by random() limit 10 ) as t";
 
     if(req.params['color'] != "Any"){
-        queryString += " and c.name = '${req.params['color']}' "
+        queryString += " and c.name = '" + req.params['color']} + "' "
         endStr = " order by random() ) as t";
     }
     if(req.params['laptopbrand'] != "Any"){
-        queryString += " and l.brand = '${req.params['laptopbrand']}' "
+        queryString += " and l.brand = '" + ${req.params['laptopbrand']} + "' "
         endStr = " order by random() ) as t";
     }
     if(req.params['gender'] != "Any"){
-        queryString += " and p.gender = '${req.params['gender']}' "
+        queryString += " and p.gender = '" + ${req.params['gender']} + "' "
         endStr = " order by random() ) as t";
     }
 
+    console.log('gallery query: ' + queryString + endStr);
     const query = client.query(queryString + endStr);
     query.then(
         (result : any) =>
