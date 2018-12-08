@@ -1,3 +1,8 @@
+
+/**
+ * Take the given sqlQuery in the form {laptop_picture_urls: []}
+ * and generate html to show each of the selected urls
+ */
 function fillGallery(sqlResults) {
     var container = document.getElementById("laptop_img_container");
     container.innerHTML = "";
@@ -12,13 +17,17 @@ function fillGallery(sqlResults) {
 }
 
 
+/** Helper to get the value of a dropdown */
 function getInputElem(id) {
     let elem = <HTMLInputElement> document.getElementById(id);
     return elem.value;
 }
 
 
-// color, count, brand, gender
+/**
+ * Refresh picture list with new pictures matching the
+ * four dropdowns color, count, brand, gender
+ */
 function refreshStickers(){
     let color = getInputElem("sticker_color");
     let brand = getInputElem("laptop_brand");
