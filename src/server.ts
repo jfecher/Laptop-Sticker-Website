@@ -147,7 +147,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         if (req.params['xaxis'] == "laptop_purchased_dt")
         {
-            xAxis = " concat(to_char(person.laptop_purchased_dt, 'MON'), extract(year from person.laptop_purchased_dt)) as xAxis";
+            xAxis = " concat(to_char(person.laptop_purchased_dt, 'MON'), extract(year from person.laptop_purchased_dt)) ";
             scatterQuery = true;
             limit = "";
         }
