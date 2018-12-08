@@ -10,3 +10,19 @@ function fillGallery(sqlResults) {
     `;
     });
 }
+
+
+function getInputElem(id) {
+    let elem = <HTMLInputElement> document.getElementById(id);
+    return elem.value;
+}
+
+
+// color, count, brand, gender
+function refreshStickers(){
+    let color = getInputElem("sticker_color");
+    let count = getInputElem("sticker_count");
+    let brand = getInputElem("laptop_brand");
+    let gender = getInputElem("gender");
+    simpleHttpRequest("/api/getStickerUrls/" + color + "/" + count + "/" + brand + "/" + gender, fillGallery, console.log);
+}
