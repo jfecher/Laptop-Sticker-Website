@@ -1,8 +1,8 @@
 var numPeople;
 function addHome(sqlResults) {
-    var results = JSON.parse(sqlResults);
+    console.log(sqlResults)
     var headingElement = <HTMLHeadingElement> document.getElementById("myNumPersons");
-    headingElement.innerHTML = results.numPeople;
+    headingElement.innerHTML = sqlResults.numPeople;
     
 
 }
