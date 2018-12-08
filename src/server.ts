@@ -43,7 +43,7 @@ app.get('/api/countTable/:tableName', (req, res) => {
 
 //----------------------------
 app.get('/api/getStickerUrls', (req, res) => {
-    var queryString = "select laptop_picture_url from person";
+    var queryString = "select person_id, laptop_picture_url from person where person_id in (select person_id from person_has_sticker) order by rand() limit 10";
     const query = client.query(queryString);
 
         query.then(
