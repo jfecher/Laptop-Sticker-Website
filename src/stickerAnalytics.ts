@@ -24,19 +24,19 @@ function createChart(sqlResults)
     var xAxisValue = xAxis.value;
 
     if (xAxis.value != "laptop_purchased_dt") {
-    var barChartOptions : any = {
-        scaleShowVerticalLines:true,
-        responsive:true,
-        scales:
-        {
-            yAxes:
-            [{
-                ticks:
-                {
-                    beginAtZero: true
-                }
-            }]
-        }};
+        const barChartOptions : any = {
+            scaleShowVerticalLines:true,
+            responsive:true,
+            scales:
+            {
+                yAxes:
+                [{
+                    ticks:
+                    {
+                        beginAtZero: true
+                    }
+                }]
+            }};
 
 
     myChart = new Chart(chartContext, {
@@ -80,7 +80,7 @@ function createChart(sqlResults)
         options: barChartOptions
         });
     } else {
-        var scatterPlotOptions : any = {
+        const scatterPlotOptions : any = {
             scales: {
                 xAxes: [{
                     type: 'linear',

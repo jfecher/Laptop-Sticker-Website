@@ -170,8 +170,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         " from person " +
                         joins +
                         " group by " + xAxis +
-                        "order by yAxis " + sort +
-                        " limit 6;";
+                        "order by yAxis " + sort;
             query = client.query(queryString);
         }  else {
             queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
@@ -188,15 +187,15 @@ app.get('/api/:xaxis/:yaxis/:sort',
             {
                 var toBeSent;
                 if(scatterQuery) {
-                let toBeSent : any = [];
-                    result.rows.forEach(
-                    (pair : any) =>
-                    {
-                        toBeSent.push(pair);
-                    }
-                    );
+                    toBeSent : any = [];
+                        result.rows.forEach(
+                        (pair : any) =>
+                        {
+                            toBeSent.push(pair);
+                        }
+                        );
                 } else {
-                let toBeSent : any = {'xValues':[], 'yValues':[]};
+                toBeSent : any = {'xValues':[], 'yValues':[]};
                 result.rows.forEach(
                     (pair : any) =>
                     {
