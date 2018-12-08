@@ -145,7 +145,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         " from person " +
                         joins +
                         " group by " + xAxis +
-                        " having count(*) > 1 " +
+                        " having count(distinct person) > 1 " +
                         " order by yAxis " + sort +
                         " limit 12;";
 
