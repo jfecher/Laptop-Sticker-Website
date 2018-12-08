@@ -106,7 +106,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         }
         if (req.params['xaxis'] == "hometown_location")
         {
-            joins = " join hometown_location on (person.hometown_location_id = hometown_location.location_id and hometown_location.state != null) ";
+            joins = " join hometown_location on (person.hometown_location_id = hometown_location.location_id and hometown_location.state is not null) ";
             xAxis = " hometown_location.state ";
         }
         if (req.params['xaxis'] == "laptop")
