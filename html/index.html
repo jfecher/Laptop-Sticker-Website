@@ -83,6 +83,14 @@
 				<h2 id="myPeopleHadStickers"></h2>
 				<p>People had stickers on their laptops</p>
 			</div>
+			<div class="col-6 col-lg-4">
+				<h2 id="avgStickers"></h2>
+				<p>Average stickers on each laptop</p>
+			</div>
+			<div class="col-6 col-lg-4">
+				<h2 id="avgSize"></h2>
+				<p>Average area of a sticker</p>
+			</div>
 			<!--/span-->
 		</div>
 		<!--/row-->
@@ -100,6 +108,8 @@
 	simpleHttpRequest("/api/countTable/brand", getBrands, console.log);
 	simpleHttpRequest("/api/countTable/laptop", getLaptops, console.log);
 	simpleHttpRequest("/api/peopleHadStickers", getPeopleHadStickers, console.log);
+	simpleHttpRequest("/api/avgStickers", getAvgStickers, console.log);
+	simpleHttpRequest("/api/avgArea", getAvgSize, console.log);
 </script>
 </body>
 </html>

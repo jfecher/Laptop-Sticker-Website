@@ -7,6 +7,7 @@ function getNumStickers(sqlResults) {
     console.log(sqlResults);
     var headingElement = <HTMLHeadingElement> document.getElementById("myNumStickers");
     headingElement.innerHTML = sqlResults.numRecords.count;
+
 }
 
 function getNumHometowns(sqlResults) {
@@ -37,5 +38,17 @@ function getPeopleHadStickers(sqlResults) {
     console.log(sqlResults);
     var headingElement = <HTMLHeadingElement> document.getElementById("myPeopleHadStickers");
     headingElement.innerHTML = sqlResults.numRecords.count;
+}
+
+function getAvgStickers(sqlResults) {
+    console.log(sqlResults);
+    var headingElement = <HTMLHeadingElement> document.getElementById("avgStickers");
+    headingElement.innerHTML = sqlResults.avgRecords.count;
+}
+
+function getAvgSize(sqlResults) {
+    console.log(sqlResults);
+    var headingElement = <HTMLHeadingElement> document.getElementById("avgSize");
+    headingElement.innerHTML = sqlResults.avgSize.count;
 }
  

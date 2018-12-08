@@ -88,6 +88,55 @@ app.get('/api/peopleHadStickers', (req, res) => {
     }
 );
 
+app.get('/api/avgStickers', (req, res) => {
+    var queryString = "select ROUND(count(sticker.sticker_id)/count(person.person_id)::decimal, 2) from person " +
+    "left join person_has_sticker using (person_id) right join sticker using (sticker_id)"
+    const query = client.query(queryString);
+
+    query.then(
+        (result : any) =>
+        {
+            let toBeSent : any = {'avg': 0};
+            result.rows.forEach(
+                (num : any) =>
+                {
+                    toBeSent.avg = num;
+                }
+            );
+            res.json(toBeSent);
+        }
+    ).catch(
+        (err : any) =>
+        {
+            console.log(err)
+        }
+      );
+    }
+);
+
+app.get('api/avgArea', (req, res) => {
+    var queryString = "select ROUND(avg(width) * avg(height)::decimal, 2) from sticker"
+    const query = client.query(queryString);
+
+    query.then(
+        (result : any) =>
+        {
+            let toBeSent : any = {'avgSize': 0};
+            result.rows.forEach(
+                (num : any) =>
+                {
+                    toBeSent.avgSize = num;
+                }
+            );
+            res.json(toBeSent);
+        }
+    ).catch(
+        (err : any) =>
+        {
+            console.log(err)
+        }
+      );
+};
 
 //----------------------------
 app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
