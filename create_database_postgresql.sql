@@ -84,6 +84,7 @@ CREATE TABLE IF NOT EXISTS person (
   likelihood_to_buy_more INT NULL,
   likelihood_to_put_more INT NULL,
   survey_location_id INT NOT NULL,
+  gender VARCHAR(50) NULL,
   PRIMARY KEY (person_id)
  ,
   CONSTRAINT fk_person_major
