@@ -98,7 +98,7 @@ app.get('/api/avgStickers', (req, res) => {
             result.rows.forEach(
                 (num : any) =>
                 {
-                    toBeSent.avg = num;
+                    toBeSent = num;
                 }
             );
             res.json(toBeSent);
