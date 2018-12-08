@@ -294,19 +294,19 @@ insert into person (person_id, major_id, hometown_location_id, survey_location_i
 	(105, 1, 15, 2, 13, 1, 1);
 
 
-insert into color (color_id, name) values (0, "Black");
-insert into color (color_id, name) values (1, "Red");
-insert into color (color_id, name) values (2, "Blue");
-insert into color (color_id, name) values (3, "Gray");
-insert into color (color_id, name) values (4, "White");
-insert into color (color_id, name) values (5, "Silver");
-insert into color (color_id, name) values (6, "Orange");
-insert into color (color_id, name) values (7, "Yellow");
-insert into color (color_id, name) values (8, "Green");
-insert into color (color_id, name) values (9, "Pink");
-insert into color (color_id, name) values (10, "Beige");
-insert into color (color_id, name) values (11, "Purple");
-insert into color (color_id, name) values (12, "Rainbow");
+insert into color (color_id, name) values (0, 'Black');
+insert into color (color_id, name) values (1, 'Red');
+insert into color (color_id, name) values (2, 'Blue');
+insert into color (color_id, name) values (3, 'Gray');
+insert into color (color_id, name) values (4, 'White');
+insert into color (color_id, name) values (5, 'Silver');
+insert into color (color_id, name) values (6, 'Orange');
+insert into color (color_id, name) values (7, 'Yellow');
+insert into color (color_id, name) values (8, 'Green');
+insert into color (color_id, name) values (9, 'Pink');
+insert into color (color_id, name) values (10, 'Beige');
+insert into color (color_id, name) values (11, 'Purple');
+insert into color (color_id, name) values (12, 'Rainbow');
 insert into color (color_id, name) values (13, 'Brown');
 
 
@@ -351,7 +351,7 @@ insert into brand (brand_id, name) values (37, 'Twitter');
 insert into brand (brand_id, name) values (38, 'HubSpot');
 insert into brand (brand_id, name) values (39, 'Bike Benefits');
 insert into brand (brand_id, name) values (40, 'Star Trek');
-insert into brand (brand_id, name) values (41, "Fox");
+insert into brand (brand_id, name) values (41, 'Fox');
 
 
 
@@ -482,12 +482,12 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(67, 'Ban The Bottle Save The Planet', 3, 3, 4, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-    (114, 'N', 4, 4, 1, 3),
-    (115, 'UNE Nor''easters', 4, 3, 2, 32),
-    (116, null, 2, 3, 8, null);
+	(114, 'N', 4, 4, 1, 3),
+	(115, 'UNE Nor''easters', 4, 3, 2, 32),
+	(116, null, 2, 3, 8, null);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-    (117, null, 3,2, 2, 33);
+	(117, null, 3,2, 2, 33);
 
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(118, 'B R C C', 3, 4, 0, null),
@@ -497,7 +497,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(122, null, 2, 2, 1, null), -- Picure of brain
 	(123, 'Northeastern University AIChe', 3, 2, 0, 3),
 	(124, 'HOME', 4, 3, 7, null), -- Picture of PA
-	(125, null, 3, 3, 0, null) -- Picture of girl grabbing building
+	(125, null, 3, 3, 0, null), -- Picture of girl grabbing building
 	(126, 'Corrosive Materials', 4, 2, 0, null),
 	(127, 'United Nations', 3, 3, 2, null),
 	(128, 'Friction', 4, 3, 0, null);
@@ -545,10 +545,10 @@ insert into person_has_sticker values
 	(32, 67),
 	(32, 29),
 	(33, 114),
-    (33, 115),
-    (33, 116),
-    (38, 117),
-    (39, 10),
+	(33, 115),
+	(33, 116),
+	(38, 117),
+	(39, 10),
 	(39, 118),
 	(39, 119),
 	(39, 120),
@@ -579,7 +579,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(305, 'prime student', 3, 2, 2, 22),
 
 	(306, 'CCIS', 2, 2, 1, 3), -- Red N, black squares, white ccis text
-	(307, 'Hack Beanpot', 3 ,2 0, null),
+	(307, 'Hack Beanpot', 3, 2, 0, null),
 	(308, 'Hack', 2, 2, 4, null), -- white background
 	(309, '#GHC16', 4, 2, 0, 35),
 	(310, 'girls who code', 4, 3, 8, 35),
@@ -613,7 +613,7 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(338, 'HubSpot', 4, 1, 0, 38),
 	(339, 'NUWIT', 3, 3, 2, 3),
 	(340, 'Boston', 3, 2, 1, null),
-	(341, 'Bike Benefits BikeBenefits.org', 1, 2, 39),
+	(341, 'Bike Benefits BikeBenefits.org', 1, 2, 2, 39),
 	(342, null, 1, 1, 2, null), -- Rocket ship
 	(343, null, 1, 1, 1, null), -- Lightning bolt
 	(344, null, 1, 1, 7, null), -- Star
@@ -815,83 +815,83 @@ insert into person_has_sticker values
 
 -- stickers for ids 76-91 (rows 77-92)
 insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
-    (214, "N", 2, 2, 1, 3),
-    (215, "Slurm", 2, 2, 8, 41), -- futurama slurm
+    (214, 'N', 2, 2, 1, 3),
+    (215, 'Slurm', 2, 2, 8, 41), -- futurama slurm
     (216, null, 1, 1, 4, null), -- white paw print (unknown if it is northeastern?)
-    (217, "V", 2, 2, 0, null), -- black v with leaf on right and circle around it
+    (217, 'V', 2, 2, 0, null), -- black v with leaf on right and circle around it
     (218, null, 2, 2, 2, null), -- Gunther penguin from adventure time
     (219, null, 2, 2, 10, null), -- idk, the drag race show maybe?
-    (220, "Vans off the wall", 3, 1, 4, null),
+    (220, 'Vans off the wall', 3, 1, 4, null),
     (221, null, 2, 2, 1, null), -- maple leaf
-    (221, null, 2, 2, 0, null), -- hand prints
-    (221, "Target", 2, 2, 0, null), -- Target sticker with name omitted
-    (221, "Pura Vida", 2, 2, 2, 30), -- peace wagon
+    (8221, null, 2, 2, 0, null), -- hand prints
+    (8222, 'Target', 2, 2, 0, null), -- Target sticker with name omitted
+    (8223, 'Pura Vida', 2, 2, 2, 30), -- peace wagon
 
     (222, null, 2, 3, 2, null), -- stitch from lilo and stitch
-    (223, "Supernova", 1, 1, 1, null), -- generic "supernova" comic-book effect
-    (224, "FUCK the PATRIARCHY", 2, 2, 1, null),
-    (225, "スタジオジブリ STUDIO GHIBLI", 3, 2, 2, null), -- Studio ghibli with Totora picture
-    (226, "GHOST", 2, 2, 4, null), -- Dog named ghost, may be a brand/comic but idk
+    (223, 'Supernova', 1, 1, 1, null), -- generic 'supernova' comic-book effect
+    (224, 'FUCK the PATRIARCHY', 2, 2, 1, null),
+    (225, 'スタジオジブリ STUDIO GHIBLI', 3, 2, 2, null), -- Studio ghibli with Totora picture
+    (226, 'GHOST', 2, 2, 4, null), -- Dog named ghost, may be a brand/comic but idk
     (227, null, 2, 2, 4, null), -- white dog circular sticker
-    (228, "Music Is All We Got", 2, 3, 4, null),
-    (229, "devil worshippers social outcasts", 2, 1, 0, null),
-    (230, "Don't touch my stuff", 2, 2, 9, null), -- Louise from bob's burgers
-    (231, "FEMINISM is not here to dictate you. It's not prescriptive, it's not dogmatic.  All we are here to do is GIVE YOU A CHOICE.  If you want to run for Prime Minister, you can.  If you don't that's wonderful too.  GENDER EQUALITY is your issue too.  Both MEN and WOMEN should feel FREE to be STRONG. All we are here to do is to give you a CHOICE.", 2, 3, 0, null),
-    (232, "S.T.A.R. Laboratories", 3, 2, 0, null),
-    (233, "Fight Like A Girl", 2, 2, 1, null),
-    (234, "Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Sweat Records Little Haiti Miami", 2, 2, 4, null),
+    (228, 'Music Is All We Got', 2, 3, 4, null),
+    (229, 'devil worshippers social outcasts', 2, 1, 0, null),
+    (230, 'Don''t touch my stuff', 2, 2, 9, null), -- Louise from bob's burgers
+    (231, 'FEMINISM is not here to dictate you.', 2, 3, 0, null),
+    (232, 'S.T.A.R. Laboratories', 3, 2, 0, null),
+    (233, 'Fight Like A Girl', 2, 2, 1, null),
+    (234, 'Sweat Records Little Haiti Miami', 2, 2, 4, null),
 
-    (235, "amazon", 2, 1, 4, 22),
+    (235, 'amazon', 2, 1, 4, 22),
     (236, null, 1, 1, 4, null),
 
-    (237, "\"It's from a vine.\"", 3, 1, 4, null),
+    (237, '''It''s from a vine.''', 3, 1, 4, null),
     (238, null, 3, 3, 2, null), -- backwards 7 flag?
     (239, null, 1, 3, 11, null), -- purple flowers
-    (240, "Ramah Camping Movement", 3, 2, 8, null),
+    (240, 'Ramah Camping Movement', 3, 2, 8, null),
     (241, null, 1, 3, 2, null), -- 3 cats stacked on another
-    (242, "spread hummus not hate", 3, 3, 0, null),
+    (242, 'spread hummus not hate', 3, 3, 0, null),
     (243, null, 1, 1, 1, null), -- red cartoon cat drawing
     (244, null, 1, 1, 1, null), -- some sort of apple that is also a box in a magician hat
     (245, null, 3, 2, 12, null), -- guitar pedals
 
-    (246, "1+", 1, 1, 1, null), -- 1+ (one plus) logo
-    (247, "Noided", 3, 1, 1, null),
-    (248, "SPARROWS", 3, 3, 1, null),
+    (246, '1+', 1, 1, 1, null), -- 1+ (one plus) logo
+    (247, 'Noided', 3, 1, 1, null),
+    (248, 'SPARROWS', 3, 3, 1, null),
     (249, null, 3, 3, 2, null), -- no idea, looks like a coaster or well
 
-    (250, "I Stand with planned parenthood #StandwithPP", 2, 2, 9, null),
-    (251, "Cats Against Cat Calls", 2, 2, 10, null),
+    (250, 'I Stand with planned parenthood #StandwithPP', 2, 2, 9, null),
+    (251, 'Cats Against Cat Calls', 2, 2, 10, null),
     (252, null, 2, 2, 2, null), -- blue painting
     (253, null, 2, 2, 12, null),
-    (254, "The greatest city in the world", 3, 1, 0, null),
+    (254, 'The greatest city in the world', 3, 1, 0, null),
     (255, null, 2, 3, 7, null), -- painting of flowers
-    (256, "DARWIN", 3, 1, 0, null), -- darwin fish
+    (256, 'DARWIN', 3, 1, 0, null), -- darwin fish
     (257, null, 2, 2, 13, null), -- another abstract painting
     (258, null, 3, 3, 8, null), -- paintings...
-    (259, "Northeastern University Boston, Massachusetts", 3, 3, 1, 3),
+    (259, 'Northeastern University Boston, Massachusetts', 3, 3, 1, 3),
     (260, null, 3, 2, 10, null), -- classical/medieval painting
     (261, null, 3, 1, 1, null), -- lightning mcqueen
-    (262, "Kerchoo", 1, 1, 4, null), -- custom kerchoo
+    (262, 'Kerchoo', 1, 1, 4, null), -- custom kerchoo
     (263, null, 2, 2, 7, null), -- pasta farianism
-    (264, "May you be touched by his noodly appendage", 3, 1, 1, null),
+    (264, 'May you be touched by his noodly appendage', 3, 1, 1, null),
 
-    (265, "Supreme", 5, 2, 1, null),
+    (265, 'Supreme', 5, 2, 1, null),
     (266, null, 2, 2, 7, null),
     (267, null, 1, 2, 4, null),
     (268, null, 4, 2, 4, null),
 
     (269, null, 2, 3, 8, null),
     (270, null, 2, 2, 13, null),
-    (271, "That the powerful play goes on and you may contribute a verse", 2, 3, 0, null),
-    (272, "Walt Whitman", 1, 1, 0, null),
-    (273, "Renewable Energy? I'm a big fan", 3, 2, 2, null),
-    (274, "Love is Love is Love is Love is Love is Love is Love is Love", 3, 3, 12, null),
+    (271, 'That the powerful play goes on and you may contribute a verse', 2, 3, 0, null),
+    (272, 'Walt Whitman', 1, 1, 0, null),
+    (273, 'Renewable Energy? I''m a big fan', 3, 2, 2, null),
+    (274, 'Love is Love is Love is Love is Love is Love is Love is Love', 3, 3, 12, null),
     (275, null, 2, 3, 2, null), --blue bird
     (276, null, 2, 3, 1, null), --red cane thing
-    (277, "Que tengo un lindo dia", 4, 2, 4, null),
+    (277, 'Que tengo un lindo dia', 4, 2, 4, null),
     (278, null, 2, 2, 2, null), --pigeon
     (279, null, 1, 1, 7, null), --yellow thing
-    (280, "Cymru", 3, 1, 8, null),
+    (280, 'Cymru', 3, 1, 8, null);
 
 -- person then sticker
 insert into person_has_sticker values
@@ -903,6 +903,9 @@ insert into person_has_sticker values
     (77, 219),
     (77, 220),
     (77, 221),
+	(77, 8221),
+	(77, 8222),
+	(77, 8223),
 
     (78, 222),
     (78, 223),
@@ -968,7 +971,7 @@ insert into person_has_sticker values
     (91, 277),
     (91, 278),
     (91, 279),
-    (91, 280),
+    (91, 280);
 
 
 -- date purchased updates
