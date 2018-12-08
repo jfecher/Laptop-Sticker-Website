@@ -66,7 +66,7 @@ def person_tbl(l):
 def person_updates(l):
     s = ""
     for pk, row in enumerate(l):
-        s += "update person set gender='{}', laptop_purchased_dt='{}', laptop_picture_url='{}' where player_id={}\n".format(row[2], row[8], row[9], pk+1)
+        s += "update person set gender='{}', laptop_purchased_dt='{}', laptop_picture_url='{}' where person_id={};\n".format(row[2], row[8], row[9], pk+1)
     return s
 
 # Returns the list of values in:
