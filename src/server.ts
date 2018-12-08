@@ -5,6 +5,29 @@ const connectionString = process.env.DATABASE_URL || '';
 const client = new pg.Client(connectionString);
 client.connect();
 
+
+//set up for cross origin
+
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'https://drive.google.com');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+    // Pass to next layer of middleware
+    next();
+});
+
+
+
+
+
+
 var port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
@@ -42,27 +65,47 @@ app.get('/api/countTable/:tableName', (req, res) => {
 
 
 //----------------------------
-app.get('/api/getStickerUrls', (req, res) => {
-    var queryString = "select person_id, laptop_picture_url from person where person_id in (select person_id from person_has_sticker) order by random() limit 10";
-    const query = client.query(queryString);
+app.get('/api/getStickerUrls/:color/:count/:laptopbrand/:gender', (req, res) => {
+    //var queryString = "select person_id, laptop_picture_url from person where person_id in (select person_id from person_has_sticker) ";
 
-        query.then(
-            (result : any) =>
-            {
-                let toBeSent : any = {'laptop_picture_urls': []};
-                result.rows.forEach(url =>
-                    toBeSent.laptop_picture_urls.push(url.laptop_picture_url)
-                );
-                res.json(toBeSent);
-            }
-        ).catch(
-            (err : any) =>
-            {
-                console.log(err)
-            }
-        );
+    var queryString = "select person_id, sticker_id from person_has_sticker natural join person natural join sticker join laptop l using (laptop_id)"
+    var endStr = " order by random() limit 10 ";
+
+    if(req.params['color'] != "Any"){
+        queryString += " and color='${req.params['color']}' "
+        endStr = " order by random() ";
     }
-);
+    if(req.params['count'] != "Any"){
+        queryString += " and color='${req.params['color']}' "
+        endStr = " order by random() ";
+    }
+    if(req.params['laptopbrand'] != "Any"){
+        queryString += " and l.name='${req.params['laptopbrand']}' "
+        endStr = " order by random() ";
+    }
+    if(req.params['gender'] != "Any"){
+        queryString += " and gender='${req.params['gender']}' "
+        endStr = " order by random() ";
+    }
+
+
+    const query = client.query(queryString + endStr);
+    query.then(
+        (result : any) =>
+        {
+            let toBeSent : any = {'laptop_picture_urls': []};
+            result.rows.forEach(url =>
+                toBeSent.laptop_picture_urls.push(url.laptop_picture_url)
+            );
+            res.json(toBeSent);
+        }
+    ).catch(
+        (err : any) =>
+        {
+            console.log(err)
+        }
+    );
+});
 
 
 //--------Sticker Analytics------------
@@ -80,11 +123,11 @@ app.get('/api/:xaxis/:yaxis/:sort',
         if (req.params['xaxis'] == "major")
         {
             joins = " join major using (major_id) ";
-            xAxis = " major.name "
+            xAxis = " major.name ";
         }
         if (req.params['xaxis'] == "hometown_location")
         {
-            joins = " join hometown_location on (person.hometown_location_id = hometown_location.location_id and hometown_location.state != null) ";
+            joins = " join hometown_location on (person.hometown_location_id = hometown_location.location_id and hometown_location.state is not null) ";
             xAxis = " hometown_location.state ";
         }
         if (req.params['xaxis'] == "laptop")
@@ -92,12 +135,17 @@ app.get('/api/:xaxis/:yaxis/:sort',
             joins = " join laptop using (laptop_id) ";
             xAxis = " laptop.brand ";
         }
+
         if (req.params['xaxis'] == "laptop_purchased_dt")
         {
             xAxis = " person.laptop_purchased_dt";
             scatterQuery = true;
         }
-    
+
+        if (req.params['xaxis'] == "gender")
+        {
+            xAxis = " person.gender ";
+        }
 
         if (req.params['yaxis'] == "likelihood_to_buy_more")
         {
@@ -109,8 +157,8 @@ app.get('/api/:xaxis/:yaxis/:sort',
         }
         if (req.params['yaxis'] == "numStickers")
         {
-            yAxis = " count(person_has_sticker.person_id) ";
-            joins = " join person_has_sticker using (person_id) ";
+            yAxis = " count(person_has_sticker.sticker_id)::decimal / count(distinct person_has_sticker.person_id) ";
+            joins += " join person_has_sticker using (person_id) ";
             joins += " join sticker using (sticker_id) ";
         }
 

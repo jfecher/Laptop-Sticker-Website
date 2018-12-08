@@ -39,7 +39,150 @@
       </nav>
     </header>
 
-    <div class="album text-muted" style="margin-top: 65px">
+    <section class="jumbotron text-xs-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Sticker Images</h1>
+        <p class="lead text-muted">Here is a random sample of laptops with stickers.  Refresh the page to see a different set of 10.</p>
+      </div>
+    </section>
+
+
+
+    <select id="sticker_color" name="color" style="margin-top: 10px">
+        <option value="Any">
+            Any
+        </option>
+        <option value="Black">
+            Black
+        </option>
+        <option value="Red">
+            Red
+        </option>
+        <option value="Blue">
+            Blue
+        </option>
+        <option value="Gray">
+            Gray
+        </option>
+        <option value="White">
+            White
+        </option>
+        <option value="Silver">
+            Silver
+        </option>
+        <option value="Orange">
+            Orange
+        </option>
+        <option value="Yellow">
+            Yellow
+        </option>
+        <option value="Green">
+            Green
+        </option>
+        <option value="Pink">
+            Pink
+        </option>
+        <option value="Beige">
+            Beige
+        </option>
+        <option value="Purple">
+            Purple
+        </option>
+        <option value="Rainbow">
+            Rainbow
+        </option>
+        <option value="Brown">
+            Brown
+        </option>
+    </select>
+
+    <select id="sticker_count" name="count" style="margin-top: 10px">
+        <option value="Any">
+            Any
+        </option>
+        <option value="1-5">
+            1-5
+        </option>
+        <option value="6-10">
+            6-10
+        </option>
+        <option value="11-15">
+            11-15
+        </option>
+        <option value="16-20">
+            16-20
+        </option>
+        <option value="20+">
+            20+
+        </option>
+    </select>
+
+    <select id="laptop_brand" name="brand" style="margin-top: 10px">
+        <option value="Any">
+            Any
+        </option>
+        <option value="Dell">
+            Dell
+        </option>
+        <option value="Apple">
+            Apple
+        </option>
+        <option value="HP">
+            HP
+        </option>
+        <option value="MSi">
+            MSi
+        </option>
+        <option value="Fujitsu">
+            Fujitsu
+        </option>
+        <option value="Lenovo">
+            Lenovo
+        </option>
+        <option value="Alienware">
+            Alienware
+        </option>
+        <option value="Lenovo">
+            Lenovo
+        </option>
+        <option value="Toshiba">
+            Toshiba
+        </option>
+        <option value="Microsoft">
+            Microsoft
+        </option>
+        <option value="Asus">
+            Asus
+        </option>
+        <option value="Acer">
+            Acer
+        </option>
+        <option value="Asus">
+            Asus
+        </option>
+    </select>
+
+    <select id="gender" name="gender" style="margin-top: 10px">
+        <option value="Any">
+            Any
+        </option>
+        <option value="Male">
+            Male
+        </option>
+        <option value="Female">
+            Female
+        </option>
+        <option value="Other">
+            Other
+        </option>
+    </select>
+
+    <button onclick="refreshStickers()" style="margin-top: 10px">
+        Search
+    </button>
+
+
+    <div class="album text-muted" style="margin-top: 10px">
       <div id="laptop_img_container" class="container">
           <!-- images go here -->
       </div>
@@ -49,7 +192,7 @@
 	<script src=/gallery.js></script>
 	<script src=/simpleHttp.js></script>
 	<script>
-		simpleHttpRequest("/api/getStickerUrls", fillGallery, console.log);
+		simpleHttpRequest("/api/getStickerUrls/Any/Any/Any/Any", fillGallery, console.log);
 	</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
