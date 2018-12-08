@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "build-ts": "tsc",
-    "postinstall": "npm run build-ts && cp html/* dist/",
+    "postinstall": "npm run build-ts && cp html/* dist/ && cp pngs/* dist/",
     "start": "npm run serve",
     "serve": "node dist/server.js"
   },
