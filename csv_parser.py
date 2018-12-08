@@ -63,16 +63,10 @@ def person_tbl(l):
         s += "\t({}, {}, {}, {}, {}, {}, {}),\n".format(pk+1, major_id, hometown_id, survey_loc_id, laptop_id, row[10], row[11])
     return s[0:-2]
 
-def date_updates(l):
+def person_updates(l):
     s = ""
     for pk, row in enumerate(l):
-        s += "update person set laptop_purchased_dt='{}' where player_id={}\n".format(row[8], pk+1)
-    return s
-
-def picture_updates(l):
-    s = "\n"
-    for pk, row in enumerate(l):
-        s += "update person set laptop_picture_url='{}' where player_id={}\n".format(row[9], pk+1)
+        s += "update person set gender='{}', laptop_purchased_dt='{}', laptop_picture_url='{}' where player_id={}\n".format(row[2], row[8], row[9], pk+1)
     return s
 
 # Returns the list of values in:
@@ -103,6 +97,5 @@ with open(output_filename, 'w') as out:
     out.write(insert_str.format("survey_loc", sql_list(survey_loc)))
     out.write(insert_str.format("laptop", laptop_tbl(responses)))
     out.write(insert_str.format("person", person_tbl(responses)))
-    out.write(date_updates(responses))
-    out.write(picture_updates(responses))
+    out.write(person_updates(responses))
 
