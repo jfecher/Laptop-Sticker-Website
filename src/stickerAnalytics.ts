@@ -46,6 +46,21 @@ function createChart(sqlResults)
     var xAxis = <HTMLInputElement> document.getElementById("xaxis");
     var xAxisValue = xAxis.value;
 
+    var barChartOptions : any = {
+        scaleShowVerticalLines:true,
+        responsive:true,
+        scales:
+        {
+            yAxes:
+            [{
+                ticks:
+                {
+                    beginAtZero: true
+                }
+            }]
+        }};
+
+
     myChart = new Chart(chartContext, {
         type: 'bar',
         data: {
@@ -71,7 +86,8 @@ function createChart(sqlResults)
                 ],
                 borderWidth: 1
             }]
-        }
+        },
+        options: barChartOptions
     });
 }
 function refreshGraph()
