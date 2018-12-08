@@ -83,7 +83,12 @@ function createChart(sqlResults)
         const scatterPlotOptions : any = {
             scales: {
                 xAxes: [{
-                    type: 'linear',
+                    type: 'time',
+                    time: {
+                        displayFormats: {
+                            month: 'MMM YYYY'
+                        }
+                    }
                     position: 'bottom'
                 }],
                 yAxes: [{
