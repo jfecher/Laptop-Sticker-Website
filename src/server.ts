@@ -126,7 +126,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         }
         if (req.params['yaxis'] == "numStickers")
         {
-            yAxis = " count(person_has_sticker.person_id) ";
+            yAxis = " count(person_has_sticker.sticker_id) / count(person_has_sticker.person_id) ";
             joins += " join person_has_sticker using (person_id) ";
             joins += " join sticker using (sticker_id) ";
         }
@@ -141,7 +141,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         " from person " +
                         joins +
                         " group by " + xAxis +
-                        " having count( " + xAxis + " ) > 1 " +
+                        " having count( xAxis ) > 1 " +
                         " order by yAxis " + sort +
                         " limit 12;";
 
