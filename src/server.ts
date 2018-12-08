@@ -126,7 +126,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         }
         if (req.params['yaxis'] == "numStickers")
         {
-            yAxis = " count(person_has_sticker.sticker_id) / count(person_has_sticker.person_id) ";
+            yAxis = " count(person_has_sticker.sticker_id)::decimal / count(distinct person_has_sticker.person_id) ";
             joins += " join person_has_sticker using (person_id) ";
             joins += " join sticker using (sticker_id) ";
         }
