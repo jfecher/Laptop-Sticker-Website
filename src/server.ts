@@ -74,6 +74,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         var xAxis = "";
         var sort = "";
         var queryString = "";
+        var scatterQuery = false;
 
 
         if (req.params['xaxis'] == "major")
@@ -91,7 +92,12 @@ app.get('/api/:xaxis/:yaxis/:sort',
             joins = " join laptop using (laptop_id) ";
             xAxis = " laptop.brand ";
         }
-
+        if (req.params['xaxis'] == "laptop_purchased_dt")
+        {
+            xAxis = " person.laptop_purchased_dt";
+            scatterQuery = true;
+        }
+    
 
         if (req.params['yaxis'] == "likelihood_to_buy_more")
         {
@@ -110,26 +116,38 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         sort = req.params['sort'];
 
-
-
-
-
-        queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
+        var query;
+        if (scatterQuery) {
+            queryString = " select " + xAxis + " as x , " + yAxis + " as y " +
                         " from person " +
                         joins +
                         " group by " + xAxis +
-                        " order by yAxis " + sort +
+                        "order by yAxis " + sort +
                         " limit 6;";
-
-        console.log(queryString);
-
-
-        console.log(queryString);
-        const query = client.query(queryString);
+            query = client.query(queryString);
+        }  else {
+            queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
+            " from person " +
+            joins +
+            " group by " + xAxis +
+            " order by yAxis " + sort +
+            " limit 6;";
+            query = client.query(queryString);
+        }
 
         query.then(
             (result : any) =>
             {
+                var toBeSent;
+                if(scatterQuery) {
+                let toBeSent : any = [];
+                    result.rows.forEach(
+                    (pair : any) =>
+                    {
+                        toBeSent.push(pair);
+                    }
+                    );
+                } else {
                 let toBeSent : any = {'xValues':[], 'yValues':[]};
                 result.rows.forEach(
                     (pair : any) =>
@@ -137,7 +155,8 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         toBeSent.xValues.push(pair.xaxis);
                         toBeSent.yValues.push(Number(pair.yaxis));
                     }
-                );
+                    );
+                }
                 res.json(toBeSent);
             }
         ).catch(

@@ -4,7 +4,9 @@ const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stic
 "laptop" : "Laptop Brand",
 "hometown_location": "Hometown",
 "major": "Major",
-"numStickers": "Average Number of Stickers"};
+"numStickers": "Average Number of Stickers",
+"laptop_purchased_dt": "Purchase Date of Laptop"
+};
 
 var myChart;
 
@@ -20,6 +22,7 @@ function createChart(sqlResults)
     var xAxis = <HTMLInputElement> document.getElementById("xaxis");
     var xAxisValue = xAxis.value;
 
+    if (xAxis.value != "laptop_purchased_dt") {
     var barChartOptions : any = {
         scaleShowVerticalLines:true,
         responsive:true,
@@ -62,7 +65,33 @@ function createChart(sqlResults)
             }]
         },
         options: barChartOptions
-    });
+        });
+    } else {
+        var scatterPlotOptions : any = {
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'bottom'
+                }],
+                yAxes: [{
+                    type: 'linear',
+                    ticks:
+                    {
+                        beginAtZero: true
+                    }
+                }]
+            }};
+        myChart = new Chart(chartContext, {
+            type:  'scatter',
+            data: {
+               datasets: [{
+                   label: valueToNameDict[xAxisValue],
+                   data: sqlResults,
+               }]
+            },
+        options: scatterPlotOptions
+        });
+    }
 }
 function refreshGraph()
 {
