@@ -112,7 +112,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
 
 
-        queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis "
+        queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
                         " from person " +
                         joins +
                         " group by " + xAxis +
