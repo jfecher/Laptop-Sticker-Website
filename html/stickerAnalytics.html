@@ -35,18 +35,7 @@
     </div>
   </nav>
 </header>
-<div class="container" style="margin-top: 65px">
-    <div class="row">
-        <div class="col-12">
-            <div class="card" style="width: 500px, height: 360px">
-                <div class="card-body">
-                    <canvas id="myChart"></canvas>
-                </div>
-            </div>
-        </div>
-     </div>
-</div>
-<select id="xaxis" name="xaxis">
+<select id="xaxis" name="xaxis" style="margin-top: 65px">
     <option value="major">
         Major
     </option>
@@ -57,20 +46,39 @@
         Laptop Brand
     </option>
 </select>
-<select id="yaxis" name="yaxis">
+<select id="yaxis" name="yaxis" style="margin-top: 65px">
     <option value="likelihood_to_buy_more">
         Likelihood to Buy More Stickers
     </option>
     <option value="likelihood_to_put_more">
         Likelihood to Put on More Stickers
     </option>
-    <option value="brand.name">
-        Sticker Brand
+    <option value="numStickers">
+        Average Number of Stickers
     </option>
 </select>
-<button onclick="refreshGraph()">
+<select id="sort" name="sort" style="margin-top: 65px">
+    <option value="asc">
+        Ascending
+    </option>
+    <option value="desc">
+        Descending
+    </option>
+</select>
+<button onclick="refreshGraph()" style="margin-top: 65px">
     Update Axes!
 </button>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card" style="width: 500px, height: 360px">
+                <div class="card-body">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
 
 </select>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js>
@@ -78,6 +86,6 @@
 <script src=/stickerAnalytics.js></script>
 <script src=/simpleHttp.js></script>
 <script>
-	simpleHttpRequest("/api/major/likelihood_to_put_more", createChart, console.log);
+	simpleHttpRequest("/api/major/likelihood_to_put_more/desc", createChart, console.log);
 </script>
 </body>

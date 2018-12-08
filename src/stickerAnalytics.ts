@@ -4,7 +4,7 @@ const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stic
 "laptop" : "Laptop Brand",
 "hometown_location": "Hometown",
 "major": "Major",
-"brand.name": "Sticker Brand"};
+"numStickers": "Average Number of Stickers"};
 
 var myChart;
 
@@ -70,7 +70,9 @@ function refreshGraph()
     var xAxisValue = xAxis.value;
     var yAxis = <HTMLInputElement> document.getElementById("yaxis");
     var yAxisValue = yAxis.value;
-    simpleHttpRequest("/api/" + xAxisValue + "/" + yAxisValue, createChart, console.log);
+    var sort = <HTMLInputElement> document.getElementById("sort");
+    var sortValue = sort.value;
+    simpleHttpRequest("/api/" + xAxisValue + "/" + yAxisValue + "/" + sortValue, createChart, console.log);
 }
 
 //simpleHttpRequest("/api/major/likelihood_to_put_more", createChart, console.log);

@@ -64,49 +64,63 @@ app.get('/api/getStickerUrls', (req, res) => {
 
 
 //--------Sticker Analytics------------
-app.get('/api/:xaxis/:yaxis',
+app.get('/api/:xaxis/:yaxis/:sort',
     (req, res) =>
     {
         var joins = "";
-        var yaxisFunc = 'avg';
-        if (req.params['yaxis'] == 'brand.name')
+        var yAxis = "";
+        var xAxis = "";
+        var sort = "";
+        var queryString = "";
+
+
+        if (req.params['xaxis'] == "major")
         {
-            yaxisFunc = 'count';
-            joins = " join person_has_sticker using (person_id) " +
-                    " join sticker using (sticker_id) " +
-                    " join brand using (brand_id) ";
+            joins = " join major using (major_id) ";
+            xAxis = " major.name "
         }
-        var queryString = '';
-        if (req.params['xaxis'] == 'hometown_location')
+        if (req.params['xaxis'] == "hometown_location")
         {
-            queryString = "select location.name, " + yaxisFunc + "(" + req.params['yaxis'] + ") " +
-                            " from person " +
-                            " join location " +
-                            " on (hometown_location_id = location_id) " +
-                            joins +
-                            " group by location.name " +
-                            " limit 5;";
+            joins = " join hometown_location on (person.hometown_location_id = hometown_location.location_id and hometown_location.state != null) ";
+            xAxis = " hometown_location.state ";
         }
-        else if (req.params['xaxis'] == 'laptop')
+        if (req.params['xaxis'] == "laptop")
         {
-            queryString = "select laptop.brand as name, " + yaxisFunc + "(" + req.params['yaxis'] + ") " +
-                            "from person " +
-                            "join laptop " +
-                            "using (laptop_id) " +
-                            joins +
-                            "group by laptop.brand " +
-                            "limit 5;";
+            joins = " join laptop using (laptop_id) ";
+            xAxis = " laptop.brand ";
         }
-        else
+
+
+        if (req.params['yaxis'] == "likelihood_to_buy_more")
         {
-            queryString = "select " + req.params['xaxis'] + ".name, " + yaxisFunc + "(" + req.params['yaxis'] + ") " +
-                            "from person " +
-                            "join " + req.params['xaxis'] + " " +
-                            "using (" + req.params['xaxis'] + "_id) " +
-                            joins +
-                            "group by " + req.params['xaxis'] + ".name " +
-                                "limit 5;";
+            yAxis = " person.likelihood_to_buy_more ";
         }
+        if (req.params['yaxis'] == "likelihood_to_put_more")
+        {
+            yAxis = " person.likelihood_to_put_more ";
+        }
+        if (req.params['yaxis'] == "num_stickers")
+        {
+            yAxis  = " count(person_has_sticker.person_id) ";
+            joins = " join person_has_sticker using (person_id) ";
+            joins += " join sticker using (sticker_id) ";
+        }
+
+        sort = req.params['sort'];
+
+
+
+
+
+        queryString = " select " + xAxis + " as xAxis , " + yAxis + + " as yAxis "
+                        " from person " +
+                        joins +
+                        " group by " + xAxis +
+                        " order by yAxis " + sort +
+                        " limit 6;";
+
+
+
 
         console.log(queryString);
         const query = client.query(queryString);
@@ -118,8 +132,8 @@ app.get('/api/:xaxis/:yaxis',
                 result.rows.forEach(
                     (pair : any) =>
                     {
-                        toBeSent.xValues.push(pair.name);
-                        toBeSent.yValues.push(Number(pair.avg));
+                        toBeSent.xValues.push(pair.xAxis);
+                        toBeSent.yValues.push(Number(pair.yAxis));
                     }
                 );
                 res.json(toBeSent);
