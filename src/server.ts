@@ -102,7 +102,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         if (req.params['xaxis'] == "major")
         {
             joins = " join major using (major_id) ";
-            xAxis = " major.name "
+            xAxis = " major.name ";
         }
         if (req.params['xaxis'] == "hometown_location")
         {
@@ -141,6 +141,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         " from person " +
                         joins +
                         " group by " + xAxis +
+                        " having count( " + xAxis + " ) > 1 " +
                         " order by yAxis " + sort +
                         " limit 12;";
 
