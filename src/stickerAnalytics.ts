@@ -82,3 +82,5 @@ function refreshGraph()
     var yAxisValue = yAxis.value;
     simpleHttpRequest("/api/" + xAxisValue + "/" + yAxisValue, createChart, console.log);
 }
+
+//simpleHttpRequest("/api/major/likelihood_to_put_more", createChart, console.log);
