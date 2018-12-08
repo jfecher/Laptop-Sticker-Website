@@ -118,6 +118,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         " from person " +
                         joins +
                         " group by " + xAxis +
+                        " having count( " + xAxis + " ) > 1 "
                         " order by yAxis " + sort +
                         " limit 6;";
 
