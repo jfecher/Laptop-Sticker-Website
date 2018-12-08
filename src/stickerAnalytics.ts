@@ -105,12 +105,12 @@ function createChart(sqlResults)
                datasets: [{
                    label: valueToNameDict[xAxisValue],
                    data: sqlResults,
+                   backgroundColor: ['rgba(255, 99, 132, 0.2)'],
+                   borderColor: ['rgba(255,99,132,1)'],
+                   options: scatterPlotOptions
                }]
-            },
-            backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-            borderColor: ['rgba(255,99,132,1)'],
-            options: scatterPlotOptions
-        });
+           }
+       });
     }
 }
 function refreshGraph()
