@@ -4,7 +4,8 @@ const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stic
 "laptop" : "Laptop Brand",
 "hometown_location": "Hometown",
 "major": "Major",
-"numStickers": "Average Number of Stickers"};
+"numStickers": "Number of Stickers",
+"gender": "Gender"};
 
 var myChart;
 

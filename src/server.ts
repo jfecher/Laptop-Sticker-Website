@@ -114,6 +114,10 @@ app.get('/api/:xaxis/:yaxis/:sort',
             joins = " join laptop using (laptop_id) ";
             xAxis = " laptop.brand ";
         }
+        if (req.params['xaxis'] == "gender")
+        {
+            xAxis = " person.gender ";
+        }
 
 
         if (req.params['yaxis'] == "likelihood_to_buy_more")
