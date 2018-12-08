@@ -187,7 +187,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
             {
                 var toBeSent;
                 if(scatterQuery) {
-                    toBeSent : any = [];
+                    toBeSent = [];
                         result.rows.forEach(
                         (pair : any) =>
                         {
@@ -195,7 +195,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         }
                         );
                 } else {
-                toBeSent : any = {'xValues':[], 'yValues':[]};
+                toBeSent = {'xValues':[], 'yValues':[]};
                 result.rows.forEach(
                     (pair : any) =>
                     {
