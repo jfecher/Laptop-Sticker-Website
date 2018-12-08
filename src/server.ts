@@ -7,7 +7,6 @@ client.connect();
 
 
 //set up for cross origin
-
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
@@ -24,12 +23,9 @@ app.use(function (req, res, next) {
 });
 
 
-
-
-
-
 var port = process.env.PORT || 8080;
 
+//routing
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/stickerAnalytics', (req, res) => res.sendFile(__dirname + '/stickerAnalytics.html'));
 app.get('/about', (req, res) => res.sendFile(__dirname + '/about.html'));
@@ -138,7 +134,7 @@ app.get('/api/avgArea', (req, res) => {
       );
 });
 
-//----------------------------
+//---------------------------- Gallery Page
 app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
     //var queryString = "select person_id, laptop_picture_url from person where person_id in (select person_id from person_has_sticker) ";
 
