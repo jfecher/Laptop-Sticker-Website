@@ -206,6 +206,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         var xAxis = "";
         var sort = "";
         var limit = " limit 12 ";
+        var having = " having count(distinct person_id) > 1 ";
         var scatterQuery = false;
 
 
@@ -230,6 +231,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
             xAxis = " concat(to_char(person.laptop_purchased_dt, 'MON'), extract(year from person.laptop_purchased_dt)) ";
             scatterQuery = true;
             limit = "";
+            having = "";
         }
 
         if (req.params['xaxis'] == "gender")
@@ -260,6 +262,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                             joins +
                             " group by " + xAxis +
                             " order by yAxis " + sort +
+                            having +
                             limit + ";";
 
         console.log(queryString);
