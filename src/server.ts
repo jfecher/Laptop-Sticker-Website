@@ -68,26 +68,39 @@ app.get('/api/countTable/:tableName', (req, res) => {
 app.get('/api/getStickerUrls/:color/:count/:laptopbrand/:gender', (req, res) => {
     //var queryString = "select person_id, laptop_picture_url from person where person_id in (select person_id from person_has_sticker) ";
 
-    var queryString = "select distinct person_id, laptop_picture_url from (select person_id, sticker_id from person_has_sticker natural join person natural join sticker join laptop l using (laptop_id) where true "
+    /** Generate this:
+    select distinct person_id, p.laptop_picture_url from
+        (select person_id, sticker_id from person_has_sticker
+            join person p using (person_id)
+            join sticker s using (sticker_id)
+            join color c using (color_id)
+            join laptop l using (laptop_id)
+            where true
+                and c.name = 'color'
+                and l.brand = 'laptopbrand'
+            order by rand()
+        ) as t;
+    */
+
+    var queryString = "select distinct person_id, laptop_picture_url from (select person_id, sticker_id from person_has_sticker join person p using (person_id) join sticker s using (sticker_id) join color c using (color_id) join laptop l using (laptop_id) where true ";
     var endStr = " order by random() limit 10 ) as t";
 
     if(req.params['color'] != "Any"){
-        queryString += " and color = '${req.params['color']}' "
+        queryString += " and c.name = '${req.params['color']}' "
         endStr = " order by random() ) as t";
     }
     if(req.params['count'] != "Any"){
-        queryString += " and color = '${req.params['color']}' "
+        queryString += " and c.name = '${req.params['color']}' "
         endStr = " order by random() ) as t";
     }
     if(req.params['laptopbrand'] != "Any"){
-        queryString += " and l.name = '${req.params['laptopbrand']}' "
+        queryString += " and l.brand = '${req.params['laptopbrand']}' "
         endStr = " order by random() ) as t";
     }
     if(req.params['gender'] != "Any"){
-        queryString += " and gender = '${req.params['gender']}' "
+        queryString += " and p.gender = '${req.params['gender']}' "
         endStr = " order by random() ) as t";
     }
-
 
     const query = client.query(queryString + endStr);
     query.then(
