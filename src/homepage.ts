@@ -43,7 +43,7 @@ function getPeopleHadStickers(sqlResults) {
 function getAvgStickers(sqlResults) {
     console.log(sqlResults);
     var headingElement = <HTMLHeadingElement> document.getElementById("avgStickers");
-    headingElement.innerHTML = sqlResults.avg.round;
+    headingElement.innerHTML = sqlResults.totalavg.round;
 }
 
 function getAvgSize(sqlResults) {
@@ -51,4 +51,3 @@ function getAvgSize(sqlResults) {
     var headingElement = <HTMLHeadingElement> document.getElementById("avgSize");
     headingElement.innerHTML = sqlResults.avgSize.round;
 }
- 

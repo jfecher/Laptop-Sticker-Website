@@ -85,7 +85,7 @@ app.get('/api/peopleHadStickers', (req, res) => {
 );
 
 app.get('/api/avgStickers', (req, res) => {
-    var queryString = "select count(sticker_id)::decimal / count(distinct person_id)::decimal as totalAvg" +
+    var queryString = "select round(count(sticker_id)::decimal / count(distinct person_id)::decimal, 2) as totalAvg" +
                         " from person " +
                         " left join person_has_sticker using (person_id) " +
                         " order by totalAvg  desc;";
