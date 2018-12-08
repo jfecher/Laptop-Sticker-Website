@@ -159,36 +159,15 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         if (req.params['yaxis'] == "likelihood_to_buy_more")
         {
-            if (scatterQuery)
-            {
-                yAxis = "person.likelihood_to_buy_more";
-            }
-            else
-            {
-                yAxis = " avg(person.likelihood_to_buy_more) ";
-            }
+            yAxis = " avg(person.likelihood_to_buy_more) ";
         }
         if (req.params['yaxis'] == "likelihood_to_put_more")
         {
-            if (scatterQuery)
-            {
-                yAxis = "person.person.likelihood_to_put_more";
-            }
-            else
-            {
-                yAxis = " avg(person.likelihood_to_put_more) ";
-            }
+            yAxis = " avg(person.likelihood_to_put_more) ";
         }
         if (req.params['yaxis'] == "numStickers")
         {
-            if (scatterQuery)
-            {
-                yAxis = "count(person_has_sticker.sticker_id)";
-            }
-            else
-            {
-                yAxis = " count(person_has_sticker.sticker_id)::decimal / count(distinct person_has_sticker.person_id) ";
-            }
+            yAxis = " count(person_has_sticker.sticker_id)::decimal / count(distinct person_has_sticker.person_id) ";
 
             joins += " join person_has_sticker using (person_id) ";
             joins += " join sticker using (sticker_id) ";
