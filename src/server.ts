@@ -174,11 +174,12 @@ app.get('/api/:xaxis/:yaxis/:sort',
             query = client.query(queryString);
         }  else {
             queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
-            " from person " +
-            joins +
-            " group by " + xAxis +
-            " order by yAxis " + sort +
-            " limit 6;";
+                            " from person " +
+                            joins +
+                            " group by " + xAxis +
+                            " order by yAxis " + sort +
+                            " limit 6;";
+            console.log(queryString);
             query = client.query(queryString);
         }
 
