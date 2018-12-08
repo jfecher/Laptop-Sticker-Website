@@ -134,6 +134,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                 result.rows.forEach(
                     (pair : any) =>
                     {
+                        console.log(pair);
                         toBeSent.xValues.push(pair.xAxis);
                         toBeSent.yValues.push(Number(pair.yAxis));
                     }
