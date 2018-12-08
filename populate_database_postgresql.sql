@@ -572,12 +572,9 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(300, 'New Schoolers', 4, 4, 0, null),
 	(301, 'Best Summer Ever * Momentum Ski Camps', 4, 3, 8, null),
 	(302, 'University', 4, 1, 2, null),
-
 	(303, 'Concepts', 6, 2, 8, null),
 	(304, 'Parade', 2, 2, 0, null),
-
 	(305, 'prime student', 3, 2, 2, 22),
-
 	(306, 'CCIS', 2, 2, 1, 3), -- Red N, black squares, white ccis text
 	(307, 'Hack Beanpot', 3, 2, 0, null),
 	(308, 'Hack', 2, 2, 4, null), -- white background
@@ -609,7 +606,6 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(335, null, 2, 2, 2, 36), -- Facebook logo
 	(336, null, 2, 3, 2, null), -- TARDIS blue telephone box
 	(337, null, 2, 2, 2, null), -- Blue background, white turn on button
-
 	(338, 'HubSpot', 4, 1, 0, 38),
 	(339, 'NUWIT', 3, 3, 2, 3),
 	(340, 'Boston', 3, 2, 1, null),
@@ -619,71 +615,12 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
 	(344, null, 1, 1, 7, null), -- Star
 	(345, null, 1, 1, 8, null), -- Green donut
 	(346, null, 4, 4, 6, 38),  -- HubSpot thing
-
 	(347, 'Black Red', 3, 3, 4, 3),
-
 	(348, 'Make It So.', 4, 5, 1, 40);
 
 
 
-insert into person_has_sticker values
-	(92, 300),
-	(92, 301),
-	(92, 302),
-	(94, 303),
-	(94, 304),
-	(96, 305),
-	(97, 71),
-	(97, 72),
-	(97, 83),
-	(97, 306),
-	(97, 307),
-	(97, 308),
-	(97, 309),
-	(97, 310),
-	(97, 311),
-	(97, 312),
-	(97, 313),
-	(97, 314),
-	(97, 315),
-	(97, 316),
-	(97, 318),
-	(97, 319),
-	(97, 320),
-	(97, 321),
-	(97, 322),
-	(97, 323),
-	(97, 324),
-	(97, 325),
-	(97, 326),
-	(97, 327),
-	(97, 328),
-	(97, 329),
-	(97, 330),
-	(97, 331),
-	(97, 332),
-	(97, 333),
-	(97, 334),
-	(97, 335),
-	(97, 336),
-	(97, 337),
-	(97, 99),
-	(98, 338),
-	(98, 339),
-	(98, 340),
-	(98, 341),
-	(98, 342),
-	(98, 343),
-	(98, 344),
-	(98, 345),
-	(98, 346),
-	(99, 40),
-	(99, 41),
-	(100, 306),
-	(101, 41),
-	(101, 40),
-	(103, 347),
-	(104, 348);
+
 
 
 
@@ -706,10 +643,8 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (68, 'CCIS', 2, 2, 1, 3),
     (69, 'We the People of the United States, I Voted Today', 2, 2, 10, null),
     (70, 'Husky Environmental Action Team HEAT', 3, 3, 10, 3),
-
     (71, 'NUHACKS', 3, 2, 2, 3),
     (72, 'Nuacm', 2, 2, 2, 3),
-
     (73, 'Google', 4, 1, 12, 20),
     (74, null, 2, 2, 2, null),  -- binoculars inside blue square
     (75, null, 2, 2, 11, null),  -- atom inside purple square
@@ -718,31 +653,22 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (78, 'NU ACES', 4, 1, 0, 3),
     (79, 'Who''s Your Data?', 2, 2, 2, 21),
     (80, null, 2, 2, 0, 3), --husky paw print
-
     (81, '2019 Hackathon Season', 3, 3, 0, 24),
     (82, null, 3, 2, 4, 20), --gmail
     (83, null, 2, 3, 8, 20), --android
     (84, 'MLH Hardware Lab Presented By Digi-Key', 4, 2, 8, 24),
     (85, null, 1, 2, 6, 23), --github bag
-
     (86, 'I ate something yummy', 2, 2, 9, 25),
-
     (87, 'Ask Why', 3, 1, 0, null),
     (88, 'Solve Together', 3, 2, 10, null),
     (89, 'Friends Close, Bad Code Closer!', 2, 3, 0, 26),
-
     (90, null, 11, 8, 12, null),
-
     (91, null, 3, 3, 12, 27),
     (92, 'NATIONAL clean Energy WEEK', 4, 4, 4, null), -- yes, it was capitalized like this
-
     (93, null, 3, 3, 8, 28), -- yoda sticker
     (94, 'We Are All Wonder Women!', 3, 2, 4, null),
-
     (95, 'ふにふに', 2, 1, 4, null), -- 'funi funi' in japanese with hamster picture
-
     (96, 'Police Public Call Box', 11, 5, 2, null),
-
     (97, 'TOMS', 4, 3, 2, 29),
     (98, 'CCIS', 2, 1, 4, 3),
     (99, 'NUWIT', 3, 2, 2, null), -- blue butterfly
@@ -760,6 +686,67 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (111, 'E', 2, 3, 2, null),
     (112, '>', 2, 3, 2, null),
     (113, 'i', 1, 3, 2, null);
+
+
+	insert into person_has_sticker values
+		(92, 300),
+		(92, 301),
+		(92, 302),
+		(94, 303),
+		(94, 304),
+		(96, 305),
+		(97, 71),
+		(97, 72),
+		(97, 83),
+		(97, 306),
+		(97, 307),
+		(97, 308),
+		(97, 309),
+		(97, 310),
+		(97, 311),
+		(97, 312),
+		(97, 313),
+		(97, 314),
+		(97, 315),
+		(97, 316),
+		(97, 318),
+		(97, 319),
+		(97, 320),
+		(97, 321),
+		(97, 322),
+		(97, 323),
+		(97, 324),
+		(97, 325),
+		(97, 326),
+		(97, 327),
+		(97, 328),
+		(97, 329),
+		(97, 330),
+		(97, 331),
+		(97, 332),
+		(97, 333),
+		(97, 334),
+		(97, 335),
+		(97, 336),
+		(97, 337),
+		(97, 99),
+		(98, 338),
+		(98, 339),
+		(98, 340),
+		(98, 341),
+		(98, 342),
+		(98, 343),
+		(98, 344),
+		(98, 345),
+		(98, 346),
+		(99, 40),
+		(99, 41),
+		(100, 306),
+		(101, 41),
+		(101, 40),
+		(103, 347),
+		(104, 348);
+
 
 -- person then sticker
 insert into person_has_sticker values
@@ -826,7 +813,6 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (8221, null, 2, 2, 0, null), -- hand prints
     (8222, 'Target', 2, 2, 0, null), -- Target sticker with name omitted
     (8223, 'Pura Vida', 2, 2, 2, 30), -- peace wagon
-
     (222, null, 2, 3, 2, null), -- stitch from lilo and stitch
     (223, 'Supernova', 1, 1, 1, null), -- generic 'supernova' comic-book effect
     (224, 'FUCK the PATRIARCHY', 2, 2, 1, null),
@@ -840,10 +826,8 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (232, 'S.T.A.R. Laboratories', 3, 2, 0, null),
     (233, 'Fight Like A Girl', 2, 2, 1, null),
     (234, 'Sweat Records Little Haiti Miami', 2, 2, 4, null),
-
     (235, 'amazon', 2, 1, 4, 22),
     (236, null, 1, 1, 4, null),
-
     (237, '''It''s from a vine.''', 3, 1, 4, null),
     (238, null, 3, 3, 2, null), -- backwards 7 flag?
     (239, null, 1, 3, 11, null), -- purple flowers
@@ -853,12 +837,10 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (243, null, 1, 1, 1, null), -- red cartoon cat drawing
     (244, null, 1, 1, 1, null), -- some sort of apple that is also a box in a magician hat
     (245, null, 3, 2, 12, null), -- guitar pedals
-
     (246, '1+', 1, 1, 1, null), -- 1+ (one plus) logo
     (247, 'Noided', 3, 1, 1, null),
     (248, 'SPARROWS', 3, 3, 1, null),
     (249, null, 3, 3, 2, null), -- no idea, looks like a coaster or well
-
     (250, 'I Stand with planned parenthood #StandwithPP', 2, 2, 9, null),
     (251, 'Cats Against Cat Calls', 2, 2, 10, null),
     (252, null, 2, 2, 2, null), -- blue painting
@@ -874,12 +856,10 @@ insert into sticker (sticker_id, text, width, height, color_id, brand_id) values
     (262, 'Kerchoo', 1, 1, 4, null), -- custom kerchoo
     (263, null, 2, 2, 7, null), -- pasta farianism
     (264, 'May you be touched by his noodly appendage', 3, 1, 1, null),
-
     (265, 'Supreme', 5, 2, 1, null),
     (266, null, 2, 2, 7, null),
     (267, null, 1, 2, 4, null),
     (268, null, 4, 2, 4, null),
-
     (269, null, 2, 3, 8, null),
     (270, null, 2, 2, 13, null),
     (271, 'That the powerful play goes on and you may contribute a verse', 2, 3, 0, null),
@@ -906,7 +886,6 @@ insert into person_has_sticker values
 	(77, 8221),
 	(77, 8222),
 	(77, 8223),
-
     (78, 222),
     (78, 223),
     (78, 224),
@@ -920,10 +899,8 @@ insert into person_has_sticker values
     (78, 232),
     (78, 233),
     (78, 234),
-
     (79, 235),
     (79, 236),
-
     (84, 237),
     (84, 238),
     (84, 239),
@@ -933,12 +910,10 @@ insert into person_has_sticker values
     (84, 243),
     (84, 244),
     (84, 245),
-
     (85, 246),
     (85, 247),
     (85, 248),
     (85, 249),
-
     (86, 250),
     (86, 251),
     (86, 252),
@@ -954,12 +929,10 @@ insert into person_has_sticker values
     (86, 262),
     (86, 263),
     (86, 264),
-
     (88, 265),
     (88, 266),
     (88, 267),
     (88, 268),
-
     (91, 269),
     (91, 270),
     (91, 271),
