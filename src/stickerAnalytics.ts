@@ -88,7 +88,7 @@ function createChart(sqlResults)
                         displayFormats: {
                             month: 'MMM YYYY'
                         }
-                    }
+                    },
                     position: 'bottom'
                 }],
                 yAxes: [{
