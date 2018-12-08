@@ -261,8 +261,8 @@ app.get('/api/:xaxis/:yaxis/:sort',
                             " from person " +
                             joins +
                             " group by " + xAxis +
-                            " order by yAxis " + sort +
                             having +
+                            " order by yAxis " + sort +
                             limit + ";";
 
         console.log(queryString);
