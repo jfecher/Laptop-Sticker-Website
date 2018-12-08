@@ -50,7 +50,9 @@ app.get('/api/getStickerUrls', (req, res) => {
             (result : any) =>
             {
                 let toBeSent : any = {'laptop_picture_urls': []};
-                toBeSent.laptop_picture_urls = result.rows;
+                result.rows.forEach(url =>
+                    toBeSent.laptop_picture_urls.push(url.laptop_picture_url)
+                );
                 res.json(toBeSent);
             }
         ).catch(
