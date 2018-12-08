@@ -215,7 +215,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         result.rows.forEach(
                         (pair : any) =>
                         {
-                            toBeSent.push({'x': Date(pair.xaxis), 'y': Number(pair.yaxis) });
+                            toBeSent.push({'x': Date.parse(pair.xaxis), 'y': Number(pair.yaxis) });
                         }
                         );
                 } else {
