@@ -1,4 +1,3 @@
-import Chart from 'chart.js';
 
 const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stickers",
 "likelihood_to_put_more" : "Likelihood to Put on More Stickers",
