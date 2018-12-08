@@ -41,10 +41,26 @@ app.get('/api/numPeople', (req, res) => {
 );
 
 
-
-
-
 //----------------------------
+app.get('/api/getStickerUrls', (req, res) => {
+    var queryString = "select laptop_picture_url from person";
+    const query = client.query(queryString);
+
+        query.then(
+            (result : any) =>
+            {
+                let toBeSent : any = {'laptop_picture_urls': []};
+                toBeSent.laptop_picture_urls = result.rows;
+                res.json(toBeSent);
+            }
+        ).catch(
+            (err : any) =>
+            {
+                console.log(err)
+            }
+        );
+    }
+);
 
 
 //--------Sticker Analytics------------
