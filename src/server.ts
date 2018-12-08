@@ -136,7 +136,12 @@ app.get('/api/avgArea', (req, res) => {
       );
 });
 
-//---------------------------- Gallery Page
+//---------------------------- Gallery Page ----------------------------
+// filter urls based on those containing stickers with the given
+// color, brand, gender.  'Any' for any of these parameters will match
+// all values of that parameter return JSON in the form
+// {laptop_picture_urls: urls} where urls is a possibly empty array of strings.
+//----------------------------------------------------------------------
 app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
     //var queryString = "select person_id, laptop_picture_url from person where person_id in (select person_id from person_has_sticker) ";
 
