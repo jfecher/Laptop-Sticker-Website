@@ -96,27 +96,6 @@
         </option>
     </select>
 
-    <select id="sticker_count" name="count" style="margin-top: 10px">
-        <option value="Any">
-            Any
-        </option>
-        <option value="1-5">
-            1-5
-        </option>
-        <option value="6-10">
-            6-10
-        </option>
-        <option value="11-15">
-            11-15
-        </option>
-        <option value="16-20">
-            16-20
-        </option>
-        <option value="20+">
-            20+
-        </option>
-    </select>
-
     <select id="laptop_brand" name="brand" style="margin-top: 10px">
         <option value="Any">
             Any
@@ -192,7 +171,7 @@
 	<script src=/gallery.js></script>
 	<script src=/simpleHttp.js></script>
 	<script>
-		simpleHttpRequest("/api/getStickerUrls/Any/Any/Any/Any", fillGallery, console.log);
+		simpleHttpRequest("/api/getStickerUrls/Any/Any/Any", fillGallery, console.log);
 	</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>

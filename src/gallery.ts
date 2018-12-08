@@ -21,8 +21,7 @@ function getInputElem(id) {
 // color, count, brand, gender
 function refreshStickers(){
     let color = getInputElem("sticker_color");
-    let count = getInputElem("sticker_count");
     let brand = getInputElem("laptop_brand");
     let gender = getInputElem("gender");
-    simpleHttpRequest("/api/getStickerUrls/" + color + "/" + count + "/" + brand + "/" + gender, fillGallery, console.log);
+    simpleHttpRequest("/api/getStickerUrls/" + color + "/" + brand + "/" + gender, fillGallery, console.log);
 }

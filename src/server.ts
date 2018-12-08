@@ -65,11 +65,11 @@ app.get('/api/countTable/:tableName', (req, res) => {
 
 
 //----------------------------
-app.get('/api/getStickerUrls/:color/:count/:laptopbrand/:gender', (req, res) => {
+app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
     //var queryString = "select person_id, laptop_picture_url from person where person_id in (select person_id from person_has_sticker) ";
 
     /** Generate this:
-    select distinct person_id, p.laptop_picture_url from
+    select distinct person_id, laptop_picture_url from
         (select person_id, sticker_id from person_has_sticker
             join person p using (person_id)
             join sticker s using (sticker_id)
@@ -82,14 +82,10 @@ app.get('/api/getStickerUrls/:color/:count/:laptopbrand/:gender', (req, res) => 
         ) as t;
     */
 
-    var queryString = "select distinct person_id, laptop_picture_url from (select person_id, sticker_id from person_has_sticker join person p using (person_id) join sticker s using (sticker_id) join color c using (color_id) join laptop l using (laptop_id) where true ";
+    var queryString = "select distinct person_id, laptop_picture_url from (select * from person_has_sticker join person p using (person_id) join sticker s using (sticker_id) join color c using (color_id) join laptop l using (laptop_id) where true ";
     var endStr = " order by random() limit 10 ) as t";
 
     if(req.params['color'] != "Any"){
-        queryString += " and c.name = '${req.params['color']}' "
-        endStr = " order by random() ) as t";
-    }
-    if(req.params['count'] != "Any"){
         queryString += " and c.name = '${req.params['color']}' "
         endStr = " order by random() ) as t";
     }
