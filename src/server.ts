@@ -12,7 +12,7 @@ app.get('/stickerAnalytics', (req, res) => res.sendFile(__dirname + '/stickerAna
 app.get('/about', (req, res) => res.sendFile(__dirname + '/about.html'));
 app.get('/gallery', (req, res) => res.sendFile(__dirname + '/gallery.html'));
 app.get('/:scriptName.js', (req, res) => res.sendFile(__dirname + '/' + req.params['scriptName'] + '.js'));
-
+app.get('/:pictureName.png', (req, res) => res.sendFile(__dirname + '/' + req.params['pictureName'] + '.png'));
 
 
 app.get('/api/:xaxis/:yaxis',
