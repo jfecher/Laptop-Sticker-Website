@@ -149,15 +149,37 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         if (req.params['yaxis'] == "likelihood_to_buy_more")
         {
-            yAxis = " avg(person.likelihood_to_buy_more) ";
+            if (scatterQuery)
+            {
+                yAxis = "person.likelihood_to_buy_more";
+            }
+            else
+            {
+                yAxis = " avg(person.likelihood_to_buy_more) ";
+            }
         }
         if (req.params['yaxis'] == "likelihood_to_put_more")
         {
-            yAxis = " avg(person.likelihood_to_put_more) ";
+            if (scatterQuery)
+            {
+                yAxis = "person.person.likelihood_to_put_more";
+            }
+            else
+            {
+                yAxis = " avg(person.likelihood_to_put_more) ";
+            }
         }
         if (req.params['yaxis'] == "numStickers")
         {
-            yAxis = " count(person_has_sticker.sticker_id)::decimal / count(distinct person_has_sticker.person_id) ";
+            if (scatterQuery)
+            {
+                yAxis = "count(person_has_sticker.sticker_id)";
+            }
+            else
+            {
+                yAxis = " count(person_has_sticker.sticker_id)::decimal / count(distinct person_has_sticker.person_id) ";
+            }
+
             joins += " join person_has_sticker using (person_id) ";
             joins += " join sticker using (sticker_id) ";
         }
@@ -169,6 +191,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
             queryString = " select " + xAxis + " as x , " + yAxis + " as y " +
                         " from person " +
                         joins +
+                        " group by person_id " + 
                         " order by y " + sort;
             console.log(queryString);
             query = client.query(queryString);
