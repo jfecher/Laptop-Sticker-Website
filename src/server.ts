@@ -136,7 +136,7 @@ app.get('api/avgArea', (req, res) => {
             console.log(err)
         }
       );
-};
+});
 
 //----------------------------
 app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
