@@ -188,10 +188,10 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         var query;
         if (scatterQuery) {
-            queryString = " select " + xAxis + " as x , " + yAxis + " as y " +
+            queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
                         " from person " +
                         joins +
-                        " group by person_id " + 
+                        " group by person_id " +
                         " order by y " + sort;
             console.log(queryString);
             query = client.query(queryString);
@@ -215,7 +215,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         result.rows.forEach(
                         (pair : any) =>
                         {
-                            toBeSent.push(pair);
+                            toBeSent.push({'x': Date(pair.xaxis), 'y': Number(pair.yaxis) });
                         }
                         );
                 } else {
