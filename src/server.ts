@@ -93,11 +93,11 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         if (req.params['yaxis'] == "likelihood_to_buy_more")
         {
-            yAxis = " person.likelihood_to_buy_more ";
+            yAxis = " avg(person.likelihood_to_buy_more) ";
         }
         if (req.params['yaxis'] == "likelihood_to_put_more")
         {
-            yAxis = " person.likelihood_to_put_more ";
+            yAxis = " avg(person.likelihood_to_put_more) ";
         }
         if (req.params['yaxis'] == "num_stickers")
         {
