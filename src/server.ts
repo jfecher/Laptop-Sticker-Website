@@ -171,6 +171,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         joins +
                         " group by " + xAxis +
                         "order by yAxis " + sort;
+            console.log(queryString);
             query = client.query(queryString);
         }  else {
             queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
