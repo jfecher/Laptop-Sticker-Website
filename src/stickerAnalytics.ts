@@ -5,7 +5,7 @@ const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stic
 "hometown_location": "Hometown",
 "major": "Major",
 "numStickers": "Average Number of Stickers",
-"laptop_purchased_dt": "Purchase Date of Laptop"
+"laptop_purchased_dt": "Purchase Date of Laptop",
 "gender": "Gender"};
 
 
