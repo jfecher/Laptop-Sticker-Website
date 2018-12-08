@@ -15,18 +15,18 @@ app.get('/:scriptName.js', (req, res) => res.sendFile(__dirname + '/' + req.para
 app.get('/:pictureName.png', (req, res) => res.sendFile(__dirname + '/' + req.params['pictureName'] + '.png'));
 
 //----Home--------
-app.get('/api/numPeople', (req, res) => {
-    var queryString = "select count(*) from person";
+app.get('/api/countTable/:tableName', (req, res) => {
+    var queryString = "select count(*) from " + req.params["tableName"];
     const query = client.query(queryString);
 
         query.then(
             (result : any) =>
             {
-                let toBeSent : any = {'numPeople': 0};
+                let toBeSent : any = {'numRecords': 0};
                 result.rows.forEach(
                     (num : any) =>
                     {
-                        toBeSent.numPeople = num;
+                        toBeSent.numRecords = num;
                     }
                 );
                 res.json(toBeSent);

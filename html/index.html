@@ -40,14 +40,56 @@
 	    </div>
 	  </nav>
 	</header>
+
+	<div class="container" style="margin-top: 65px;">
+			<div class="col-12 col-md-12">
+				<p class="float-right hidden-md-up"></p>
+				<div class="jumbotron">
+					<h1>Stickers of NEU</h1>
+					<p>We collected info on laptop stickers from students around Northeastern University. Explore this website to see some of the results. Start with some of our stats below
+						at a glance...
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-6 col-lg-4">
+						<h2 id = "myNumPersons"></h2>
+						<p>People surveyed at NEU</p>
+					</div><!--/span-->
+					<div class="col-6 col-lg-4">
+						<h2 id = "myNumStickers"></h2>
+						<p>Unique stickers collected</p>
+					</div><!--/span-->
+					<div class="col-6 col-lg-4">
+						<h2 id = "myNumHometowns"></h2>
+						<p>Unique hometowns</p>
+					</div><!--/span-->
+					<div class="col-6 col-lg-4">
+						<h2 id = "myNumMajors"></h2>
+						<p>Unique majors that we had</p>
+					</div><!--/span-->
+					<div class="col-6 col-lg-4">
+						<h2 id = "myNumBrands">Heading</h2>
+						<p>Unique brands</p>
+					</div><!--/span-->
+					<div class="col-6 col-lg-4">
+						<h2 id="myNumLaptop"></h2>
+						<p>Unique laptop models</p>
+					</div><!--/span-->
+				</div><!--/row-->
+			</div><!--/span-->
+	</div>
 	
 	
-	<h3 id = "myNumPersons" style="margin-top: 65px;"></h3>
 
 	<script src=/homepage.js></script>
 	<script src=/simpleHttp.js></script>
 	<script>
-		simpleHttpRequest("/api/numPeople", addHome, console.log);
+		simpleHttpRequest("/api/countTable/person", getNumPersons, console.log);
+		simpleHttpRequest("/api/countTable/sticker", getNumStickers, console.log);
+		simpleHttpRequest("/api/countTable/hometown_location", getNumHometowns, console.log);
+		simpleHttpRequest("/api/countTable/major", getMajors, console.log);
+		simpleHttpRequest("/api/countTable/brand", getBrands, console.log);
+		simpleHttpRequest("/api/countTable/laptop", getLaptops, console.log);
 	</script>
  </body>
 </html>
