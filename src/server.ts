@@ -125,7 +125,6 @@ app.get('/api/:xaxis/:yaxis/:sort',
         var yAxis = "";
         var xAxis = "";
         var sort = "";
-        var queryString = "";
         var limit = " limit 12; ";
         var scatterQuery = false;
 
@@ -203,7 +202,9 @@ app.get('/api/:xaxis/:yaxis/:sort',
                             " group by " + xAxis +
                             " order by yAxis " + sort +
                             limit;
+
         console.log(queryString);
+        
         query = client.query(queryString);
 
         query.then(
