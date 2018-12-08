@@ -201,10 +201,10 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         var query;
         if (scatterQuery) {
-            queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
+            queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " + " , to_char(laptop_purchased_dt, 'MON') as mmm, extract(year from laptop_purchased_dt) as yyyy "
                         " from person " +
                         joins +
-                        " group by person_id " +
+                        " group by mmm, yyyy " +
                         " order by yAxis " + sort;
             console.log(queryString);
             query = client.query(queryString);
