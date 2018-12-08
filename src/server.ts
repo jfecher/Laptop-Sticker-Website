@@ -104,7 +104,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
         if (req.params['yaxis'] == "numStickers")
         {
             yAxis = " count(person_has_sticker.person_id) ";
-            joins = " join person_has_sticker using (person_id) ";
+            joins += " join person_has_sticker using (person_id) ";
             joins += " join sticker using (sticker_id) ";
         }
 
