@@ -101,9 +101,9 @@ app.get('/api/:xaxis/:yaxis/:sort',
         {
             yAxis = " avg(person.likelihood_to_put_more) ";
         }
-        if (req.params['yaxis'] == "num_stickers")
+        if (req.params['yaxis'] == "numStickers")
         {
-            yAxis  = " count(person_has_sticker.person_id) ";
+            yAxis = " count(person_has_sticker.person_id) ";
             joins = " join person_has_sticker using (person_id) ";
             joins += " join sticker using (sticker_id) ";
         }
