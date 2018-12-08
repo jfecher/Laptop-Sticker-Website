@@ -119,7 +119,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                         " order by yAxis " + sort +
                         " limit 6;";
 
-
+        console.log(query);
 
 
         console.log(queryString);
