@@ -119,8 +119,13 @@ app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
         endStr = " order by random() ) as t";
     }
     if(req.params['gender'] != "Any"){
-        queryString += " and p.gender = '" + req.params['gender'] + "' ";
-        endStr = " order by random() ) as t";
+        if(req.params['gender'] == 'Other'){
+            queryString += " and p.gender <> 'Male' and p.gender <> 'Female' ";
+            endStr = " order by random() ) as t";
+        }else{
+            queryString += " and p.gender = '" + req.params['gender'] + "' ";
+            endStr = " order by random() ) as t";
+        }
     }
 
     console.log('gallery query: ' + queryString + endStr);
