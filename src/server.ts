@@ -204,8 +204,8 @@ app.get('/api/:xaxis/:yaxis/:sort',
                             limit;
 
         console.log(queryString);
-        
-        query = client.query(queryString);
+
+        const query = client.query(queryString);
 
         query.then(
             (result : any) =>
