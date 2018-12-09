@@ -1,6 +1,8 @@
 import express from 'express';
 import pg from 'pg';
 const app = express();
+
+//Connecting to database
 const connectionString = process.env.DATABASE_URL || '';
 const client = new pg.Client(connectionString);
 client.connect();
@@ -25,7 +27,7 @@ app.use(function (req, res, next) {
 
 var port = process.env.PORT || 8080;
 
-//routing
+//Routing using ExpressJS for loading scripts and pages and pcitures
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/stickerAnalytics', (req, res) => res.sendFile(__dirname + '/stickerAnalytics.html'));
 app.get('/about', (req, res) => res.sendFile(__dirname + '/about.html'));
@@ -34,6 +36,11 @@ app.get('/:scriptName.js', (req, res) => res.sendFile(__dirname + '/' + req.para
 app.get('/:pictureName.png', (req, res) => res.sendFile(__dirname + '/' + req.params['pictureName'] + '.png'));
 
 //----Home--------
+
+/**
+ * Queries the number of records in any given table
+ * @param tableName name of table you want to count records from
+ */
 app.get('/api/countTable/:tableName', (req, res) => {
     var queryString = "select count(*) from " + req.params["tableName"];
     const query = client.query(queryString);
@@ -59,6 +66,10 @@ app.get('/api/countTable/:tableName', (req, res) => {
     }
 );
 
+
+/**
+ * Queries you to count the amount of people that have stickers
+ */
 app.get('/api/peopleHadStickers', (req, res) => {
     var queryString = "select count(distinct person_id) from person_has_sticker;"
     const query = client.query(queryString);
@@ -84,6 +95,9 @@ app.get('/api/peopleHadStickers', (req, res) => {
     }
 );
 
+/**
+ * Queries the average amount of sticker on each persons laptop
+ */
 app.get('/api/avgStickers', (req, res) => {
     var queryString = "select round(count(sticker_id)::decimal / count(distinct person_id)::decimal, 2) as totalAvg" +
                         " from person " +
@@ -112,6 +126,9 @@ app.get('/api/avgStickers', (req, res) => {
     }
 );
 
+/**
+ * Queries the average area of each sticker
+ */
 app.get('/api/avgArea', (req, res) => {
     var queryString = "select ROUND(avg(width) * avg(height)::decimal, 2) from sticker"
     const query = client.query(queryString);
@@ -201,6 +218,13 @@ app.get('/api/getStickerUrls/:color/:laptopbrand/:gender', (req, res) => {
 
 
 //--------Sticker Analytics------------
+
+/**
+ * Queries the database to provide the data pairs to create different types of graphs 
+ * @param xaxis stat to compare on the x-axis
+ * @param yaxis stat to compare on the y-axis
+ * @param whether data should be displayed in ascending or descending order 
+ */
 app.get('/api/:xaxis/:yaxis/:sort',
     (req, res) =>
     {
@@ -208,11 +232,12 @@ app.get('/api/:xaxis/:yaxis/:sort',
         var yAxis = "";
         var xAxis = "";
         var sort = "";
-        var limit = " limit 12 ";
-        var having = " having count(distinct person_id) > 1 ";
+        var limit = " limit 12 "; //so that chart doesn't get too big
+        var having = " having count(distinct person_id) > 1 "; // to remove outliers
         var scatterQuery = false;
 
 
+        //setting what to join with based off of x-axis plus what to query
         if (req.params['xaxis'] == "major")
         {
             joins = " join major using (major_id) ";
@@ -242,6 +267,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
             xAxis = " person.gender ";
         }
 
+        //setting what to join with based off of y-axis plus what to query
         if (req.params['yaxis'] == "likelihood_to_buy_more")
         {
             yAxis = " avg(person.likelihood_to_buy_more) ";
@@ -260,6 +286,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
 
         sort = req.params['sort'];
 
+        //creates query string
         const queryString = " select " + xAxis + " as xAxis , " + yAxis + " as yAxis " +
                             " from person " +
                             joins +
@@ -276,6 +303,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
             (result : any) =>
             {
                 var toBeSent;
+                //creates list of x, y pairs for scatter plot
                 if(scatterQuery) {
                     toBeSent = [];
                         result.rows.forEach(
@@ -284,6 +312,7 @@ app.get('/api/:xaxis/:yaxis/:sort',
                             toBeSent.push({'x': Date.parse(pair.xaxis), 'y': Number(pair.yaxis) });
                         }
                         );
+                //provides values for bar-graph
                 } else {
                 toBeSent = {'xValues':[], 'yValues':[]};
                 result.rows.forEach(

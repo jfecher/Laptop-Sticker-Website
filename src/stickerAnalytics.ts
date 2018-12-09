@@ -1,4 +1,6 @@
-
+/**
+ * To provide more normal axis names
+ */
 const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stickers",
 "likelihood_to_put_more" : "Likelihood to Put on More Stickers",
 "laptop" : "Laptop Brand",
@@ -11,6 +13,10 @@ const valueToNameDict = {"likelihood_to_buy_more" : "Likelihood to Buy More Stic
 
 var myChart;
 
+/**
+ * Creates any type of chart for sticker analytics page
+ * @param sqlResults Parsed object from SQL Query
+ */
 function createChart(sqlResults)
 {
     if (myChart)
@@ -23,6 +29,7 @@ function createChart(sqlResults)
     var xAxis = <HTMLInputElement> document.getElementById("xaxis");
     var xAxisValue = xAxis.value;
 
+    //sets up bar-chart
     if (xAxis.value != "laptop_purchased_dt") {
         const barChartOptions : any = {
             scaleShowVerticalLines:true,
@@ -37,7 +44,6 @@ function createChart(sqlResults)
                     }
                 }]
             }};
-
 
     myChart = new Chart(chartContext, {
         type: 'bar',
@@ -79,6 +85,7 @@ function createChart(sqlResults)
         },
         options: barChartOptions
         });
+    //creates scatter plot
     } else {
         const scatterPlotOptions : any = {
             scales: {
@@ -113,6 +120,9 @@ function createChart(sqlResults)
        });
     }
 }
+/**
+ * Refreshes graph when user wants to update axes
+ */
 function refreshGraph()
 {
     var xAxis = <HTMLInputElement> document.getElementById("xaxis");

@@ -1,3 +1,6 @@
+/**
+ * Makes object for XMLHttpRequest
+ */
 function makeHttpObject()
 {
     try {return new XMLHttpRequest();}
@@ -10,6 +13,10 @@ function makeHttpObject()
     throw new Error("Could not create HTTP request object.");
 }
 
+
+/**
+ * Reusable function for basic http request
+ */
 function simpleHttpRequest(url, success, failure)
 {
     var request = makeHttpObject();
